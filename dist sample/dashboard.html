@@ -117,58 +117,6 @@
         </li>
       </ul>
       <ul class="c-header-menu-application">
-        <!--APPLICATION MENU-->
-        <!--
-            <li data-has-sub-nav="true" class="c-application-menu">
-                <a href="javascript:void(0);">
-                    <i id="applicationMenuIcon"></i>
-                    <span>Web Pay Processing</span>
-                </a>
-                <div class="c-header-menu-dropdown c-application-menu-dropdown">
-                    <div class="c-application-menu-item" data-iconclass="icon-desktop">
-                        <img src="citrus/images/application-menu/ServiceBureau-Icon.png" rel="placeholder" />
-                        <span>Service Bureau</span>
-                    </div>
-                    <div class="c-application-menu-item  active" data-iconclass="icon-web-pay-processing">
-                        <img src="citrus/images/application-menu/WebPayProcessing-Icon.png" rel="placeholder" />
-                        <span>Web Pay Processing</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-company-set">
-                        <img src="citrus/images/application-menu/CompanySet-Icon.png" rel="placeholder" />
-                        <span>Company Set</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-partner-set">
-                        <img src="citrus/images/application-menu/PartnerSet-Icon.png" rel="placeholder" />
-                        <span>Partner Set</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-compensation">
-                        <img src="citrus/images/application-menu/WebPay-Icon.png" rel="placeholder" />
-                        <span>Web Pay</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-time">
-                        <img src="citrus/images/application-menu/WebTime-Icon.png" rel="placeholder" />
-                        <span>Web Time</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-benefits">
-                        <img src="citrus/images/application-menu/WebBenefits-Icon.png" rel="placeholder" />
-                        <span>Web Benefits</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-weblink-alt">
-                        <img src="citrus/images/application-menu/WebLink-Icon.png" rel="placeholder" />
-                        <span>Web Link</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-recruiting">
-                        <img src="citrus/images/application-menu/Recruiting-Icon.png" rel="placeholder" />
-                        <span>Recruiting</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-onboarding">
-                        <img src="citrus/images/application-menu/Onboarding-Icon.png" rel="placeholder" />
-                        <span>Onboarding</span>
-                    </div>
-                </div>
-            </li>
-
-            <!END APPLICATION MENU -->
       </ul>
       <ul class="c-header-menu-responsive">
         <li data-has-sub-nav="true">
@@ -195,30 +143,33 @@
     <!--ENDS CONTENTTITLE ROW-->
     <div class="gutter col-xs-1 padding-none"></div>
     <div id="content-wrapper" class="row col-xs-10">
-      <div id="side-section" class="col-xs-3 padding-none border-right border-right-xs-none">
-        <h3 id="side-bar-title">Employees</h3>
-        <div id="toolbar" class="button-group col-xs-12">
-          <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
-          <button id="profile-btn" class="button disabled icon-group"></button>
-          <button id="checklist-btn" class="button icon-checklist"></button>
-          <button id="reset-btn" class="button disabled icon-reset"></button>
-        </div>
-        <div id="side-bar" class="col-xs-3 padding-none">
-          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12">
-          </ul>
-        </div>
+      <div id="side-section" class="col-xs-3">
+      <h3 id="side-bar-title" class="type-sectiontitle">Employees</h3>
+      <div id="toolbar" class="button-group col-xs-12">
+        <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
+        <button id="profile-btn" class="button disabled icon-group"></button>
+        <button id="checklist-btn" class="button icon-checklist"></button>
+        <button id="reset-btn" class="button disabled icon-reset"></button>
       </div>
-
-      <div class="col-xs-9 padding-none">
-        <div id="gridtabs" class="button-group col-xs-12">
-          <button id="" class="button outline">Sales Associate</button>
-          <button id="" class="button outline">Cashier</button>
-          <button id="" class="button outline">Freight</button>
-          <button class="button secondary icon-plus-circle"></button>
-        </div>
-        <!--START GRID-->
+      <div id="side-bar" class="col-sm-3 padding-none border-right border-right-xs-none">
+        <ul id="side-bar-list" class="side-nav hidden-xs-animated">
+        </ul>
+      </div>
+    </div>
+      <div class="col-xs-9 border-left border-fix">
         <div class="row">
-        <div id="grid-wrapper" class="col-xs-12">
+          <div class="col-xs-12">
+            <h3 class="type-sectiontitle">Responsive Nav</h3>
+          </div>
+          <div id="gridtabs" class="button-group col-xs-12">
+            <button id="" class="button outline">Sales Associate</button>
+            <button id="" class="button outline">Cashier</button>
+            <button id="" class="button outline">Freight</button>
+            <button class="button secondary icon-plus-circle"></button>
+          </div>
+        </div>
+        <div id="grid-wrapper" class="">
+          <h2 id="y-axis-header">Potential</h2>
           <div id="y-axis" class="axis">
             <span id="y4">10</span>
             <span id="y3">7</span>
@@ -266,15 +217,13 @@
                 <span id="x3">7</span>
                 <span id="x4">10</span>
               </div>
+              <h2 id="x-axis-header">Performance</h2>
             </div>
           </div>
         </div>
-        </div>
       </div>
-      <!--END GRID-->
     </div>
-    <!--end of row with side bar and grid -->
-  </div>
+    <div class="gutter col-xs-1 padding-none"></div></div>
   <!--end of content-area-->
   <div class="gutter col-xs-1 padding-none"></div>
   <!-- FOOTER INFO SECTION START -->
