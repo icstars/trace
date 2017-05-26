@@ -20,10 +20,10 @@
   <link rel="shortcut icon" href="citrus/images/favicon.png">
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="evaluation.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/evaluation.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="dashboard.js"></script>
+  <script src="scripts/main.js"></script>
 </head>
 
 <body class="citrus">
@@ -193,12 +193,22 @@
     <div class="gutter col-xs-1 padding-none"></div>
     <div id="content-wrapper" class="row col-xs-10 padding-none">
       <!-- COLUMN WITH SIDEBAR CONTENTS STARTS -->
-      <div id="list-searchbar" class="col-xs-3">
+      <div id="side-section" class="col-xs-3">
         <h3 id="side-bar-title">Employees</h3>
+        <div id="toolbar" class="col-xs-12">
+          <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button> -->
+          <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
+          <button id="profile-btn" class="button disabled icon-group"></button>
+          <button id="checklist-btn" class="button icon-checklist"></button>
+          <button id="reset-btn" class="button disabled icon-x-circle"></button>
+          <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-forward"></i></button> -->
+        </div>
         <div id="side-bar" class="col-xs-3 padding-none">
-          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12"></ul>
+          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12">
+          </ul>
         </div>
       </div>
+
       <!-- COLUMN WITH EVALUATION ELEMENTS STARTS -->
       <div id="eval-section" class="col-xs-9 padding-none">
         <div id="eval-content-area" class="col-xs-12">  <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" -->

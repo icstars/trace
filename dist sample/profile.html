@@ -20,10 +20,11 @@
   <link rel="shortcut icon" href="citrus/images/favicon.png">
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="dashboard.css">
-  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/profile.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="dashboard.js"></script>
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/main.js"></script>
 </head>
 
 <body class="citrus">
@@ -193,81 +194,94 @@
     <div class="gutter col-xs-1 padding-none"></div>
     <div id="content-wrapper" class="row col-xs-10">
       <!-- 1ST OF 2 SECTIONS OF MAIN CONTENT: SIDEBAR ELEMENTS STARTS HERE -->
-      <div id="list-searchbar" class="col-xs-3">
-        <h3 id="side-bar-title">Employees</h3>
+      <div id="side-section" class="col-xs-3">
+        <h3 id="side-bar-title" class="type-sectiontitle">Employees</h3>
+        <div id="toolbar" class="button-group col-xs-12">
+          <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
+          <button id="profile-btn" class="button disabled icon-group"></button>
+          <button id="checklist-btn" class="button icon-checklist"></button>
+          <button id="reset-btn" class="button disabled icon-x-circle"></button>
+        </div>
         <div id="side-bar" class="col-xs-3 padding-none">
-          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12"></ul>
+          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12">
+          </ul>
         </div>
       </div>
       <!-- 1ST OF 2 SECTIONS OF MAIN CONTENT: SIDEBAR ELEMENTS ENDS HERE -->
       <!-- 2ND OF 2 SECTIONS OF MAIN CONTENT: EVALUATION ELEMENTS STARTS HERE -->
       <div class="col-xs-9 padding-none">
-        <div class="col-xs-6"><!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS STARTS -->
-          <div class="row col-xs-12"><!-- GRIDTABS ROW STARTS -->
-          <div id="profile-gridtabs" class="button-group col-xs-12"><!-- GRIDTABS START -->
-            <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button> -->
-            <button class="button secondary outline gridtabs profile">SAVE</button>
-            <button class="button secondary outline gridtabs profile">EDIT</button>
-            <!-- <button class="button secondary outline gridtabs">Third</button> -->
-            <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-forward"></i></button> -->
-          </div><!-- GRIDTABS ENDS -->
-        </div><!-- GRIDTABS ROW ENDS -->
-
-        <div class="row col-xs-12"><!-- EMPLOYEE INFO ROW STARTS -->
-          <div id="employee-info"class="col-sm-12"><!-- EMPLOYEE INFO STARTS -->
+        <div class="col-xs-6">
+          <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS STARTS -->
+          <!-- GRIDTABS ROW STARTS -->
+          <div class="row col-xs-12">
+            <h2 id="profile-header" class="type-sectiontitle">fName lName</h2>
+            <!-- GRIDTABS START -->
+            <div id="profile-gridtabs" class="button-group col-xs-12">
+              <button class="button secondary outline gridtabs icon-save"> SAVE</button>
+              <button class="button secondary outline gridtabs icon-edit"> EDIT</button>
+            </div>
+            <!-- GRIDTABS ENDS -->
+          </div>
+          <!-- GRIDTABS ROW ENDS -->
+          <div class="row col-xs-12">
+            <!-- EMPLOYEE INFO ROW STARTS -->
+            <div id="employee-info" class="col-sm-12">
+              <!-- EMPLOYEE INFO STARTS -->
               <div class="form-group">
-                  <label>FIRST NAME</label>
-                  <input type="text">
+                <label>EMPLOYEE ID</label>
+                <input type="text">
+              </div>
+              <div class="form-group">
+                <label>GENDER</label>
+                <input type="text">
               </div>
 
               <div class="form-group">
-                  <label>LAST NAME</label>
-                  <input type="text">
+                <label>DEPARTMENT</label>
+                <input type="text">
               </div>
 
               <div class="form-group">
-                  <label>EMPLOYEE ID</label>
-                  <input type="text">
+                <label>START DATE</label>
+                <input type="text">
               </div>
-              <div class="form-group">
-                  <label>GENDER</label>
-                  <input type="text">
-              </div>
-
-              <div class="form-group">
-                  <label>DEPARTMENT</label>
-                  <input type="text">
-              </div>
-
-              <div class="form-group">
-                  <label>START DATE</label>
-                  <input type="text">
-              </div>
-          </div><!-- EMPLOYEE INFO ENDS -->
-        </div><!-- EMPLOYEE INFO ROW ENDS -->
-</div>
-<!-- SECOND SECTION OF TWO: PROFILE-GRAPH SECTION  -->
+            </div>
+            <!-- EMPLOYEE INFO ENDS -->
+          </div>
+          <!-- EMPLOYEE INFO ROW ENDS -->
+        </div>
+        <!-- SECOND SECTION OF TWO: PROFILE-GRAPH SECTION  -->
         <!-- PROFILE-GRAPH SECTION START -->
-        <div class="col-xs-6"><!-- PROFILE-GRAPH STARTS -->
-          <div class="row col-xs-12"><!-- PROFILE-GRAPH ROW STARTS -->
-          <div id="profile-graph" class="col-xs-12"><!-- PROFILE-GRAPH START -->
-            <img id="graph" src="profile-graph.png" alt="graph" style="height: 220px;width:220px;">
-          </div><!-- PROFILE-GRAPH ENDS -->
-        </div><!-- PROFILE-GRAPH ROW ENDS -->
+        <div class="col-xs-6">
+          <!-- PROFILE-GRAPH STARTS -->
+          <div class="row col-xs-12">
+            <!-- PROFILE-GRAPH ROW STARTS -->
+            <div id="profile-graph" class="col-xs-12">
+              <!-- PROFILE-GRAPH START -->
+              <img id="graph" src="images/profile-graph.png" alt="graph" style="height:220px;width:220px;">
+            </div>
+            <!-- PROFILE-GRAPH ENDS -->
+          </div>
+          <!-- PROFILE-GRAPH ROW ENDS -->
 
-      <div class="row col-xs-12"><!-- PROFILE-GRAPH ROW STARTS -->
-        <div id="profile-comments" class="form-group col-xs-12"><!-- PROFILE-GRAPH START -->
+          <div class="row col-xs-12">
+            <!-- PROFILE-GRAPH ROW STARTS -->
+            <div id="profile-comments" class="form-group col-xs-12">
+              <!-- PROFILE-GRAPH START -->
               <label>Notes</label>
               <textarea cols="30" rows="15"></textarea>
+            </div>
           </div>
-        </div><!-- PROFILE-GRAPH ENDS -->
-      </div><!-- PROFILE-GRAPH ROW ENDS -->
+          <!-- PROFILE-GRAPH ENDS -->
+        </div>
+        <!-- PROFILE-GRAPH ROW ENDS -->
         <!-- PROFILE-GRAPH SECTION ENDS -->
-    </div><!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
-  </div>
+      </div>
+      <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
+    </div>
     <!--CONTENT WRAPPER ENDS-->
     <!--end of row with side bar and grid -->
-</div>
+  </div>
   <!--CONTENT-AREA ENDS-->
 
   <div class="gutter col-xs-1 padding-none"></div>
