@@ -1,0 +1,19 @@
+button.button.secondary.outline.gridtabs.profile {
+  width: 35%;
+}
+
+#profile-gridtabs.button-group.col-xs-12 {
+  margin: 10% 0 10% 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+img#graph {
+  height: 200px;
+  width: 115%;
+  margin-top: 13%;
+}
+
+#profile-comments.form-group {
+  margin: 10% 0 0 7%;
+}

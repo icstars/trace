@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="XXXXXXXXXXXXXXXX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Paytential</title>
+  <!-- CITRUS Styles -->
+  <link rel="stylesheet" href="citrus/css/citrus.all.min.css">
+  <link rel="stylesheet" href="citrus/css/citrus.open-sans.min.css">
+  <link rel="stylesheet" href="citrus/css/citrus.icon-font.min.css">
+  <!-- Global Header -->
+  <link rel="stylesheet" href="citrus/css/components/citrus.header.min.css">
+  <link rel="stylesheet" href="citrus/css/components/citrus.status-bar.min.css">
+  <link rel="shortcut icon" href="citrus/images/favicon.png">
+  <script src="citrus/scripts/libs/modernizr.js"></script>
+  <!-- OUR STYLES -->
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="profile.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="dashboard.js"></script>
+</head>
+
+<body class="citrus">
+  <!-- if (Model.IsImpersonating) -->
+  <div class="c-impersonation-bar">Viewing as Manager</div>
+  <!-- end if -->
+  <!-- start of logo banner -->
+  <div class="c-header">
+    <div class="c-header-bar c-header-alert">
+      <!-- <div class="c-header-company-id">
+        PAYLOCITY CORPORATION [2000] <a href="#"><i class="icon-settings icon-bold"></i></a>
+        <ul class="c-header-menu-dropdown">
+          <li>Web Time</li>
+          <li>Revenue ($)</li>
+        </ul>
+      </div> -->
+      <div class="c-header-logo">
+        <!--STAND-IN LOGO-->
+        <img src="citrus/images/apple-logo.png" alt="logo" style="width: 50px; height: 50px">
+      </div>
+      <span class="c-header-searchfield">
+        <input id="searchfield" placeholder="Search for People &amp; Co IDs">
+      </span>
+      <div class="c-header-search-toggle">
+        <a href="#"><i class="icon-search icon-bold size-medium"></i></a>
+      </div>
+      <div class="c-header-notifications">
+        <span>2</span>
+        <ul class="c-header-menu-dropdown">
+          <li>
+            <h3>2 Unread Messages</h3>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 09/01/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 08/28/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...</p>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4>08/25/2015</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+              </p>
+            </a>
+          </li>
+          <li><a href="#">View all messages</a></li>
+        </ul>
+      </div>
+      <div class="c-header-user-portrait">
+        <span class="c-header-alert">2</span>
+        <img src="https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png">
+        <ul class="c-header-menu-dropdown">
+          <li class="c-header-user-name">
+            <p>Clark Kent</p>ckent [ck1]</li>
+          <li><a href="#"><i class="icon-edit"></i> Edit Profile</a></li>
+          <li><a href="#"><i class="icon-settings"></i> User Preferences</a></li>
+          <li><a href="#"><i class="icon-notifications"></i> Notifications</a></li>
+          <li><a href="#"><i class="icon-about"></i> About</a></li>
+          <li><a href="#"><i class="icon-help"></i> Help</a></li>
+          <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li>
+          <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
+        </ul>
+      </div>
+      <ul class="c-header-menu-dropdown">
+        <li class="c-header-user-name">
+          <p>Clark Kent</p>ckent [ck1]</li>
+        <li><a href="#"><i class="icon-edit"></i> Edit Profile</a></li>
+        <li><a href="#"><i class="icon-settings"></i> User Preferences</a></li>
+        <li><a href="#"><i class="icon-notifications"></i> Notifications</a></li>
+        <li><a href="#"><i class="icon-about"></i> About</a></li>
+        <li><a href="#"><i class="icon-help"></i> Help</a></li>
+        <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li>
+        <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
+      </ul>
+    </div>
+    <div class="c-header-menu">
+      <ul class="c-header-menu-toggle">
+        <li>
+          <a href="#" class="cHeaderMenuBtn"><i class="icon-menu"></i> Menu</a>
+        </li>
+      </ul>
+      <ul class="c-header-menu-application">
+        <!--APPLICATION MENU-->
+        <!--
+            <li data-has-sub-nav="true" class="c-application-menu">
+                <a href="javascript:void(0);">
+                    <i id="applicationMenuIcon"></i>
+                    <span>Web Pay Processing</span>
+                </a>
+                <div class="c-header-menu-dropdown c-application-menu-dropdown">
+                    <div class="c-application-menu-item" data-iconclass="icon-desktop">
+                        <img src="citrus/images/application-menu/ServiceBureau-Icon.png" rel="placeholder" />
+                        <span>Service Bureau</span>
+                    </div>
+                    <div class="c-application-menu-item  active" data-iconclass="icon-web-pay-processing">
+                        <img src="citrus/images/application-menu/WebPayProcessing-Icon.png" rel="placeholder" />
+                        <span>Web Pay Processing</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-company-set">
+                        <img src="citrus/images/application-menu/CompanySet-Icon.png" rel="placeholder" />
+                        <span>Company Set</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-partner-set">
+                        <img src="citrus/images/application-menu/PartnerSet-Icon.png" rel="placeholder" />
+                        <span>Partner Set</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-compensation">
+                        <img src="citrus/images/application-menu/WebPay-Icon.png" rel="placeholder" />
+                        <span>Web Pay</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-time">
+                        <img src="citrus/images/application-menu/WebTime-Icon.png" rel="placeholder" />
+                        <span>Web Time</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-benefits">
+                        <img src="citrus/images/application-menu/WebBenefits-Icon.png" rel="placeholder" />
+                        <span>Web Benefits</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-weblink-alt">
+                        <img src="citrus/images/application-menu/WebLink-Icon.png" rel="placeholder" />
+                        <span>Web Link</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-recruiting">
+                        <img src="citrus/images/application-menu/Recruiting-Icon.png" rel="placeholder" />
+                        <span>Recruiting</span>
+                    </div>
+                    <div class="c-application-menu-item" data-iconclass="icon-onboarding">
+                        <img src="citrus/images/application-menu/Onboarding-Icon.png" rel="placeholder" />
+                        <span>Onboarding</span>
+                    </div>
+                </div>
+            </li>
+
+            <!END APPLICATION MENU -->
+      </ul>
+      <ul class="c-header-menu-responsive">
+        <li data-has-sub-nav="true">
+          <a href="#">Dashboard</a>
+        </li>
+      </ul>
+      <ul class="c-header-menu-right">
+        <li>
+          <a href="#">Help</a>
+          <ul class="c-header-menu-dropdown">
+            <li><a href="#">Employee</a></li>
+            <li><a href="#">Human Resources</a></li>
+            <li><a href="#">Current Checks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- T.R.A.C.E. CODE START -->
+  <div class="content-area">
+    <div class="row">
+      <h2 class="type-contenttitle col-xs-12">Profile</h2>
+      <a href="dashboard.html"><button id="back-page-btn" class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button></a>
+    </div>
+    <!--ENDS CONTENTTITLE ROW-->
+    <div class="gutter col-xs-1 padding-none"></div>
+    <div id="content-wrapper" class="row col-xs-10">
+      <!-- 1ST OF 2 SECTIONS OF MAIN CONTENT: SIDEBAR ELEMENTS STARTS HERE -->
+      <div id="list-searchbar" class="col-xs-3">
+        <h3 id="side-bar-title">Employees</h3>
+        <div id="side-bar" class="col-xs-3 padding-none">
+          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12"></ul>
+        </div>
+      </div>
+      <!-- 1ST OF 2 SECTIONS OF MAIN CONTENT: SIDEBAR ELEMENTS ENDS HERE -->
+      <!-- 2ND OF 2 SECTIONS OF MAIN CONTENT: EVALUATION ELEMENTS STARTS HERE -->
+      <div class="col-xs-9 padding-none">
+        <div class="col-xs-6"><!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS STARTS -->
+          <div class="row col-xs-12"><!-- GRIDTABS ROW STARTS -->
+          <div id="profile-gridtabs" class="button-group col-xs-12"><!-- GRIDTABS START -->
+            <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button> -->
+            <button class="button secondary outline gridtabs profile">SAVE</button>
+            <button class="button secondary outline gridtabs profile">EDIT</button>
+            <!-- <button class="button secondary outline gridtabs">Third</button> -->
+            <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-forward"></i></button> -->
+          </div><!-- GRIDTABS ENDS -->
+        </div><!-- GRIDTABS ROW ENDS -->
+
+        <div class="row col-xs-12"><!-- EMPLOYEE INFO ROW STARTS -->
+          <div id="employee-info"class="col-sm-12"><!-- EMPLOYEE INFO STARTS -->
+              <div class="form-group">
+                  <label>FIRST NAME</label>
+                  <input type="text">
+              </div>
+
+              <div class="form-group">
+                  <label>LAST NAME</label>
+                  <input type="text">
+              </div>
+
+              <div class="form-group">
+                  <label>EMPLOYEE ID</label>
+                  <input type="text">
+              </div>
+              <div class="form-group">
+                  <label>GENDER</label>
+                  <input type="text">
+              </div>
+
+              <div class="form-group">
+                  <label>DEPARTMENT</label>
+                  <input type="text">
+              </div>
+
+              <div class="form-group">
+                  <label>START DATE</label>
+                  <input type="text">
+              </div>
+          </div><!-- EMPLOYEE INFO ENDS -->
+        </div><!-- EMPLOYEE INFO ROW ENDS -->
+</div>
+<!-- SECOND SECTION OF TWO: PROFILE-GRAPH SECTION  -->
+        <!-- PROFILE-GRAPH SECTION START -->
+        <div class="col-xs-6"><!-- PROFILE-GRAPH STARTS -->
+          <div class="row col-xs-12"><!-- PROFILE-GRAPH ROW STARTS -->
+          <div id="profile-graph" class="col-xs-12"><!-- PROFILE-GRAPH START -->
+            <img id="graph" src="profile-graph.png" alt="graph" style="height: 220px;width:220px;">
+          </div><!-- PROFILE-GRAPH ENDS -->
+        </div><!-- PROFILE-GRAPH ROW ENDS -->
+
+      <div class="row col-xs-12"><!-- PROFILE-GRAPH ROW STARTS -->
+        <div id="profile-comments" class="form-group col-xs-12"><!-- PROFILE-GRAPH START -->
+              <label>Notes</label>
+              <textarea cols="30" rows="15"></textarea>
+          </div>
+        </div><!-- PROFILE-GRAPH ENDS -->
+      </div><!-- PROFILE-GRAPH ROW ENDS -->
+        <!-- PROFILE-GRAPH SECTION ENDS -->
+    </div><!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
+  </div>
+    <!--CONTENT WRAPPER ENDS-->
+    <!--end of row with side bar and grid -->
+</div>
+  <!--CONTENT-AREA ENDS-->
+
+  <div class="gutter col-xs-1 padding-none"></div>
+  <!-- FOOTER INFO SECTION START -->
+  <footer class="col-xs-12">
+    <div id="sections" class="row">
+      <!-- <div id="footer-info-sec" class="col-xs-12"> -->
+      <div id="footer-section-1" class="col-xs-6">
+        <h3 id="About-us">ABOUT PAYLOCITY</h3>
+        <ul class="footer-list">
+          <li class="footer-list-items"><a class="footer-anchors" href="#">TESTIMONIALS</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">AWARDS</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">LEADERSHIP</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">PRODUCT TOUR</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">RESOURCES</a></li>
+        </ul>
+      </div>
+      <div id="footer-section-2" class="col-xs-6">
+        <h3 id="developers">DEVELOPERS</h3>
+        <ul class="footer-list">
+          <li class="footer-list-items">VANESSA FLORES</li>
+          <li class="footer-list-items">CARLOS MARTINEZ</li>
+          <li class="footer-list-items">MARILYN NICOLS</li>
+          <li class="footer-list-items">DAN RODGERS</li>
+          <li class="footer-list-items">TINA RODRIGUEZ</li>
+        </ul>
+      </div>
+      <!-- </div><!-FOOTER INFO SECTION END -->-->
+    </div>
+
+    <!--  CONNECT SECTION START -->
+    <!-- <div class="row"> -->
+    <div id="connect" class="row col-xs-12">
+      <div id="connect-with-us" class="col-xs-4">
+        <h2 id="connect-p">CONNECT <span>with</span> US</h2>
+      </div>
+      <div id="soc-media" class="col-xs-8">
+        <img class="soc-med-icons" src="facebook.png" alt="facebook logo">
+        <img class="soc-med-icons" src="linkedin.png" alt="linkedin logo">
+        <img class="soc-med-icons" src="google+.png" alt="google plus logo">
+        <img class="soc-med-icons" src="twitter.png" alt="twitter logo">
+        <img class="soc-med-icons" src="youtube.png" alt="youtube logo">
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
