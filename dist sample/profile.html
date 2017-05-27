@@ -114,58 +114,6 @@
         </li>
       </ul>
       <ul class="c-header-menu-application">
-        <!--APPLICATION MENU-->
-        <!--
-            <li data-has-sub-nav="true" class="c-application-menu">
-                <a href="javascript:void(0);">
-                    <i id="applicationMenuIcon"></i>
-                    <span>Web Pay Processing</span>
-                </a>
-                <div class="c-header-menu-dropdown c-application-menu-dropdown">
-                    <div class="c-application-menu-item" data-iconclass="icon-desktop">
-                        <img src="citrus/images/application-menu/ServiceBureau-Icon.png" rel="placeholder" />
-                        <span>Service Bureau</span>
-                    </div>
-                    <div class="c-application-menu-item  active" data-iconclass="icon-web-pay-processing">
-                        <img src="citrus/images/application-menu/WebPayProcessing-Icon.png" rel="placeholder" />
-                        <span>Web Pay Processing</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-company-set">
-                        <img src="citrus/images/application-menu/CompanySet-Icon.png" rel="placeholder" />
-                        <span>Company Set</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-partner-set">
-                        <img src="citrus/images/application-menu/PartnerSet-Icon.png" rel="placeholder" />
-                        <span>Partner Set</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-compensation">
-                        <img src="citrus/images/application-menu/WebPay-Icon.png" rel="placeholder" />
-                        <span>Web Pay</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-time">
-                        <img src="citrus/images/application-menu/WebTime-Icon.png" rel="placeholder" />
-                        <span>Web Time</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-benefits">
-                        <img src="citrus/images/application-menu/WebBenefits-Icon.png" rel="placeholder" />
-                        <span>Web Benefits</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-weblink-alt">
-                        <img src="citrus/images/application-menu/WebLink-Icon.png" rel="placeholder" />
-                        <span>Web Link</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-recruiting">
-                        <img src="citrus/images/application-menu/Recruiting-Icon.png" rel="placeholder" />
-                        <span>Recruiting</span>
-                    </div>
-                    <div class="c-application-menu-item" data-iconclass="icon-onboarding">
-                        <img src="citrus/images/application-menu/Onboarding-Icon.png" rel="placeholder" />
-                        <span>Onboarding</span>
-                    </div>
-                </div>
-            </li>
-
-            <!END APPLICATION MENU -->
       </ul>
       <ul class="c-header-menu-responsive">
         <li data-has-sub-nav="true">
@@ -200,7 +148,7 @@
           <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
           <button id="profile-btn" class="button disabled icon-group"></button>
           <button id="checklist-btn" class="button icon-checklist"></button>
-          <button id="reset-btn" class="button disabled icon-x-circle"></button>
+          <button id="reset-btn" class="button disabled icon-reset"></button>
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
           <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12">
@@ -213,120 +161,142 @@
         <div class="col-xs-6">
           <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS STARTS -->
           <!-- GRIDTABS ROW STARTS -->
-          <div class="row col-xs-12">
+          <div class="row col-xs-8">
             <h2 id="profile-header" class="type-sectiontitle">fName lName</h2>
+          </div>
             <!-- GRIDTABS START -->
             <div id="profile-gridtabs" class="button-group col-xs-12">
               <button class="button secondary outline gridtabs icon-save"> SAVE</button>
               <button class="button secondary outline gridtabs icon-edit"> EDIT</button>
+              <button class="button secondary outline gridtabs icon-save"> RATE</button>
+              <button class="button secondary outline gridtabs icon-save"> SHARE</button>
             </div>
-            <!-- GRIDTABS ENDS -->
-          </div>
+          <!-- GRIDTABS ENDS -->
           <!-- GRIDTABS ROW ENDS -->
-          <div class="row col-xs-12">
             <!-- EMPLOYEE INFO ROW STARTS -->
-            <div id="employee-info" class="col-sm-12">
+            <div id="employee-info" class="col-xs-12">
               <!-- EMPLOYEE INFO STARTS -->
-              <div class="form-group">
-                <label>EMPLOYEE ID</label>
-                <input type="text">
+              <div class="row">
+                <div class="col-xs-12">
+                  <table class="lists nohover fixed-layout">
+                    <tbody>
+                      <tr>
+                        <td>Gender:</td>
+                        <td>Male</td>
+                      </tr>
+                      <tr>
+                        <td>Department:</td>
+                        <td>Sales</td>
+                      </tr>
+                      <tr>
+                        <td>Role:</td>
+                        <td>Financial Analyst</td>
+                      </tr>
+                      <tr>
+                        <td>Starting Date:</td>
+                        <td>51/12/2002</td>
+                      </tr>
+                      <tr>
+                        <td>Location:</td>
+                        <td>Lockport, IL</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-              <div class="form-group">
-                <label>GENDER</label>
-                <input type="text">
-              </div>
-
-              <div class="form-group">
-                <label>DEPARTMENT</label>
-                <input type="text">
-              </div>
-
-              <div class="form-group">
-                <label>START DATE</label>
-                <input type="text">
-              </div>
+              <!-- EMPLOYEE INFO ENDS -->
             </div>
-            <!-- EMPLOYEE INFO ENDS -->
-          </div>
-          <!-- EMPLOYEE INFO ROW ENDS -->
-        </div>
-        <!-- SECOND SECTION OF TWO: PROFILE-GRAPH SECTION  -->
-        <!-- PROFILE-GRAPH SECTION START -->
-        <div class="col-xs-6">
-          <!-- PROFILE-GRAPH STARTS -->
-          <div class="row col-xs-12">
-            <!-- PROFILE-GRAPH ROW STARTS -->
-            <div id="profile-graph" class="col-xs-12">
-              <!-- PROFILE-GRAPH START -->
-              <img id="graph" src="images/profile-graph.png" alt="graph" style="height:220px;width:220px;">
+            <!-- EMPLOYEE INFO ROW ENDS -->
+
+          <!-- PROFILE-GRAPH SECTION START -->
+          <div class="col-xs-6">
+            <!-- PROFILE-GRAPH STARTS -->
+              <div id="profile-graph" class="col-xs-12">
+                <img id="graph" src="images/profile-graph.png" alt="graph" style="height:220px;width:220px;">
+              </div>
+              <!-- PROFILE-GRAPH ENDS -->
+            <div class="row">
+                <h2>Rating History</h2>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <table class="lists">
+                  <thead>
+                    <tr>
+                      <th class="toggle" width="16"></th>
+                      <th class="type-centeralign">Date</th>
+                      <th class="type-centeralign">Potential Rating</th>
+                      <th class="type-centeralign">Performance Rating</th>
+                      <th class="type-centeralign">Comments</th>
+                      <th class="type-centeralign">Manager ID</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="toggle"><class="icon-expand"></i></td>
+                      <td class="h2 type-centeralign">7/12/2002</td>
+                      <td class="h2 type-centeralign">8</td>
+                      <td class="h2 type-centeralign">8</td>
+                      <td class="h2 type-centeralign">afjsdlfjsfs</td>
+                      <td class="h2 type-centeralign">35</td>
+                    </tr>
+                    <!-- <tr class="details"></tr> -->
+                  </tbody>
+                </table>
+              </div>
             </div>
             <!-- PROFILE-GRAPH ENDS -->
           </div>
           <!-- PROFILE-GRAPH ROW ENDS -->
-
-          <div class="row col-xs-12">
-            <!-- PROFILE-GRAPH ROW STARTS -->
-            <div id="profile-comments" class="form-group col-xs-12">
-              <!-- PROFILE-GRAPH START -->
-              <label>Notes</label>
-              <textarea cols="30" rows="15"></textarea>
-            </div>
-          </div>
-          <!-- PROFILE-GRAPH ENDS -->
         </div>
-        <!-- PROFILE-GRAPH ROW ENDS -->
-        <!-- PROFILE-GRAPH SECTION ENDS -->
+        <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
       </div>
-      <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
+      <!--CONTENT WRAPPER ENDS-->
     </div>
-    <!--CONTENT WRAPPER ENDS-->
-    <!--end of row with side bar and grid -->
-  </div>
-  <!--CONTENT-AREA ENDS-->
+    <!--CONTENT-AREA ENDS-->
+    <div class="gutter col-xs-1 padding-none"></div>
+    <!-- FOOTER INFO SECTION START -->
+    <footer class="col-xs-12">
+      <div id="sections" class="row">
+        <!-- <div id="footer-info-sec" class="col-xs-12"> -->
+        <div id="footer-section-1" class="col-xs-6">
+          <h3 id="About-us">ABOUT PAYLOCITY</h3>
+          <ul class="footer-list">
+            <li class="footer-list-items"><a class="footer-anchors" href="#">TESTIMONIALS</a></li>
+            <li class="footer-list-items"><a class="footer-anchors" href="#">AWARDS</a></li>
+            <li class="footer-list-items"><a class="footer-anchors" href="#">LEADERSHIP</a></li>
+            <li class="footer-list-items"><a class="footer-anchors" href="#">PRODUCT TOUR</a></li>
+            <li class="footer-list-items"><a class="footer-anchors" href="#">RESOURCES</a></li>
+          </ul>
+        </div>
+        <div id="footer-section-2" class="col-xs-6">
+          <h3 id="developers">DEVELOPERS</h3>
+          <ul class="footer-list">
+            <li class="footer-list-items">VANESSA FLORES</li>
+            <li class="footer-list-items">CARLOS MARTINEZ</li>
+            <li class="footer-list-items">MARILYN NICOLS</li>
+            <li class="footer-list-items">DAN RODGERS</li>
+            <li class="footer-list-items">TINA RODRIGUEZ</li>
+          </ul>
+        </div>
+        <!-- </div><!-FOOTER INFO SECTION END -->-->
+      </div>
 
-  <div class="gutter col-xs-1 padding-none"></div>
-  <!-- FOOTER INFO SECTION START -->
-  <footer class="col-xs-12">
-    <div id="sections" class="row">
-      <!-- <div id="footer-info-sec" class="col-xs-12"> -->
-      <div id="footer-section-1" class="col-xs-6">
-        <h3 id="About-us">ABOUT PAYLOCITY</h3>
-        <ul class="footer-list">
-          <li class="footer-list-items"><a class="footer-anchors" href="#">TESTIMONIALS</a></li>
-          <li class="footer-list-items"><a class="footer-anchors" href="#">AWARDS</a></li>
-          <li class="footer-list-items"><a class="footer-anchors" href="#">LEADERSHIP</a></li>
-          <li class="footer-list-items"><a class="footer-anchors" href="#">PRODUCT TOUR</a></li>
-          <li class="footer-list-items"><a class="footer-anchors" href="#">RESOURCES</a></li>
-        </ul>
+      <!--  CONNECT SECTION START -->
+      <!-- <div class="row"> -->
+      <div id="connect" class="row col-xs-12">
+        <div id="connect-with-us" class="col-xs-4">
+          <h2 id="connect-p">CONNECT <span>with</span> US</h2>
+        </div>
+        <div id="soc-media" class="col-xs-8">
+          <img class="soc-med-icons" src="facebook.png" alt="facebook logo">
+          <img class="soc-med-icons" src="linkedin.png" alt="linkedin logo">
+          <img class="soc-med-icons" src="google+.png" alt="google plus logo">
+          <img class="soc-med-icons" src="twitter.png" alt="twitter logo">
+          <img class="soc-med-icons" src="youtube.png" alt="youtube logo">
+        </div>
       </div>
-      <div id="footer-section-2" class="col-xs-6">
-        <h3 id="developers">DEVELOPERS</h3>
-        <ul class="footer-list">
-          <li class="footer-list-items">VANESSA FLORES</li>
-          <li class="footer-list-items">CARLOS MARTINEZ</li>
-          <li class="footer-list-items">MARILYN NICOLS</li>
-          <li class="footer-list-items">DAN RODGERS</li>
-          <li class="footer-list-items">TINA RODRIGUEZ</li>
-        </ul>
-      </div>
-      <!-- </div><!-FOOTER INFO SECTION END -->-->
-    </div>
-
-    <!--  CONNECT SECTION START -->
-    <!-- <div class="row"> -->
-    <div id="connect" class="row col-xs-12">
-      <div id="connect-with-us" class="col-xs-4">
-        <h2 id="connect-p">CONNECT <span>with</span> US</h2>
-      </div>
-      <div id="soc-media" class="col-xs-8">
-        <img class="soc-med-icons" src="facebook.png" alt="facebook logo">
-        <img class="soc-med-icons" src="linkedin.png" alt="linkedin logo">
-        <img class="soc-med-icons" src="google+.png" alt="google plus logo">
-        <img class="soc-med-icons" src="twitter.png" alt="twitter logo">
-        <img class="soc-med-icons" src="youtube.png" alt="youtube logo">
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 
 </html>
