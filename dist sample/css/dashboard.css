@@ -4,6 +4,14 @@
 
 }
 
+#y-axis-header {
+
+}
+
+#x-axis-header {
+
+}
+
 #y-axis {
  display: flex;
  flex-flow:column nowrap;
@@ -23,9 +31,15 @@
 /**********************************AXIS FOR X AND Y END***************************************/
 
 /**********************************GRID***********************************/
+
+#gridtabs {
+  /*position this*/
+}
+
 #grid-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   /*margin-top: -2%;*/
 }
 
