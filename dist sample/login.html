@@ -21,31 +21,22 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-touch-fullscreen" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-  <!--[if IE]>
-    <meta http-equiv="imagetoolbar" content="no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <script src="citrus/scripts/polyfills/html5shiv.js"></script>
-    <![endif]-->
-
-
+  <title>Paytential</title>
   <!-- CITRUS Styles -->
   <link rel="stylesheet" href="citrus/css/citrus.all.min.css">
   <link rel="stylesheet" href="citrus/css/citrus.open-sans.min.css">
   <link rel="stylesheet" href="citrus/css/citrus.icon-font.min.css">
-
   <!-- Global Header -->
   <link rel="stylesheet" href="citrus/css/components/citrus.header.min.css">
   <link rel="stylesheet" href="citrus/css/components/citrus.status-bar.min.css">
-  <script src="citrus/scripts/libs/modernizr.js"></script>
   <link rel="shortcut icon" href="citrus/images/favicon.png">
-
+  <script src="citrus/scripts/libs/modernizr.js"></script>
+  <!--OUR STYLES-->
+  <link rel="stylesheet" href="css/login.css">
 </head>
 
 
 <body>
-
-
   <div id="login-wrapper" class="col-sm-12">
     <div id="login-form" class="col-sm-4">
       <!-- <label for="Company Id"> Company Id</label> -->
@@ -67,7 +58,7 @@
 
       <input class="inputs" type="Password" name="" value="" required placeholder="Password">
       <br>
-
+      <!--TODO fix bad practice: Values should not have spaces-->
       <input type="checkbox" name="" value="Remember My Credentials">
       <label for="Remember My Credentials">Remember My Credentials </label>
       <br>

@@ -25,6 +25,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/main.js"></script>
+  <script src="scripts/profile.js"></script>
 </head>
 
 <body class="citrus">
@@ -43,7 +44,7 @@
       </div> -->
       <div class="c-header-logo">
         <!--STAND-IN LOGO-->
-        <img src="citrus/images/apple-logo.png" alt="logo" style="width: 50px; height: 50px">
+        <img src="images/apple-logo.png" alt="logo" style="width: 50px; height: 50px">
       </div>
       <span class="c-header-searchfield">
         <input id="searchfield" placeholder="Search for People &amp; Co IDs">
@@ -158,96 +159,114 @@
       <!-- 1ST OF 2 SECTIONS OF MAIN CONTENT: SIDEBAR ELEMENTS ENDS HERE -->
       <!-- 2ND OF 2 SECTIONS OF MAIN CONTENT: EVALUATION ELEMENTS STARTS HERE -->
       <div class="col-xs-9 padding-none">
+        <div class="row col-xs-8">
+          <h2 id="profile-header" class="type-sectiontitle">fName lName</h2>
+        </div>
+        <!-- GRIDTABS START -->
+        <div id="profile-gridtabs" class="button-group col-xs-4">
+          <button class="button secondary outline gridtabs icon-save"> SAVE</button>
+          <button class="button secondary outline gridtabs icon-edit"> EDIT</button>
+          <button class="button secondary outline gridtabs icon-save"> RATE</button>
+          <button class="button secondary outline gridtabs icon-reply"> SHARE</button>
+        </div>
+        <!-- GRIDTABS ENDS -->
         <div class="col-xs-6">
-          <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS STARTS -->
-          <!-- GRIDTABS ROW STARTS -->
-          <div class="row col-xs-8">
-            <h2 id="profile-header" class="type-sectiontitle">fName lName</h2>
-          </div>
-            <!-- GRIDTABS START -->
-            <div id="profile-gridtabs" class="button-group col-xs-12">
-              <button class="button secondary outline gridtabs icon-save"> SAVE</button>
-              <button class="button secondary outline gridtabs icon-edit"> EDIT</button>
-              <button class="button secondary outline gridtabs icon-save"> RATE</button>
-              <button class="button secondary outline gridtabs icon-save"> SHARE</button>
-            </div>
-          <!-- GRIDTABS ENDS -->
-          <!-- GRIDTABS ROW ENDS -->
-            <!-- EMPLOYEE INFO ROW STARTS -->
-            <div id="employee-info" class="col-xs-12">
-              <!-- EMPLOYEE INFO STARTS -->
-              <div class="row">
-                <div class="col-xs-12">
-                  <table class="lists nohover fixed-layout">
-                    <tbody>
-                      <tr>
-                        <td>Gender:</td>
-                        <td>Male</td>
-                      </tr>
-                      <tr>
-                        <td>Department:</td>
-                        <td>Sales</td>
-                      </tr>
-                      <tr>
-                        <td>Role:</td>
-                        <td>Financial Analyst</td>
-                      </tr>
-                      <tr>
-                        <td>Starting Date:</td>
-                        <td>51/12/2002</td>
-                      </tr>
-                      <tr>
-                        <td>Location:</td>
-                        <td>Lockport, IL</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- EMPLOYEE INFO ENDS -->
-            </div>
-            <!-- EMPLOYEE INFO ROW ENDS -->
-
-          <!-- PROFILE-GRAPH SECTION START -->
-          <div class="col-xs-6">
-            <!-- PROFILE-GRAPH STARTS -->
-              <div id="profile-graph" class="col-xs-12">
-                <img id="graph" src="images/profile-graph.png" alt="graph" style="height:220px;width:220px;">
-              </div>
-              <!-- PROFILE-GRAPH ENDS -->
-            <div class="row">
-                <h2>Rating History</h2>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
+          <!-- EMPLOYEE INFO ROW STARTS -->
+          <div id="employee-info" class="col-xs-12">
+            <!-- EMPLOYEE INFO STARTS -->
                 <table class="lists">
-                  <thead>
-                    <tr>
-                      <th class="toggle" width="16"></th>
-                      <th class="type-centeralign">Date</th>
-                      <th class="type-centeralign">Potential Rating</th>
-                      <th class="type-centeralign">Performance Rating</th>
-                      <th class="type-centeralign">Comments</th>
-                      <th class="type-centeralign">Manager ID</th>
-                    </tr>
-                  </thead>
+                  <thead>General:</thead>
                   <tbody>
                     <tr>
-                      <td class="toggle"><class="icon-expand"></i></td>
-                      <td class="h2 type-centeralign">7/12/2002</td>
-                      <td class="h2 type-centeralign">8</td>
-                      <td class="h2 type-centeralign">8</td>
-                      <td class="h2 type-centeralign">afjsdlfjsfs</td>
-                      <td class="h2 type-centeralign">35</td>
+                      <td>Employee ID:</td>
+                      <td>000</td>
                     </tr>
-                    <!-- <tr class="details"></tr> -->
+                    <tr>
+                      <td>Gender:</td>
+                      <td>Male</td>
+                    </tr>
+                    <tr>
+                      <td>Birthday:</td>
+                      <td>6/28/1985</td>
+                    </tr>
+                    <tr>
+                      <td>Position:</td>
+                      <td>Sales Associate</td>
+                    </tr>
+                    <tr>
+                      <td>Department:</td>
+                      <td>Sales</td>
+                    </tr>
+                    <tr>
+                      <td>Starting Date:</td>
+                      <td>9/12/2002</td>
+                    </tr>
+                    <tr>
+                      <td>Location:</td>
+                      <td>Lockport, IL</td>
+                    </tr>
                   </tbody>
                 </table>
-              </div>
+                <table class="lists">
+                  <thead>Contact Info:</thead>
+                  <tbody>
+                    <tr>
+                      <td>E-Mail:</td>
+                      <td>fnamelname@company.org</td>
+                    </tr>
+                    <tr>
+                      <td>Phone:</td>
+                      <td>000-111-2222</td>
+                    </tr>
+                    <tr>
+                      <td>Extension:</td>
+                      <td>33</td>
+                    </tr>
+                  </tbody>
+                </table>
+            <!-- EMPLOYEE INFO ENDS -->
+          </div>
+          <!-- EMPLOYEE INFO ROW ENDS -->
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Rating History</h2>
+              <table class="lists">
+                <thead>
+                  <tr>
+                    <th class="toggle" width="16"></th>
+                    <th class="type-centeralign">Date</th>
+                    <th class="type-centeralign">Potential Rating</th>
+                    <th class="type-centeralign">Performance Rating</th>
+                    <th class="type-centeralign">Comments</th>
+                    <th class="type-centeralign">Manager ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="toggle">
+                      <i class="icon-expand">
+                        </i>
+                    </td>
+                    <td class="h2 type-centeralign">7/12/2002</td>
+                    <td class="h2 type-centeralign">8</td>
+                    <td class="h2 type-centeralign">8</td>
+                    <td class="h2 type-centeralign">afjsdlfjsfs</td>
+                    <td class="h2 type-centeralign">35</td>
+                  </tr>
+                  <tr class="details"></tr><!--TODO I think this is supposed to be the dropdown-->
+                </tbody>
+              </table>
             </div>
             <!-- PROFILE-GRAPH ENDS -->
           </div>
           <!-- PROFILE-GRAPH ROW ENDS -->
+        </div>
+        <!--Graph Column-->
+        <div class="col-xs-6">
+          <!-- PROFILE-GRAPH STARTS -->
+          <div id="profile-graph" class="col-xs-12">
+            <img id="graph" src="images/profile-graph.png" alt="graph" style="height:220px;width:220px;">
+          </div>
         </div>
         <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
       </div>
@@ -289,11 +308,11 @@
           <h2 id="connect-p">CONNECT <span>with</span> US</h2>
         </div>
         <div id="soc-media" class="col-xs-8">
-          <img class="soc-med-icons" src="facebook.png" alt="facebook logo">
-          <img class="soc-med-icons" src="linkedin.png" alt="linkedin logo">
-          <img class="soc-med-icons" src="google+.png" alt="google plus logo">
-          <img class="soc-med-icons" src="twitter.png" alt="twitter logo">
-          <img class="soc-med-icons" src="youtube.png" alt="youtube logo">
+          <img class="soc-med-icons" src="images/facebook.png" alt="facebook logo">
+          <img class="soc-med-icons" src="images/linkedin.png" alt="linkedin logo">
+          <img class="soc-med-icons" src="images/google+.png" alt="google plus logo">
+          <img class="soc-med-icons" src="images/twitter.png" alt="twitter logo">
+          <img class="soc-med-icons" src="images/youtube.png" alt="youtube logo">
         </div>
       </div>
     </footer>

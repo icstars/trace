@@ -58,7 +58,8 @@ cursor: zoom-in;
  cursor: zoom-out;
 }
 
-.dataPoint{/*colors are set for contrast, feel free to change*/
+/*TODO change these colors*/
+.dataPoint{
  background-color: #000 !important;
  border: #000 solid 2px !important;
 }
