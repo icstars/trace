@@ -164,66 +164,67 @@
         </div>
         <!-- GRIDTABS START -->
         <div id="profile-gridtabs" class="button-group col-xs-4">
-          <button class="button secondary outline gridtabs icon-save"> SAVE</button>
-          <button class="button secondary outline gridtabs icon-edit"> EDIT</button>
-          <button class="button secondary outline gridtabs icon-save"> RATE</button>
-          <button class="button secondary outline gridtabs icon-reply"> SHARE</button>
+          <button id="save-btn" class="button secondary outline gridtabs icon-save"></button>
+          <button id="edit-btn" class="button secondary outline gridtabs icon-edit"></button>
+          <button id="rate-btn" class="button secondary outline gridtabs icon-star"></button>
+          <button id="share-btn" class="button secondary outline gridtabs icon-reply"></button>
+          <button id="delete-btn" class="button secondary outline gridtabs icon-trash"></button>
         </div>
         <!-- GRIDTABS ENDS -->
         <div class="col-xs-6">
           <!-- EMPLOYEE INFO ROW STARTS -->
           <div id="employee-info" class="col-xs-12">
             <!-- EMPLOYEE INFO STARTS -->
-                <table class="lists">
-                  <thead>General:</thead>
-                  <tbody>
-                    <tr>
-                      <td>Employee ID:</td>
-                      <td>000</td>
-                    </tr>
-                    <tr>
-                      <td>Gender:</td>
-                      <td>Male</td>
-                    </tr>
-                    <tr>
-                      <td>Birthday:</td>
-                      <td>6/28/1985</td>
-                    </tr>
-                    <tr>
-                      <td>Position:</td>
-                      <td>Sales Associate</td>
-                    </tr>
-                    <tr>
-                      <td>Department:</td>
-                      <td>Sales</td>
-                    </tr>
-                    <tr>
-                      <td>Starting Date:</td>
-                      <td>9/12/2002</td>
-                    </tr>
-                    <tr>
-                      <td>Location:</td>
-                      <td>Lockport, IL</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="lists">
-                  <thead>Contact Info:</thead>
-                  <tbody>
-                    <tr>
-                      <td>E-Mail:</td>
-                      <td>fnamelname@company.org</td>
-                    </tr>
-                    <tr>
-                      <td>Phone:</td>
-                      <td>000-111-2222</td>
-                    </tr>
-                    <tr>
-                      <td>Extension:</td>
-                      <td>33</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <table class="lists fixed-layout">
+              <thead>General:</thead>
+              <tbody>
+                <tr>
+                  <td>Employee ID:</td>
+                  <td id="id_field">000</td>
+                </tr>
+                <tr>
+                  <td>Gender:</td>
+                  <td id="gender_field">Male</td>
+                </tr>
+                <tr>
+                  <td>Birthday:</td>
+                  <td id="bday_field">6/28/1985</td>
+                </tr>
+                <tr>
+                  <td>Position:</td>
+                  <td id="pos_field">Sales Associate</td>
+                </tr>
+                <tr>
+                  <td>Department:</td>
+                  <td id="dep_field">Sales</td>
+                </tr>
+                <tr>
+                  <td>Starting Date:</td>
+                  <td id="startDate_field">9/12/2002</td>
+                </tr>
+                <tr>
+                  <td>Location:</td>
+                  <td id="location_field">Lockport, IL</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="lists">
+              <thead>Contact Info:</thead>
+              <tbody>
+                <tr>
+                  <td>E-Mail:</td>
+                  <td id="email_field">fnamelname@company.org</td>
+                </tr>
+                <tr>
+                  <td>Phone:</td>
+                  <td id="phone_field">000-111-2222</td>
+                </tr>
+                <tr>
+                  <td>Extension:</td>
+                  <td id="ext_field">33</td>
+                </tr>
+              </tbody>
+            </table>
             <!-- EMPLOYEE INFO ENDS -->
           </div>
           <!-- EMPLOYEE INFO ROW ENDS -->
@@ -235,25 +236,23 @@
                   <tr>
                     <th class="toggle" width="16"></th>
                     <th class="type-centeralign">Date</th>
-                    <th class="type-centeralign">Potential Rating</th>
-                    <th class="type-centeralign">Performance Rating</th>
+                    <th class="type-centeralign">Potential</th>
+                    <th class="type-centeralign">Performance</th>
                     <th class="type-centeralign">Comments</th>
                     <th class="type-centeralign">Manager ID</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="ratings-history-list">
                   <tr>
-                    <td class="toggle">
-                      <i class="icon-expand">
-                        </i>
-                    </td>
+                    <td class="toggle"><i class="icon-expand"></i></td>
                     <td class="h2 type-centeralign">7/12/2002</td>
                     <td class="h2 type-centeralign">8</td>
                     <td class="h2 type-centeralign">8</td>
                     <td class="h2 type-centeralign">afjsdlfjsfs</td>
                     <td class="h2 type-centeralign">35</td>
                   </tr>
-                  <tr class="details"></tr><!--TODO I think this is supposed to be the dropdown-->
+                  <!-- <tr class="details"></tr> -->
+                  <!--TODO I think this is supposed to be the dropdown-->
                 </tbody>
               </table>
             </div>
