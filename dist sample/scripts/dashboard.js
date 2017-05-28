@@ -20,15 +20,18 @@ $(document).ready(function() {
     })
 
   //KEEPS GRID IN SHAPE AS WINDOW RESIZES
+
   // $('#side-bar-list').css('height', $('#main-section-wrap'));
+  //TODO adjust this?
+
   $('.gridbox').css('height', $('.gridbox').width());
-  $('#x-axis').css('width', $('.gc').width() * 3);
-  $('#y-axis').css('height', $('.gc').width() * 3);
+  $('#x-axis').css('width', $('#grid').width());
+  $('#y-axis').css('height', $('#grid').height());
   $(window).resize(function() {
     // $('#side-bar-list').css('height', $('#main-section-wrap'));
     $('.gridbox').css('height', $('.gridbox').width());
-    $('#x-axis').css('width', $('.gc').width() * 3);
-    $('#y-axis').css('height', $('.gc').width() * 3);
+    $('#x-axis').css('width', $('#grid').width());
+    $('#y-axis').css('height', $('#grid').height());
   })
 
 

@@ -218,7 +218,7 @@
 #grid-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  margin-top:2%;
 }
 
 #grid {/*grid column*/
