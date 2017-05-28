@@ -20,8 +20,15 @@
   <link rel="shortcut icon" href="citrus/images/favicon.png">
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dashboard-test.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/main.js"></script>
   <script src="scripts/dashboard.js"></script>
 </head>
 
@@ -41,7 +48,7 @@
       </div> -->
       <div class="c-header-logo">
         <!--STAND-IN LOGO-->
-        <img src="citrus/images/apple-logo.png" alt="logo" style="width: 50px; height: 50px">
+        <img src="images/apple-logo.png" alt="logo" style="width: 50px; height: 50px">
       </div>
       <span class="c-header-searchfield">
         <input id="searchfield" placeholder="Search for People &amp; Co IDs">
@@ -190,25 +197,29 @@
     <!--ENDS CONTENTTITLE ROW-->
     <div class="gutter col-xs-1 padding-none"></div>
     <div id="content-wrapper" class="row col-xs-10">
-      <div id="list-searchbar" class="col-xs-3">
+      <div id="side-section" class="col-xs-3 padding-none border-right border-right-xs-none">
         <h3 id="side-bar-title">Employees</h3>
+        <div id="toolbar" class="button-group col-xs-12">
+          <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
+          <button id="profile-btn" class="button disabled icon-group"></button>
+          <button id="checklist-btn" class="button icon-checklist"></button>
+          <button id="reset-btn" class="button disabled icon-reset"></button>
+        </div>
         <div id="side-bar" class="col-xs-3 padding-none">
-          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12"></ul>
+          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12">
+          </ul>
         </div>
       </div>
 
       <div class="col-xs-9 padding-none">
-        <div class="col-xs-12">
-          <div id="toolbar" class="col-xs-12">
-            <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button> -->
-            <button class="button icon-checkmark-circle"></button>
-            <button class="button icon-checklist"></button>
-            <!--make this a switch-->
-            <button class="button icon-profile"></button>
-            <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-forward"></i></button> -->
-          </div>
+        <div id="gridtabs" class="button-group col-xs-12">
+          <button id="" class="button outline col-xs-3">Sales Associate</button>
+          <button id="" class="button outline col-xs-3">Cashier</button>
+          <button id="" class="button outline col-xs-3">Freight</button>
+          <button class="button secondary icon-plus-circle"></button>
         </div>
         <!--START GRID-->
+        <div id="main-section-wrap" class="row">
         <div id="grid-wrapper" class="col-xs-12">
           <div id="y-axis" class="axis">
             <span id="y4">10</span>
@@ -216,7 +227,7 @@
             <span id="y2">4</span>
             <span id="y1">1</span>
           </div>
-          <div id="grid" class="row col-xs-8">
+          <div id="grid" class="row col-xs-10">
             <div class="col-xs-4 padding-none gc">
               <div id="gb6" class="gridbox c1 r1 yellow">
                 <a id="dp6" class="button count dataPoint"></a>
@@ -259,6 +270,7 @@
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <!--END GRID-->

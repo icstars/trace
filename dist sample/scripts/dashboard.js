@@ -10,19 +10,32 @@ $(document).ready(function() {
     employees[emp._id] = emp;
   }
 
+
+
+  // resizes column to same height as gridbox
+    $('#side-bar-list').css('height', $('.gridbox').width() *3);
+    $(window).resize(function() {
+      $('#side-bar-list').css('height', $('.gridbox').width() *3);
+
+    })
+
   //KEEPS GRID IN SHAPE AS WINDOW RESIZES
+  // $('#side-bar-list').css('height', $('#main-section-wrap'));
   $('.gridbox').css('height', $('.gridbox').width());
   $('#x-axis').css('width', $('.gc').width() * 3);
   $('#y-axis').css('height', $('.gc').width() * 3);
   $(window).resize(function() {
+    // $('#side-bar-list').css('height', $('#main-section-wrap'));
     $('.gridbox').css('height', $('.gridbox').width());
     $('#x-axis').css('width', $('.gc').width() * 3);
     $('#y-axis').css('height', $('.gc').width() * 3);
   })
 
+
+
   //Select dataPoint
   $('.dataPoint').click(function() {
-    //gridbox ID WARNNIG: will break if gbIDs are greater than 9
+    //gridbox ID WARNING: will break if gbIDs are greater than 9
     var gbID = parseInt($(this).attr('id').slice(-1));
     $("#side-bar-list li").each(function() {
       //$.inArray(value, array) returns index of value in array or -1 if not found
