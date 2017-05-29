@@ -1,4 +1,4 @@
-/**********************************GRIDTABS START***************************************/
+  /**********************************GRIDTABS START***************************************/
 #gridtabs {
   height: 54px;
   background: #666666;
@@ -8,21 +8,32 @@
 
 button.button.outline {
   height: 54px;
+  width: 20%;
   border: none;
-  /*color: orange !important;*/
   color: white !important;
-  /*border-left: solid 1px orange !important;*/
   border-left: solid 1px #757575 !important;
 }
 
 #gridtabs-add {
   height: 54px;
+  width: 19%;
   background: transparent;
   border: none;
   color: orange !important;
   /*border-left: solid 1px orange;*/
   border-left: solid 1px #757575 !important;
+  border-right: solid 1px #757575 !important;
 }
+
+button.button.outline:hover, #gridtabs-add:hover {
+  background-color: #E88924 !important;
+  color: white !important;
+}
+
+ button.button.outline:active, #gridtabs-add:active {
+   background-color: #E88924 !important;/*talk to dan about active state selector*/
+
+ }
 
 /********************************GRIDTABS END***************************************/
 

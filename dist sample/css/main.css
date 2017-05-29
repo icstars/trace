@@ -31,15 +31,18 @@ body, html, {
 }
 
 .c-header {
-  margin: 0 !important;
-  background: white;
-  padding-top: 2%;
+  /*margin: 0 !important;
+  background: white;*/
+  /*padding-top: 2%;*/
 }
 
-.c-header-bar.c-header-alert {
+#logo-header{
+/*.c-header-bar.c-header-alert {*/
   /*background: #E88924;*/
   background: white;
-  height: 65px;
+  /*height: 65px; experimenting with structure*/
+  height: 150px;
+  text-align: center;
 }
 
 span.c-header-searchbar {
@@ -47,16 +50,21 @@ span.c-header-searchbar {
   margin-right: -10px;
 }
 
-input#searchfield {
+/*input#searchfield {
   width: 234px;
   height: 33px;
   margin: -8px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAMAAACT+SJTAAAAGXRFW…3/qj1rRrdeDb6xcPSqlcEvJS48Gf1R5q9p5sGd07cLMAA/tAFvKNUmxgAAAABJRU5ErkJggg==) repeat-x;
   padding-left: 0px;
-}
+}*/
 
 .c-header-menu {
-  background: #666666;
+  background: #E88924;
+}
+
+#nav-bar {
+  background: #E88924;
+  border-bottom: 2px solid #666666;
 }
 /*******************************CONTENT-AREA**********************************/
 .content-area {
@@ -99,7 +107,7 @@ h2.type-contenttitle {
 
 /***********************************SIDEBAR***********************************/
 #side-section {
-  border-right: solid slategray 1px;
+  border-right: solid transparent 1px;
   padding:0;
   background: #666666;
 }
@@ -134,12 +142,8 @@ h2.type-contenttitle {
   align-items: center;
   flex-flow: row nowrap;
   padding-left: 10px;
-  /*border-bottom: chocolate 1px solid;*/
   border-bottom: solid 1px #757575;
   background: #666666;
-  /*-moz-box-shadow: inset 0 0 10px #FF6208;
-  -webkit-box-shadow: inset 0 0 10px #FF6208;
-  box-shadow: inset -5px 0 10px #FF6208;*/
 }
 
 #side-bar-list li span {
@@ -149,23 +153,14 @@ h2.type-contenttitle {
 
 #side-bar-list li:hover, #side-bar-list li.selected{
   border-bottom: #333333 1px solid;
-  /*background-color: #666666 !important;*/
-  /*background-color: #515151 !important;*/
   background-color: #474747 !important;
-  /*-moz-box-shadow: inset 0 0 10px #2removed for aesthetics/;
-
-  -webkit-box-shadow: inset 0 0 10px #202020;removed for aesthetics*/
-  /*box-shadow: inset 0 0 10px #FF6208; removed for aesthet*/
-  /*box-shadow: inset -5px 0 10px #202020;removed for aesthetics*/
 }
 
 #side-bar-list li:active{
   border-bottom: #333333 1px solid;
-  /*background-color: #454545 !important;*/
   background-color: #474747 !important;
   -moz-box-shadow: inset 0 0 10px #202020;
   -webkit-box-shadow: inset 0 0 10px #202020;
-  /*box-shadow: inset 0 0 10px #FF6208; removed for aesthetics*/
   box-shadow: inset -5px 0 10px #202020;
 }
 
