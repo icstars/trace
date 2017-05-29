@@ -1,0 +1,85 @@
+/***********************************evaluation section:directhires-section:START***********************************/
+
+#side-nav.col-xs-3 {
+  height: 450px;
+  overflow-y: scroll;
+}
+h2#side-nav-header {
+}
+.side-nav li a:hover {
+    background-color: #1c8dc8;
+    border-color: #1c8dc8;
+    color: #fff;
+}
+.side-nav li a:active {
+
+}
+
+/****************************************evaluation section:START**********************************************/
+#eval-progressbar.col-xs-9 {
+  width:70%;
+  margin: 5% 2% 0 2%;
+}
+.eval-progressbar div {
+  padding:0;
+}
+
+.eval-progressbar div span {
+  width:50%;
+}
+.form-group.col-xs-9 {
+  width: 65%;
+  margin: 5% 0 -5% 3%;
+}
+
+#submit-button {
+  float:right;
+}
+
+#eval-section {
+  padding: 2%;
+}
+
+.row.eval-categories {
+  margin:auto;
+}
+
+.row.eval-headers {
+  margin: auto;
+  margin-top: 5%;
+}
+
+h2.col-xs-12.eval-headers {
+  padding: 0;
+}
+
+#eval-content-area.row.content-area {
+  border-radius: 1%;
+  margin-top: 2%;
+  padding: 5% 0 5% 0;
+}
+
+#performance.eval-progressbar, #potential.eval-progressbar {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  padding: 0;
+}
+
+.bar.data.rounded {
+  padding: 0;
+  width:5%;
+  margin-right: -3%;
+}
+
+a.button.count {
+  background: #E88924 !important;
+}
+
+.bar.data .progress {
+  background: transparent !important;
+}
+
+span.progress {
+  background: #E88924 !important;
+}
