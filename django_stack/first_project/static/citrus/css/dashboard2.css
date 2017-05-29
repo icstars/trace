@@ -1,0 +1,173 @@
+body, html, {
+  height:100%;
+}
+
+
+/**************************HEADER**************************************/
+
+.c-impersonation-bar {
+  background: #E88924 !important;
+  /*height:75px;*/
+  /* fallback */
+  /*background: url(images/linear_bg_2.png);*/
+  background-repeat: repeat-x;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0%, 100%, from(#1a82f7), to(#2F2727));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #2F2727, #1a82f7);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #2F2727, #1a82f7);
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #2F2727, #1a82f7);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #2F2727, #1a82f7);
+}
+
+.c-header {
+  margin: 0 !important;
+  background: white;
+  padding-top: 2%;
+}
+
+.c-header-bar.c-header-alert {
+  /*background: #E88924;*/
+  background: white;
+  height: 65px;
+}
+
+span.c-header-searchbar {
+  padding-top: 0;
+  margin-right: -10px;
+}
+
+input#searchfield {
+  width: 234px;
+  height: 33px;
+  margin: -8px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAMAAACT+SJTAAAAGXRFW…3/qj1rRrdeDb6xcPSqlcEvJS48Gf1R5q9p5sGd07cLMAA/tAFvKNUmxgAAAABJRU5ErkJggg==) repeat-x;
+  padding-left: 0px;
+}
+
+
+/*****************************GRIDTABS************************************/
+
+#gridtabs.button-group.col-xs-12 {
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  border: #666666 !important;
+  /*color:white !important;*/
+}
+/*GRIDTABS-ARROWS*/
+button.button.secondary.outline.icon.gridtabs-arrows {
+  border-color: #666666 !important;
+  color: white;
+  background-color: grey;
+}
+
+button.gridtabs.button.secondary.outline {
+  border-color: #666666;
+  width: 25%;
+  color: white;
+  background-color: grey;
+}
+
+button.gridtabs.button.secondary.outline:hover {
+  /*background-color: grey !important;*/
+  background-color: #E88924;
+  border-color: #666666;
+  color: white !important;
+}
+
+button.gridtabs.button.secondary.outline:active {
+  background-color: #E88924 !important;
+  /*color:black !important;*/
+}
+
+i.icon-back, i.icon-forward {
+  color: white;
+  background-color: grey;
+}
+
+i.icon-back:hover, i.icon-forward:hover{
+	background-color: #E88924 !important;
+}
+/*************************GIRDTABS END***************************/
+
+/***********************************SIDEBAR***********************************/
+
+ul#side-bar-list.side-nav.hidden-xs-animated {
+  overflow-y: auto;
+  /*background: chocolate;*/
+  border: lightgray solid 1px;
+}
+
+h2#side-bar-header {
+  padding-bottom: 5%;
+}
+
+#side-bar.col.xs-3 {
+  padding: 3%;
+  background: #505050;
+}
+
+#side-bar-list li {
+  /*-moz-box-shadow:    inset 0 0 8px #000000;
+   -webkit-box-shadow: inset 0 0 8px #000000;
+   box-shadow:         inset 0 0  8px #000000;*/
+  border-bottom: lightgray 1px solid;
+}
+
+#side-bar-list li a {
+  /*text-decoration: none;
+  background: blue;*/
+  /*color: antiquewhite !important;*/
+}
+
+#side-bar-list li a:hover, #side-bar-list li a:active{
+  background-color: grey !important;
+}
+
+#side-bar-list li a:hover {
+  border-color: #1c8dc8;
+  color: black !important;
+}
+/***********************************SIDEBAR END***********************************/
+
+/**********************************GIRD***********************************/
+
+
+/*#grid a div {
+  padding-top:20%;
+  /*height: 20px;
+  width: 20px;*/
+/*}*/
+
+/*#grid.col-xs-9 {
+  padding-top:3%;*/
+/*background: #505050;*/
+/*}*/
+
+#grid {
+  height: 620px;
+  /* width: 620px; */
+  /* height: 70%; */
+	/*width: 70%;*/
+	padding:0;
+	overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: linear-gradient(to top right, red, #FF5511, yellow, green, blue);
+  /* Standard syntax */
+}
+
+.gridbox {
+  /* height: 206.3px; */
+  /* width: 206.3px; */
+  /*width:33.33%;percentages dont seem to work
+	height:33.33%;*/
+  flex: 1 1 auto;
+  outline: 1px black solid;
+}
+/***********************************GRID END***********************************/

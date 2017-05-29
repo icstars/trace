@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,23 +12,24 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Paytential</title>
   <!-- CITRUS Styles -->
-  <link rel="stylesheet" href="citrus/css/citrus.all.min.css">
-  <link rel="stylesheet" href="citrus/css/citrus.open-sans.min.css">
-  <link rel="stylesheet" href="citrus/css/citrus.icon-font.min.css">
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.all.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.open-sans.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.icon-font.min.css" %}"/>
   <!-- Global Header -->
-  <link rel="stylesheet" href="citrus/css/components/citrus.header.min.css">
-  <link rel="stylesheet" href="citrus/css/components/citrus.status-bar.min.css">
-  <link rel="shortcut icon" href="citrus/images/favicon.png">
-  <script src="citrus/scripts/libs/modernizr.js"></script>
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.header.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.status-bar.min.css" %}"/>
+  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
+  <script src="{% static "citrus/scripts/libs/modernizr.js" %}"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/dashboard.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
-  <script src="scripts/jquery-3.2.1.min.js"></script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/dashboard.js"></script>
+  <script src="{% static "scripts/jquery-3.2.1.min.js" %}"></script>
+  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
+  <script src="{% static "scripts/main.js" %}"></script>
+
+  <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
+  <script src="{% static "scripts/dashboard.js" %}"></script>
 </head>
 
 <body class="citrus">
@@ -37,16 +39,9 @@
   <!-- start of logo banner -->
   <div class="c-header">
     <div class="c-header-bar c-header-alert">
-      <!-- <div class="c-header-company-id">
-        PAYLOCITY CORPORATION [2000] <a href="#"><i class="icon-settings icon-bold"></i></a>
-        <ul class="c-header-menu-dropdown">
-          <li>Web Time</li>
-          <li>Revenue ($)</li>
-        </ul>
-      </div> -->
       <div class="c-header-logo">
         <!--STAND-IN LOGO-->
-        <img src="images/apple-logo.png" alt="logo" style="width: 50px; height: 50px">
+        <img src="{% static "images/apple-logo.png" %}" alt="logo" style="width: 50px; height: 50px">
       </div>
       <span class="c-header-searchfield">
         <input id="searchfield" placeholder="Search for People &amp; Co IDs">
@@ -156,6 +151,7 @@
         </ul>
       </div>
     </div>
+    <!--GRID START-->
       <div class="col-xs-9 border-left border-fix">
         <div class="row">
           <div class="col-xs-12">
@@ -222,6 +218,7 @@
           </div>
         </div>
       </div>
+      <!--GRID END-->
     </div>
     <div class="gutter col-xs-1 padding-none"></div></div>
   <!--end of content-area-->
@@ -250,7 +247,7 @@
           <li class="footer-list-items">TINA RODRIGUEZ</li>
         </ul>
       </div>
-      <!-- </div><!-FOOTER INFO SECTION END -->
+    <!--FOOTER INFO SECTION END -->
     </div>
 
     <!--  CONNECT SECTION START -->
@@ -260,11 +257,11 @@
         <h2 id="connect-p">CONNECT <span>with</span> US</h2>
       </div>
       <div id="soc-media" class="col-xs-8">
-        <img class="soc-med-icons" src="facebook.png" alt="facebook logo">
-        <img class="soc-med-icons" src="linkedin.png" alt="linkedin logo">
-        <img class="soc-med-icons" src="google+.png" alt="google plus logo">
-        <img class="soc-med-icons" src="twitter.png" alt="twitter logo">
-        <img class="soc-med-icons" src="youtube.png" alt="youtube logo">
+        <img class="soc-med-icons" src="static/images/facebook.png" alt="facebook logo">
+        <img class="soc-med-icons" src="static/images/linkedin.png" alt="linkedin logo">
+        <img class="soc-med-icons" src="static/images/google+.png" alt="google plus logo">
+        <img class="soc-med-icons" src="static/images/twitter.png" alt="twitter logo">
+        <img class="soc-med-icons" src="static/images/youtube.png" alt="youtube logo">
       </div>
     </div>
     <!--  CONNECT SECTION END-->
