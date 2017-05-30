@@ -20,11 +20,19 @@
   <link rel="shortcut icon" href="citrus/images/favicon.png">
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
+  <link rel="stylesheet" href="css/profile-test.css">
+  <link rel="stylesheet" href="css/dashboard-test.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/evaluation.css">
+  <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
+  <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/main.js"></script>
+  <script src="scripts/dashboard.js"></script>
 </head>
+
 
 <body class="citrus">
   <!-- if (Model.IsImpersonating) -->
@@ -32,7 +40,10 @@
   <!-- end if -->
   <!-- start of logo banner -->
   <div class="c-header">
-
+    <div id="logo-header" class="c-header-logo">
+      <!--STAND-IN LOGO-->
+      <img src="images/apple-logo.png" alt="logo" style="width: 150px; height: 150px">
+    </div>
     <div id="nav-bar" class="c-header-bar c-header-alert">
       <div class="c-header-notifications">
         <span>HELP</span>
@@ -127,30 +138,22 @@
         </ul>
       </div>
     </div>
-    <div id="logo-header" class="c-header-logo">
-      <!--STAND-IN LOGO-->
-      <img src="images/apple-logo.png" alt="logo" style="width: 150px; height: 150px">
-    </div>
   </div>
-  <!-- T.R.A.C.E. CODE STARTS HERE -->
+  <!-- T.R.A.C.E. CODE START -->
   <div class="content-area">
     <!-- <div class="row">
-      <h2 class="type-contenttitle col-xs-12">Evaluation</h2>
-      <a href="dashboard.html"><button id="back-page-btn" class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button></a>
+      <h2 class="type-contenttitle">Dashboard</h2>
     </div> -->
     <!--ENDS CONTENTTITLE ROW-->
     <div class="gutter col-xs-1 padding-none"></div>
-    <div id="content-wrapper" class="row col-xs-10 padding-none">
-      <!-- COLUMN WITH SIDEBAR CONTENTS STARTS -->
-      <div id="side-section" class="col-xs-3">
+    <div id="content-wrapper" class="row col-xs-10">
+      <div id="side-section" class="col-xs-3 padding-none border-right border-right-xs-none">
         <h3 id="side-bar-title">Employees</h3>
-        <div id="toolbar" class="col-xs-12">
-          <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button> -->
+        <div id="toolbar" class="button-group col-xs-12">
           <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
           <button id="profile-btn" class="button disabled icon-group"></button>
           <button id="checklist-btn" class="button icon-checklist"></button>
-          <button id="reset-btn" class="button disabled icon-x-circle"></button>
-          <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-forward"></i></button> -->
+          <button id="reset-btn" class="button disabled icon-reset"></button>
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
           <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12">
@@ -158,114 +161,142 @@
         </div>
       </div>
 
-      <!-- COLUMN WITH EVALUATION ELEMENTS STARTS -->
-      <div id="eval-section" class="col-xs-9 padding-none">
-        <div id="eval-content-area" class="col-xs-12">
-          <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" -->
-          <div id="eval-content-area" id="" class="row content-area">
-            <!--START EVALUATION SECTION-->
-            <div id="eval-progressbar" class="col-xs-12">
-              <!-- performance evaluation bar:START -->
-              <div class="row eval-categories">
-                <h2 class="col-xs-12 eval-headers">Performance</h2>
-                <!-- <p>Performance Standard Rule</p> -->
-                <div id="performance" class="eval-progressbar col-xs-12">
-                  <!-- low -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">1</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">2</a></span>
-                  </div>
-                  <!-- medium -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">3</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">4</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">5</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">6</a></span>
-                  </div>
-                  <!-- high -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">7</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">8</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">9</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">10</a></span>
-                  </div>
-                </div>
-              </div>
-              <!-- potential evaluation bar:START -->
-              <div class="row eval-headers">
-                <!-- <div id="shapes"> -->
-
-
-                <h2 class="col-xs-12 eval-headers">Potential</h2>
-                <!-- <p>Potential Standard Rule</p> -->
-                <!-- </div> -->
-                <div id="potential" class="eval-progressbar col-xs-12">
-
-                  <!-- low -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">1</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">2</a></span>
-                  </div>
-                  <!-- medium -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">3</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">4</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">5</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">6</a></span>
-                  </div>
-                  <!-- high -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">7</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">8</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">9</a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="button count">10</a></span>
-                  </div>
-                </div>
-              </div>
+      <!-- <div class="col-xs-9 padding-none"> -->
+        <!-- <div id="gridtabs" class="button-group col-xs-12"> -->
+          <!-- <div class="gutter padding-none col-xs-1"></div> -->
+          <!-- <button id="save-btn" class="button secondary outline gridtabs icon-save col-xs-2"></button>
+          <button id="edit-btn" class="button secondary outline gridtabs icon-edit col-xs-2"></button>
+          <button id="rate-btn" class="button secondary outline gridtabs icon-star col-xs-2"></button>
+          <button id="share-btn" class="button secondary outline gridtabs icon-reply col-xs-2"></button>
+          <button id="delete-btn" class="button secondary outline gridtabs icon-trash col-xs-2"></button> -->
+          <!-- <div class="gutter padding-none col-xs-1"></div> -->
+        <!-- </div> -->
+      <!-- 1ST OF 2 SECTIONS OF MAIN CONTENT: SIDEBAR ELEMENTS ENDS HERE -->
+      <!-- 2ND OF 2 SECTIONS OF MAIN CONTENT: EVALUATION ELEMENTS STARTS HERE -->
+      <div class="col-xs-9 padding-none">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="col-xs-8">
+              <h2 id="profile-header" class="type-sectiontitle col-xs-12">fName lName</h2>
             </div>
-            <div class="form-group col-xs-9">
-              <label>Notes</label>
-              <textarea cols="30" rows="10"></textarea>
-            </div>
-            <div class="form-group col-xs-9">
-              <button id="submit-button" type="button" class="button size-medium">Submit</button>
+          <!-- GRIDTABS START -->
+            <div id="profile-commentsgridtabs" class="button-group col-xs-4">
+              <!-- <div class="padding-none col-xs-12"> -->
+              <!-- <div class="gutter padding-none col-xs-1"></div> -->
+              <button id="save-btn" class="button secondary outline gridtabs icon-save col-xs-2"></button>
+              <button id="edit-btn" class="button secondary outline gridtabs icon-edit col-xs-2"></button>
+              <button id="rate-btn" class="button secondary outline gridtabs icon-star col-xs-2"></button>
+              <button id="share-btn" class="button secondary outline gridtabs icon-reply col-xs-2"></button>
+              <button id="delete-btn" class="button secondary outline gridtabs icon-trash col-xs-2"></button>
+              <!-- <div class="gutter padding-none col-xs-1"></div> -->
+              <!-- </div> -->
             </div>
           </div>
         </div>
-        <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" ENDS-->
+        <!-- GRIDTABS ENDS -->
+
+        <div class="row col-xs-8">
+          <!-- EMPLOYEE INFO ROW STARTS -->
+          <div id="employee-info" class="col-xs-12">
+            <!-- EMPLOYEE INFO STARTS -->
+            <table class="lists fixed-layout">
+              <tbody>
+                <tr>
+                  <td>Employee ID:</td>
+                  <td id="id_field">000</td>
+                </tr>
+                <tr>
+                  <td>Gender:</td>
+                  <td id="gender_field">Male</td>
+                </tr>
+                <tr>
+                  <td>Birthday:</td>
+                  <td id="bday_field">6/28/1985</td>
+                </tr>
+                <tr>
+                  <td>Position:</td>
+                  <td id="pos_field">Sales Associate</td>
+                </tr>
+                <tr>
+                  <td>Department:</td>
+                  <td id="dep_field">Sales</td>
+                </tr>
+                <tr>
+                  <td>Starting Date:</td>
+                  <td id="startDate_field">9/12/2002</td>
+                </tr>
+                <tr>
+                  <td>Location:</td>
+                  <td id="location_field">Lockport, IL</td>
+                </tr>
+                <tr>
+                  <td>E-Mail:</td>
+                  <td id="email_field">fnamelname@company.org</td>
+                </tr>
+                <tr>
+                  <td>Phone:</td>
+                  <td id="phone_field">000-111-2222</td>
+                </tr>
+                <tr>
+                  <td>Extension:</td>
+                  <td id="ext_field">33</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- EMPLOYEE INFO ENDS -->
+          </div>
+
+          <!-- EMPLOYEE INFO ROW ENDS -->
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Rating History</h2>
+              <table class="lists">
+                <thead>
+                  <tr>
+                    <th class="toggle" width="16"></th>
+                    <th class="type-centeralign">Date</th>
+                    <th class="type-centeralign">Potential</th>
+                    <th class="type-centeralign">Performance</th>
+                    <th class="type-centeralign">Comments</th>
+                    <th class="type-centeralign">Manager ID</th>
+                  </tr>
+                </thead>
+                <tbody id="ratings-history-list">
+                  <tr>
+                    <td class="toggle"><i class="icon-expand"></i></td>
+                    <td class="h2 type-centeralign">7/12/2002</td>
+                    <td class="h2 type-centeralign">8</td>
+                    <td class="h2 type-centeralign">8</td>
+                    <td class="h2 type-centeralign">afjsdlfjsfs</td>
+                    <td class="h2 type-centeralign">35</td>
+                  </tr>
+                  <!-- <tr class="details"></tr> -->
+                  <!--TODO I think this is supposed to be the dropdown-->
+                </tbody>
+              </table>
+            </div>
+            <!-- PROFILE-GRAPH ENDS -->
+          </div>
+          <!-- PROFILE-GRAPH ROW ENDS -->
+        </div>
+        <!--Graph Column-->
+        <div class="col-xs-4">
+          <!-- PROFILE-GRAPH STARTS -->
+          <div id="profile-graph" class="col-xs-12">
+            <img id="graph" src="images/profile-graph.png" alt="graph" style="height:220px;width:220px;">
+          </div>
+        </div>
+        <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
       </div>
-      <!-- COLUMN WITH EVALUATION ELEMENTS ENDS -->
+      <!--CONTENT WRAPPER ENDS-->
     </div>
-    <footer class="row col-xs-12">
-      <div id="footer-info-sec" class="col-xs-12">
+    </div>
+    <!--CONTENT-AREA ENDS-->
+    <div class="gutter col-xs-1 padding-none"></div>
+    <!-- FOOTER INFO SECTION START -->
+    <footer class="col-xs-12">
+      <div id="sections" class="row">
+        <!-- <div id="footer-info-sec" class="col-xs-12"> -->
         <div id="footer-section-1" class="col-xs-6">
           <h3 id="About-us">ABOUT PAYLOCITY</h3>
           <ul class="footer-list">
@@ -286,8 +317,9 @@
             <li class="footer-list-items">TINA RODRIGUEZ</li>
           </ul>
         </div>
+        <!-- </div><!-FOOTER INFO SECTION END -->-->
       </div>
-      <!-- FOOTER INFO SECTION END -->
+
       <!--  CONNECT SECTION START -->
       <!-- <div class="row"> -->
       <div id="connect" class="row col-xs-12">
@@ -302,7 +334,6 @@
           <img class="soc-med-icons" src="images/youtube.png" alt="youtube logo">
         </div>
       </div>
-      <!--  CONNECT SECTION END-->
     </footer>
 </body>
 

@@ -1,14 +1,16 @@
   /**********************************GRIDTABS START***************************************/
 #gridtabs {
   height: 54px;
-  background: #666666;
+  /*background: #666666;*/
   text-align: center;
   margin-bottom: 0%;
+  margin-top: 6%;
 }
 
 button.button.outline {
   height: 54px;
   width: 20%;
+  background: #666666 !important;
   border: none;
   color: white !important;
   border-left: solid 1px #757575 !important;
@@ -17,7 +19,7 @@ button.button.outline {
 #gridtabs-add {
   height: 54px;
   width: 19%;
-  background: transparent;
+  background: #666666 !important;
   border: none;
   color: orange !important;
   /*border-left: solid 1px orange;*/

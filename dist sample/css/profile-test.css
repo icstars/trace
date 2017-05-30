@@ -1,0 +1,26 @@
+#profile-header {
+  border: none;
+  color: orange !important;
+}
+
+#profile-commentsgridtabs {
+  height: 54px;
+  /*background: #666666;*/
+  text-align: center;
+  margin-bottom: 0%;
+  margin-top: 1%;
+}
+
+#save-btn, #edit-btn, #rate-btn, #share-btn, #delete-btn {
+  height: 45px;
+}
+#graph {
+
+}
+thead {
+
+}
+#profile-comments {
+
+
+}
