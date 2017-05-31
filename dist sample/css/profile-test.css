@@ -1,26 +1,78 @@
-#profile-header {
+/*#header-wrapper {
+  background: #333333 !important;
+}*/
+
+/*#logo-header {
+  height: 175px;
+  background: #333333 !important;
+  margin: 0 0 2% 0;
+}*/
+
+/*#profile-header {
   border: none;
   color: orange !important;
-}
+}*/
+
+/*#img-logo {
+  border: solid 2px orange;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  margin: 2% 0 0 0;
+}*/
 
 #profile-commentsgridtabs {
-  height: 54px;
-  /*background: #666666;*/
+  /*height: 54px;
+  background: #666666;
   text-align: center;
-  margin-bottom: 0%;
+  margin-bottom: 0%;*/
   margin-top: 1%;
+}
+
+button.button.outline {
+  /*height: 54px;
+  width: 20%;
+  background: #757575 !important;
+  border: none;
+  color: white !important;
+  border-left: solid 1px #757575 !important;*/
 }
 
 #save-btn, #edit-btn, #rate-btn, #share-btn, #delete-btn {
   height: 45px;
+  /*height: 54px;*/
+  width: 20%;
+  background: #666666 !important;
+  border: none;
+  color: white !important;
+  border-left: solid 1px #757575 !important;
 }
+
+#profile-header {
+  color: orange;
+  border: none;
+}
+
 #graph {
 
 }
+table {
+  margin: 10% 0 0 5%;
+}
+
+caption{
+  font-size: 1.857rem;
+  color: #E88924;
+  text-align: -webkit-left;
+  margin: 0 0 0 3%;
+}
+
 thead {
 
 }
-#profile-comments {
-
-
-}
+/*.ratings-comments{
+ white-space: nowrap;
+ overflow: hidden;
+    text-overflow: ellipsis;*/
+  /*text-overflow: "…";*/
+/*}*/

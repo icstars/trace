@@ -63,7 +63,18 @@ $(document).ready(function() {
   var populateRatings = function(endex){
     $('#ratings-history-list').empty();
     for (var i in employees[endex].ratings) {
-      $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='h2 type-centeralign'>"+employees[endex].ratings[i].date+"</td><td class='h2 type-centeralign'>"+employees[endex].ratings[i].potential+"</td><td class='h2 type-centeralign'>"+employees[endex].ratings[i].performance+"</td><td class='h2 type-centeralign'>"+employees[endex].ratings[i].notes+"</td><td class='h2 type-centeralign'>"+employees[endex].refersTo+"</td></tr>");
+      $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employees[endex].ratings[i].date+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].potential+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].performance+"</td><td class='type-centeralign ratings-comments'>"+employees[endex].ratings[i].notes+"</td><td class='type-centeralign'>"+employees[endex].refersTo+"</td></tr>");
     }
   }
+
+// function for ellipsis??
+//   function shorten(text, maxLength) {
+// var ret = text;
+// if (ret.length > maxLength) {
+// ret = ret.substr(0,maxLength-3) + “…”;
+// }
+// return ret;
+// }
+
+
 });
