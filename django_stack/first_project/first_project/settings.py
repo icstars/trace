@@ -78,9 +78,11 @@ WSGI_APPLICATION = 'first_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'USER': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'PASSWORD': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'trace_project_db',
+        'USER': 'root',
+        'PASSWORD': 'teamTraceProject38',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
