@@ -56,23 +56,31 @@ button.button.outline {
 #graph {
 
 }
+
+#ratings-table-section {
+ display: flow-root;
+}
+
+#ratings-content-area {
+  padding-left: 2%;
+  border: none;
+}
+
+#ratings-header {
+  padding-left: 2%;
+}
+
 table {
   margin: 10% 0 0 5%;
 }
 
-caption{
+/*caption{
   font-size: 1.857rem;
   color: #E88924;
   text-align: -webkit-left;
   margin: 0 0 0 3%;
-}
+}*/
 
 thead {
 
 }
-/*.ratings-comments{
- white-space: nowrap;
- overflow: hidden;
-    text-overflow: ellipsis;*/
-  /*text-overflow: "…";*/
-/*}*/
