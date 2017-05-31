@@ -67,7 +67,13 @@ $(document).ready(function() {
     }
   }
 
-// function for ellipsis??
+  $('#side-bar-list').css('height', $('#profile-maincontent-section').width());
+  $(window).resize(function() {
+    $('#side-bar-list').css('height', $('#profile-maincontent-section').width());
+  })
+
+
+// function for ellipsis for comments with table??
 //   function shorten(text, maxLength) {
 // var ret = text;
 // if (ret.length > maxLength) {

@@ -21,6 +21,10 @@
   margin: 2% 0 0 0;
 }*/
 
+#profile-maincontent-section {
+  height: 450px;
+}
+
 #profile-commentsgridtabs {
   /*height: 54px;
   background: #666666;
