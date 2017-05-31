@@ -56,10 +56,23 @@ button.button.outline {
 #graph {
 
 }
+table {
+  margin: 10% 0 0 5%;
+}
+
+caption{
+  font-size: 1.857rem;
+  color: #E88924;
+  text-align: -webkit-left;
+  margin: 0 0 0 3%;
+}
+
 thead {
 
 }
-#profile-comments {
-
-
-}
+/*.ratings-comments{
+ white-space: nowrap;
+ overflow: hidden;
+    text-overflow: ellipsis;*/
+  /*text-overflow: "…";*/
+/*}*/
