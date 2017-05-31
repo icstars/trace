@@ -63,7 +63,7 @@ $(document).ready(function() {
   var populateRatings = function(endex){
     $('#ratings-history-list').empty();
     for (var i in employees[endex].ratings) {
-      $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employees[endex].ratings[i].date+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].potential+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].performance+"</td><td class='type-centeralign ratings-comments'>"+employees[endex].ratings[i].notes+"</td><td class='type-centeralign'>"+employees[endex].refersTo+"</td></tr>");
+      $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employees[endex].ratings[i].date+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].potential+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].performance+"</td><td class='ratings-comments'>"+employees[endex].ratings[i].notes+"</td><td class='type-centeralign'>"+employees[endex].refersTo+"</td></tr>");
     }
   }
 
