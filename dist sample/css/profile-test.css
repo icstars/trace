@@ -25,6 +25,10 @@
   height: 450px;
 }
 
+#emp-info-and-graph {
+  margin-bottom: 3%;
+}
+
 #profile-commentsgridtabs {
   /*height: 54px;
   background: #666666;
@@ -63,20 +67,27 @@ button.button.outline {
 
 #ratings-table-section {
  display: flow-root;
+ margin-left: 2%;
+ width: 93%;
+height: 230px;
+/*overflow-x:none;*/
+overflow-y:overlay;
+}
 }
 
 #ratings-content-area {
   padding-left: 2%;
-  border: none;
+  border: none !important;
 }
 
 #ratings-header {
-  padding-left: 2%;
+  padding-left: 7%;
 }
 
 table {
+  /*height: */
   margin: 10% 0 0 5%;
-}
+
 
 /*caption{
   font-size: 1.857rem;
