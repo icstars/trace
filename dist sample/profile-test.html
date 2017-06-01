@@ -162,44 +162,35 @@
         </div>
       </div>
 
-      <!-- <div class="col-xs-9 padding-none"> -->
-        <!-- <div id="gridtabs" class="button-group col-xs-12"> -->
-          <!-- <div class="gutter padding-none col-xs-1"></div> -->
-          <!-- <button id="save-btn" class="button secondary outline gridtabs icon-save col-xs-2"></button>
-          <button id="edit-btn" class="button secondary outline gridtabs icon-edit col-xs-2"></button>
-          <button id="rate-btn" class="button secondary outline gridtabs icon-star col-xs-2"></button>
-          <button id="share-btn" class="button secondary outline gridtabs icon-reply col-xs-2"></button>
-          <button id="delete-btn" class="button secondary outline gridtabs icon-trash col-xs-2"></button> -->
-          <!-- <div class="gutter padding-none col-xs-1"></div> -->
-        <!-- </div> -->
       <!-- 1ST OF 2 SECTIONS OF MAIN CONTENT: SIDEBAR ELEMENTS ENDS HERE -->
       <!-- 2ND OF 2 SECTIONS OF MAIN CONTENT: EVALUATION ELEMENTS STARTS HERE -->
-      <div class="col-xs-9 padding-none">
+      <div id="profile-maincontent-section" class="col-xs-9 padding-none">
         <div class="row">
+          <div id="profile-commentsgridtabs" class="button-group col-xs-4">
+            <!-- <div class="padding-none col-xs-12"> -->
+            <!-- <div class="gutter padding-none col-xs-1"></div> -->
+            <button id="save-btn" class="button secondary outline gridtabs icon-save col-xs-2"></button>
+            <button id="edit-btn" class="button secondary outline gridtabs icon-edit col-xs-2"></button>
+            <button id="rate-btn" class="button secondary outline gridtabs icon-star col-xs-2"></button>
+            <button id="share-btn" class="button secondary outline gridtabs icon-reply col-xs-2"></button>
+            <button id="delete-btn" class="button secondary outline gridtabs icon-trash col-xs-2"></button>
+            <!-- <div class="gutter padding-none col-xs-1"></div> -->
+            <!-- </div> -->
+          </div>
           <div class="col-xs-12">
+
+
             <div class="col-xs-8">
               <h2 id="profile-header" class="type-sectiontitle col-xs-12">fName lName</h2>
             </div>
-          <!-- GRIDTABS START -->
-            <div id="profile-commentsgridtabs" class="button-group col-xs-4">
-              <!-- <div class="padding-none col-xs-12"> -->
-              <!-- <div class="gutter padding-none col-xs-1"></div> -->
-              <button id="save-btn" class="button secondary outline gridtabs icon-save col-xs-2"></button>
-              <button id="edit-btn" class="button secondary outline gridtabs icon-edit col-xs-2"></button>
-              <button id="rate-btn" class="button secondary outline gridtabs icon-star col-xs-2"></button>
-              <button id="share-btn" class="button secondary outline gridtabs icon-reply col-xs-2"></button>
-              <button id="delete-btn" class="button secondary outline gridtabs icon-trash col-xs-2"></button>
-              <!-- <div class="gutter padding-none col-xs-1"></div> -->
-              <!-- </div> -->
-            </div>
+          <!-- PROFILE HEADER AND GRIDTABS START -->
+
           </div>
         </div>
-        <!-- GRIDTABS ENDS -->
-
-        <div class="row col-xs-8">
-          <!-- EMPLOYEE INFO ROW STARTS -->
-          <div id="employee-info" class="col-xs-12">
-            <!-- EMPLOYEE INFO STARTS -->
+        <!-- PROFILE HEADER AND GRIDTABS ENDS -->
+      <div class="row"><!-- EMPLOYEE INFO ROW AND GRAPH STARTS -->
+        <div id="emp-info-and-graph" class="col-xs-12">
+          <div id="employee-info" class="col-xs-8"><!-- EMPLOYEE INFO STARTS -->
             <table class="lists fixed-layout">
               <tbody>
                 <tr>
@@ -244,55 +235,53 @@
                 </tr>
               </tbody>
             </table>
-            <!-- EMPLOYEE INFO ENDS -->
-          </div>
-
-          <!-- EMPLOYEE INFO ROW ENDS -->
-          <div class="row">
-            <div class="col-xs-12">
-              <h2>Rating History</h2>
-              <table class="lists">
-                <thead>
-                  <tr>
-                    <th class="toggle" width="16"></th>
-                    <th class="type-centeralign">Date</th>
-                    <th class="type-centeralign">Potential</th>
-                    <th class="type-centeralign">Performance</th>
-                    <th class="type-centeralign">Comments</th>
-                    <th class="type-centeralign">Manager ID</th>
-                  </tr>
-                </thead>
-                <tbody id="ratings-history-list">
-                  <tr>
-                    <td class="toggle"><i class="icon-expand"></i></td>
-                    <td class="h2 type-centeralign">7/12/2002</td>
-                    <td class="h2 type-centeralign">8</td>
-                    <td class="h2 type-centeralign">8</td>
-                    <td class="h2 type-centeralign">afjsdlfjsfs</td>
-                    <td class="h2 type-centeralign">35</td>
-                  </tr>
-                  <!-- <tr class="details"></tr> -->
-                  <!--TODO I think this is supposed to be the dropdown-->
-                </tbody>
-              </table>
-            </div>
-            <!-- PROFILE-GRAPH ENDS -->
-          </div>
-          <!-- PROFILE-GRAPH ROW ENDS -->
-        </div>
-        <!--Graph Column-->
-        <div class="col-xs-4">
-          <!-- PROFILE-GRAPH STARTS -->
+          </div><!-- EMPLOYEE INFO ENDS -->
+        <div class="col-xs-4"><!-- PROFILE-GRAPH STARTS -->
           <div id="profile-graph" class="col-xs-12">
             <img id="graph" src="images/profile-graph.png" alt="graph" style="height:220px;width:220px;">
           </div>
-        </div>
-        <!-- GRIDTABS AND EMPLOYEE INFO AND GRAPHS ENDS -->
+        </div><!-- PROFILE-GRAPH ENDS -->
       </div>
-      <!--CONTENT WRAPPER ENDS-->
+    <div>
+  <div>
+  <h2 id="ratings-header">Rating History</h2>
+  <div id="ratings-table-section" class="bounding-box width-1280">
+    <div id="ratings-content-area" class="content-area">
+        <div class="row">
+          <div class="col-xs-12 padding-none">
+          <table class="table" style="margin-top:0;margin-bottom:0;">
+            <thead>
+              <tr>
+                <th class="toggle" width="16"></th>
+                <th class="type-centeralign">Date</th>
+                <th class="type-centeralign">Potential</th>
+                <th class="type-centeralign">Performance</th>
+                <th class="">Comments</th>
+                <th class="type-centeralign">Manager ID</th>
+              </tr>
+            </thead>
+            <tbody id="ratings-history-list">
+              <tr>
+                <td class="toggle"><i class="icon-expand"></i></td>
+                <td class="type-centeralign">7/12/2002</td>
+                <td class="type-centeralign">8</td>
+                <td class="type-centeralign">8</td>
+                <td  class="ratings-comments">afjsdlfjsfs</td>
+                <td class="type-centeralign">35</td>
+              </tr>
+              <!-- <tr class="details"></tr> -->
+              <!--TODO I think this is supposed to be the dropdown-->
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+</div>
     </div>
-    <!--CONTENT-AREA ENDS-->
+    </div><!-- 2ND OF 2 SECTIONS OF MAIN CONTENT: EVALUATION ELEMENTS STARTS HERE -->
+  </div><!--CONTENT-AREA ENDS-->
     <div class="gutter col-xs-1 padding-none"></div>
     <!-- FOOTER INFO SECTION START -->
     <footer class="col-xs-12">
