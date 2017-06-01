@@ -9,183 +9,118 @@ $(document).ready(function() {
     emp = data[i];
     employees[emp._id] = emp;
   }
+  //Populate SIDEBAR
+  for (var i in employees) {
+    $('#side-bar-list').append("<li><span>" + employees[i].fname + " " + employees[i].lname + "</span></li>");
+  }
 
-  //KEEPS GRID IN SHAPE AS WINDOW RESIZES
-  // $('#side-bar-list').css('height', $('#main-section-wrap'));
-  //TODO adjust this?
-  $('.gridbox').css('height', $('.gridbox').width());
-  $('#x-axis').css('width', $('#grid').width());
-  // $('#y-axis').css('height', $('#grid').height());copy
-  $('#y-axis').css('height',  $('.gridbox').width() *3)
-  // resizes column to same height as gridbox
-  $('#side-bar-list').css('height', $('.gridbox').width() *3);
+  //KEEPS SIDEBAR IN SHAPE AS WINDOW RESIZES
+  //SIDEBAR can't be dependant on the grid as it is only on the dashboard
+  // TODO fix this
+
+  $('#side-bar-list').css('height', $('#eval-section').width());
   $(window).resize(function() {
-    // $('#side-bar-list').css('height', $('#main-section-wrap'));
-    $('.gridbox').css('height', $('.gridbox').width());
-    $('#x-axis').css('width', $('#grid').width());
-    // $('#y-axis').css('height', $('#grid').height());
-    $('#y-axis').css('height',  $('.gridbox').width() *3)
-    $('#side-bar-list').css('height', $('.gridbox').width() *3);
+    $('#side-bar-list').css('height', $('#eval-section').width());
   })
 
-  //Select dataPoint
-  $('.dataPoint').click(function() {
-    //gridbox ID WARNING: will break if gbIDs are greater than 9
-    var gbID = parseInt($(this).attr('id').slice(-1));
-    $("#side-bar-list li").each(function() {
-      //$.inArray(value, array) returns index of value in array or -1 if not found
-      if ($.inArray($(this).data('e_id'), scoreGrid[gbID]) >= 0) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      }
-    })
+  //Tag SIDEBAR items with e_id
+  $('#side-bar-list li').each(function(i) {
+    $(this).data('e_id', employees[i]._id);
+  })
 
+  $('#side-bar-list li').click(function(e) {
+    //TODO link to profile page based on e_id
+    if( $(this).hasClass('selected') ){
+      $(this).removeClass('selected');
+    } else {
+      $(this).addClass('selected');
+    }
+    updateSideBarBtns();
+  })
+  //toggles disabled on SIDEBAR buttons that require selected employees
+  var updateSideBarBtns = function(){
+    if($('#side-bar-list li.selected').length > 0){//checks if any side-bar-list items are selected
+      $('#eval-btn, #profile-btn').removeClass('disabled');
+    } else {
+      $('#eval-btn, #profile-btn').addClass('disabled');
+    }
     if($('#side-bar-list li').filter(':hidden').length > 0){//checks if any side-bar-list items are hidden
       $('#reset-btn').removeClass('disabled');
     } else {
       $('#reset-btn').addClass('disabled');
     }
-  });
-
-  // Zoom
-  $('.gridbox').click(function(e) {
-    //prevents clicks on data points from hitting on the grid
-    if (e.target !== this)
-      return;
-    if ($('.gridbox').hasClass('zoomed')) {
-      resetGrid();
-      $('.gridbox').removeClass('zoomed');
-    } else {
-      $('.gridbox').addClass('zoomed');
-      $('.gridbox a').hide();
-      if ($(this).hasClass('blue')) {
-        resetGrid('blue');
-      } else if ($(this).hasClass('green')) {
-        resetGrid('green');
-      } else if ($(this).hasClass('yellow')) {
-        resetGrid('yellow');
-      } else if ($(this).hasClass('orange')) {
-        resetGrid('orange');
-      } else if ($(this).hasClass('red')) {
-        resetGrid('red');
-      }
-      //Set x-axis bounds
-      if ($(this).hasClass('c1')) {
-        $('#x1').text('1');
-        $('#x2').text('2');
-        $('#x3').text('3');
-        $('#x4').text('4');
-      } else if ($(this).hasClass('c2')) {
-        $('#x1').text('4');
-        $('#x2').text('5');
-        $('#x3').text('6');
-        $('#x4').text('7');
-      } else if ($(this).hasClass('c3')) {
-        $('#x1').text('7');
-        $('#x2').text('8');
-        $('#x3').text('9');
-        $('#x4').text('10');
-      }
-      //Set y-axis bounds
-      if ($(this).hasClass('r3')) {
-        $('#y1').text('1');
-        $('#y2').text('2');
-        $('#y3').text('3');
-        $('#y4').text('4');
-      } else if ($(this).hasClass('r2')) {
-        $('#y1').text('4');
-        $('#y2').text('5');
-        $('#y3').text('6');
-        $('#y4').text('7');
-      } else if ($(this).hasClass('r1')) {
-        $('#y1').text('7');
-        $('#y2').text('8');
-        $('#y3').text('9');
-        $('#y4').text('10');
-      }
-    }
-  }) //Zoom End
-
-  // Reset Grid
-  var resetGrid = function(c) {
-    $('.gridbox').removeClass('blue');
-    $('.gridbox').removeClass('green');
-    $('.gridbox').removeClass('yellow');
-    $('.gridbox').removeClass('orange');
-    $('.gridbox').removeClass('red');
-
-    if (c === undefined) { //set back to 9box
-      $('.c3.r1').addClass('blue');
-      $('.c2.r1, .c3.r2').addClass('green');
-      $('.c1.r1, .c2.r2, .c3.r3').addClass('yellow');
-      $('.c1.r2, .c2.r3').addClass('orange');
-      $('.c1.r3').addClass('red');
-      $('#x1, #y1').text('1');
-      $('#x2, #y2').text('4');
-      $('#x3, #y3').text('7');
-      $('#x4, #y4').text('10');
-      plotScores();
-    } else {
-      $('.gridbox').addClass(c);
-    }
-  } //Reset Grid End
-  var scoreGrid = {
-    "0": [],
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": []
-  };
-  //stores e_ids into scoreGrid dictionary in key cell that cooresponds to gridbox
-  var plotScores = function() {
-    var perf = 0,
-      pot = 0;
-    //local version of scoreGrid for calculations
-    var scGrid = {
-      "0": [],
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": []
-    };
-    //takes last scores in ratings assuming they are sorted by date (sample data is not)
-    for (var i in employees) {
-      var j = employees[i].ratings.length - 1;
-      perf = employees[i].ratings[j].performance;
-      pot = employees[i].ratings[j].potential;
-      var k = 0;
-      //k gets the gridbox id that cooresponds to this employee's scores
-      if (pot > 4 && pot < 7) { //middle row
-        k += 3
-      } else if (pot >= 7) { //top row
-        k += 6
-      }
-      if (perf > 4 && perf < 7) { //middle col
-        k += 1
-      } else if (perf >= 7) { //right col
-        k += 2
-      }
-      scGrid['' + k].push(employees[i]._id);
-    }
-
-    for (var i in scGrid) {
-      var l = scGrid['' + i].length;
-      if (l === 0) {
-        $('#dp' + i).hide();
-      } else {
-        $('#dp' + i).show().text(l);
-      }
-    }
-    scoreGrid = scGrid;
   }
-  plotScores();
+
+  //Display button text on hover
+  //$().hover(mouse in, mouse out)
+  $('#eval-btn').hover(function() {
+    $(this).text(' Rate');
+  },function() {
+    $(this).text('');
+  })
+
+  $('#checklist-btn').hover(function() {
+    if($(this).hasClass('active')){
+      $(this).text(' Clear All');
+    } else {
+      $(this).text(' Select All');
+    }
+  },function() {
+    $(this).text('');
+  })
+
+  $('#profile-btn').hover(function() {
+    $(this).text(' Profile');
+  },function() {
+    $(this).text('');
+  })
+
+  $('#reset-btn').hover(function() {
+    $(this).text(' Reset');
+  },function() {
+    $(this).text('');
+  })
+//SIDEBAR button click functions
+  $('#eval-btn').click(function() {
+    if($(this).hasClass('disabled'))
+      return;//prevents button from working if it should be disabled
+    alert("Whoops this isn't implemented yet");
+    //TODO load eval page w/ e_id from selected
+  })
+  //seleects only the employees that are currently visible in the side-bar-list
+  $('#checklist-btn').click(function() {
+    if($(this).hasClass('disabled'))
+      return;//prevents button from working if it should be disabled
+    if($(this).hasClass('active')){
+      $('#side-bar-list li').filter(':visible').removeClass('selected');
+      $(this).removeClass('active');
+    } else {
+      $('#side-bar-list li').filter(':visible').addClass('selected');
+      $(this).addClass('active');
+    }
+    if($(this).hasClass('active')){
+      $(this).text(' Clear All');
+      $(this).removeClass('icon-checklist');
+      $(this).addClass('icon-list');
+    } else {
+      $(this).text(' Select All');
+      $(this).removeClass('icon-list');
+      $(this).addClass('icon-checklist');
+    }
+    updateSideBarBtns();
+  })
+
+  $('#profile-btn').click(function() {
+    if($(this).hasClass('disabled'))
+      return;//prevents button from working if it should be disabled
+    alert("Whoops this isn't implemented yet");
+    //TODO load profile page w/ e_id from selected
+  })
+
+  $('#reset-btn').click(function() {
+    if($(this).hasClass('disabled'))
+      return;//prevents button from working if it should be disabled
+    $('#side-bar-list li').show();
+    updateSideBarBtns();
+  })
 });

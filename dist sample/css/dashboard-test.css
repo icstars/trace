@@ -9,7 +9,7 @@
 
 button.button.outline {
   height: 54px;
-  width: 20%;
+  width: 22%;
   background: #666666 !important;
   border: none;
   color: white !important;
@@ -18,7 +18,7 @@ button.button.outline {
 
 #gridtabs-add {
   height: 54px;
-  width: 19%;
+  width: 12%;
   background: #666666 !important;
   border: none;
   color: orange !important;
@@ -46,19 +46,30 @@ button.button.outline:hover, #gridtabs-add:hover {
 }
 
 #y-axis {
- display: flex;
- flex-flow:column nowrap;
- justify-content: space-between;
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: space-between;
+  /*transform: rotate(3deg);*/
+  width: 2%;
+  transform-origin: left top 0;
 }
 
 #x-axis {
  display: flex;
  flex-flow: row nowrap;
  justify-content: space-between;
+ /*margin-left: -3%;*/
+ margin: 2% 0 1% -3%;
 }
 
 .axis span {
  font-size: 1.5em;
+ transform: rotate(90deg);
+transform-origin: left top 0;
+}
+
+#x1, #x2, #x3 {
+  transform: rotate(0deg);
 }
 
 /**********************************AXIS FOR X AND Y END***************************************/

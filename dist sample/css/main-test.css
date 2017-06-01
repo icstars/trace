@@ -35,10 +35,6 @@ body, html, {
 }
 
 #logo-header{
-/*.c-header-bar.c-header-alert {*/
-  /*background: #E88924;*/
-  /*background: white;*/
-  /*height: 65px; experimenting with structure*/
   height: 150px;
   text-align: center;
   margin: 0 0 4% 0;
@@ -120,12 +116,13 @@ h2.type-contenttitle {
 
 #side-bar-title {
   height: 42px;
-  width: 100%;
+  width: 97%;
   font-size: 2em;
   color:white;
-  /*margin: 7% 0 5% 0;*/
   padding: 0 0 5%;
   border-bottom: solid 1px #757575;
+  margin-top: 7%;
+  margin-left: 3%;
 }
 
 #side-bar {
@@ -140,6 +137,7 @@ h2.type-contenttitle {
 #side-bar-list {
   overflow-y: auto;
   padding: inherit;
+  margin-bottom: 15%;
 }
 
 #side-bar-list li {
