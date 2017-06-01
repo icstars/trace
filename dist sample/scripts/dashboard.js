@@ -15,14 +15,16 @@ $(document).ready(function() {
   //TODO adjust this?
   $('.gridbox').css('height', $('.gridbox').width());
   $('#x-axis').css('width', $('#grid').width());
-  $('#y-axis').css('height', $('#grid').height());
+  // $('#y-axis').css('height', $('#grid').height());copy
+  $('#y-axis').css('height',  $('.gridbox').width() *3)
   // resizes column to same height as gridbox
   $('#side-bar-list').css('height', $('.gridbox').width() *3);
   $(window).resize(function() {
     // $('#side-bar-list').css('height', $('#main-section-wrap'));
     $('.gridbox').css('height', $('.gridbox').width());
     $('#x-axis').css('width', $('#grid').width());
-    $('#y-axis').css('height', $('#grid').height());
+    // $('#y-axis').css('height', $('#grid').height());
+    $('#y-axis').css('height',  $('.gridbox').width() *3)
     $('#side-bar-list').css('height', $('.gridbox').width() *3);
   })
 
