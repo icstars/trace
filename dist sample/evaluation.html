@@ -20,19 +20,29 @@
   <link rel="shortcut icon" href="citrus/images/favicon.png">
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main-test.css">
   <link rel="stylesheet" href="css/evaluation.css">
+  !-- <link rel="stylesheet" href="css/dashboard.css"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="scripts/main.js"></script>
+  <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <!-- <script src="scripts/main.js"></script> -->
+  <script src="scripts/evaluation.js"></script>
 </head>
+
 
 <body class="citrus">
   <!-- if (Model.IsImpersonating) -->
   <!-- <div class="c-impersonation-bar">Viewing as Manager</div> -->
   <!-- end if -->
   <!-- start of logo banner -->
-  <div class="c-header">
-
+  <div id="header-wrapper" class="c-header">
+    <div id="logo-header" class="c-header-logo">
+      <!--STAND-IN LOGO-->
+      <img id="img-logo" src="images/apple-logo.png" alt="logo" style="width: 150px; height: 150px">
+    </div>
     <div id="nav-bar" class="c-header-bar c-header-alert">
       <div class="c-header-notifications">
         <span>HELP</span>
@@ -127,10 +137,6 @@
         </ul>
       </div>
     </div>
-    <div id="logo-header" class="c-header-logo">
-      <!--STAND-IN LOGO-->
-      <img src="images/apple-logo.png" alt="logo" style="width: 150px; height: 150px">
-    </div>
   </div>
   <!-- T.R.A.C.E. CODE STARTS HERE -->
   <div class="content-area">
@@ -164,9 +170,11 @@
           <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" -->
           <div id="eval-content-area" id="" class="row content-area">
             <!--START EVALUATION SECTION-->
+
             <div id="eval-progressbar" class="col-xs-12">
               <!-- performance evaluation bar:START -->
               <div class="row eval-categories">
+
                 <h2 class="col-xs-12 eval-headers">Performance</h2>
                 <!-- <p>Performance Standard Rule</p> -->
                 <div id="performance" class="eval-progressbar col-xs-12">
