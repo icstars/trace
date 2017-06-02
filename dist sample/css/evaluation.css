@@ -84,6 +84,8 @@ textarea {
 
 #submit-button {
   float:right;
+  background: #E88924;
+  border: #E88924;
 }
 
 #eval-section {
