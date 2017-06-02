@@ -1,0 +1,178 @@
+  /**********************************GRIDTABS START***************************************/
+#gridtabs {
+  height: 54px;
+  /*background: #666666;*/
+  text-align: center;
+  margin-bottom: 0%;
+  margin-top: 6%;
+}
+
+button.button.outline {
+  height: 54px;
+  width: 20%;
+  background: #666666 !important;
+  border: none;
+  color: white !important;
+  border-left: solid 1px #757575 !important;
+}
+
+#gridtabs-add {
+  height: 54px;
+  width: 19%;
+  background: #666666 !important;
+  border: none;
+  color: orange !important;
+  /*border-left: solid 1px orange;*/
+  border-left: solid 1px #757575 !important;
+  border-right: solid 1px #757575 !important;
+}
+
+button.button.outline:hover, #gridtabs-add:hover {
+  background-color: #E88924 !important;
+  color: white !important;
+}
+
+ button.button.outline:active, #gridtabs-add:active {
+   background-color: #E88924 !important;/*talk to dan about active state selector*/
+
+ }
+
+/********************************GRIDTABS END***************************************/
+
+
+/**********************************AXIS FOR X AND Y START***************************************/
+.axis {
+
+}
+
+#y-axis {
+ display: flex;
+ flex-flow:column nowrap;
+ justify-content: space-between;
+}
+
+#x-axis {
+ display: flex;
+ flex-flow: row nowrap;
+ justify-content: space-between;
+}
+
+.axis span {
+ font-size: 1.5em;
+}
+
+/**********************************AXIS FOR X AND Y END***************************************/
+
+/**********************************GRID***********************************/
+#grid-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top:2%;
+}
+
+#grid {/*grid column*/
+
+}
+
+.gridbox {
+cursor: zoom-in;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.gridbox.zoomed{
+ cursor: zoom-out;
+}
+
+.dataPoint{/*colors are set for contrast, feel free to change*/
+ background-color: #000 !important;
+ border: #000 solid 2px !important;
+}
+
+.c1 {
+	border-left:#666666 solid 3px;
+	border-right:#666666 solid 3px;
+}
+
+.r1 {
+	border-top:#666666 solid 3px;
+	border-bottom:#666666 solid 3px;
+}
+
+.c3 {
+	border-right:#666666 solid 3px;
+	border-left:#666666 solid 3px;
+}
+
+.r3 {
+	border-bottom:#666666 solid 3px;
+	border-top:#666666 solid 3px;
+}
+
+.c1.zoomed {
+border-right:#666666 dashed 3px;
+}
+
+.r1.zoomed {
+border-bottom:#666666 dashed 3px;
+}
+
+.c3.zoomed {
+border-left:#666666 dashed 3px;
+}
+
+.r3.zoomed {
+border-top:#666666 dashed 3px;
+}
+
+.yellow {/*yellow*/
+	/*background:#F1DC59;*/
+  background: yellow;
+}
+
+.yellow:hover {/*dark yellow */
+	background:#EACC14;
+}
+
+.green {/*green*/
+	/*background:#6CBC6B;*/
+  background: green;
+}
+
+.green:hover {/*dark green*/
+	/*background:#459644;*/
+  background: #2D612C;
+}
+
+.blue {/*blue*/
+	/*background:#4BB1E6;*/
+  /*background: #1C8DC8;*/
+  background: blue;
+}
+
+.blue:hover {/*dark blue*/
+	/*background:#1C8DC8;*/
+  background: #135E85;
+}
+
+.orange {/*orange*/
+	/*background:#FF8C5E;*/
+  background: #FF5511;
+  /*background: #E88924;*/
+}
+
+.orange:hover {/*dark orange*/
+	/*background:#FF5511;*/
+  background: #E88924;
+}
+
+.red {/*red*/
+	/*background:#DB6963;*/
+  background: red;
+}
+
+.red:hover {/*dark red */
+	background-color:#C5352D;
+}
+/***********************************GRID END***********************************/
