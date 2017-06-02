@@ -25,7 +25,7 @@ def populate(N=5):
     for i in range(N):
     #Employee
         employee_id = i
-        #manager_id = False
+        is_manager = False
         first_name = fakegen.first_name()
         last_name = fakegen.last_name()
         gender = fakegen.gender()
@@ -43,19 +43,22 @@ def populate(N=5):
         email = fakegen.safe_email()
         phone = fakegen.phone_number()
     #Management
+        manager_id = random.choice(range(30,33))
         start_date = datetime(year + random.choice(range(5)), month, day)
         end_date = null
-    #Rating
-        potential = random.choice(range(1,11))
-        performance = random.choice(range(1,11))
-        timestamp = datetime(year + random.choice(range(5,10)), month, day)
-        notes = fakegen.text(max_nb_chars=200)
 
     #Create a fake Employee
-        emp = Employee.objects.get_or_create(employee_id,manager_id,first_name,last_name,gender,birth_date,hire_date,termination_date,position,email,phone)
+        emp = Employee.objects.get_or_create(employee_id,is_manager,first_name,last_name,gender,birth_date,hire_date,termination_date,position,email,phone)
     #Create managment relationships for that Employee
-        for i in random.choice(range(1,3))
-            mng = Management.objects.get_or_create(employee_id,random.choice(range(30,33)),start_date,end_date)
+        for i in range(1,random.choice(range(1,3))):
+            mng = Management.objects.get_or_create(employee_id,manager_id,start_date,end_date)
+    #Create ratings for that Employee
+        for i in range(1,random.choice(range(1,9))):
+            potential = random.choice(range(1,11))
+            performance = random.choice(range(1,11))
+            timestamp = datetime(year + random.choice(range(5,10)), month, day)
+            notes = fakegen.text(max_nb_chars=200)
+            ratings = Rating.objects.get_or_create(employee_id,manager_id,potential,performance,timestamp,notes)
 
-        for i in random.choice(range(1,9))
-            ratings = Rating.objects.get_or_create(employee_id,random.choice(range(30,33)),potential,performance,timestamp,notes)
+if __name__ == '__main__':
+    populate()
