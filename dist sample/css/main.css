@@ -39,11 +39,13 @@ body, html, {
 #logo-header{
 /*.c-header-bar.c-header-alert {*/
   /*background: #E88924;*/
-  background: white;
+  /*background: white;*/
   /*height: 65px; experimenting with structure*/
-  height: 150px;
-  text-align: center;
+  /*height: 150px;*/
+  
 }
+
+
 
 span.c-header-searchbar {
   padding-top: 0;

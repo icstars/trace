@@ -31,21 +31,42 @@ body, html, {
 }
 
 #header-wrapper {
-  background: #333333 !important;
+  /*background: #333333 !important;*/
 }
 
 #logo-header{
-  height: 150px;
+  /*height: 150px;*/
+  /*text-align: center;*/
+  margin: 0 0 2% 0;
   text-align: center;
-  margin: 0 0 4% 0;
+/*border-bottom: 27px solid transparent;
+border-left: 14px solid #666666;
+border-top: 27px solid transparent;
+content: "";
+height: 0;
+right: -14px;
+top: 0;
+position: absolute;
+width: 0;*/
+
+}
+
+#logo-header:after {
+  /*border-bottom: 27px solid transparent;
+  border-left: 14px solid #666666;
+  border-top: 27px solid transparent;
+  content: "";
+  height: 0;
+  right: -14px;
+  top: 0;
+  position: absolute;
+  width: 0;*/
 }
 
 #img-logo {
-  border: solid 2px orange;
-  border-radius: 100%;
-  width: 150px;
-  height: 150px;
   margin: 2% 0 0 0;
+  width: 100%
+  auto;
 }
 span.c-header-searchbar {
   padding-top: 0;
@@ -70,6 +91,7 @@ span.c-header-searchbar {
 }
 /*******************************CONTENT-AREA**********************************/
 .content-area {
+  height: 845px;
   padding-right: 2%;
   /*padding-bottom: 2%;*/
   margin-bottom: 2%;
