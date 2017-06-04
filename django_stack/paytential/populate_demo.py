@@ -1,5 +1,5 @@
 import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE','demo.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','paytential.settings')
 
 import django
 django.setup()
@@ -19,46 +19,45 @@ def pick_pos():
     p.save()
     return p
 
-operational_unit_id = fakegen.ean(length=3)
-
 def populate(N=5):
+#Create 3 Managers
+    mstart = fakegen.date()
+    mend = fakegen.date()
+    m1 = Employee.objects.get_or_create(employee_id=34161727,is_manager=True,first_name='Joe',last_name='McManager',gender='M',birth_date=mstart,hire_date=mend,termination_date=None,position='District Manager',operational_unit_id=148,email=fakegen.company_email(),phone=fakegen.phone_number())
+    m2 = Employee.objects.get_or_create(employee_id=44613589,is_manager=True,first_name='Sue',last_name='McManager',gender='F',birth_date=mstart,hire_date=mend,termination_date=None,position='District Manager',operational_unit_id=403,email=fakegen.company_email(),phone=fakegen.phone_number())
+    m3 = Employee.objects.get_or_create(employee_id=51357643,is_manager=True,first_name='Faker',last_name='_',gender='M',birth_date=mstart,hire_date=mend,termination_date=None,position='District Manager',operational_unit_id=284,email=fakegen.company_email(),phone=fakegen.phone_number())
     for i in range(N):
     #Employee
         employee_id = i
         is_manager = False
         first_name = fakegen.first_name()
         last_name = fakegen.last_name()
-        gender = fakegen.gender()
-    #make y/m/d
-        year = random.choice(range(1975, 2001))
-        month = random.choice(range(1, 13))
-        day = random.choice(range(1, 31))
-    #combine y/m/d into a datetime
-        birth_date = datetime(year, month, day)
-    #hire employee on their 16th birthday
-        hire_date = datetime(year + 16, month, day)
+        gender = random.choice(['M','F'])
+    #employees are at least 16yrs old
+        birth_date = fakegen.date()
+        hire_date = fakegen.date()
     #we NEVER fire employees
-        termination_date = null
+        termination_date = None
         position = pick_pos()
-        email = fakegen.safe_email()
+        operational_unit_id = random.choice([148,403,284])
+        email = fakegen.company_email()
         phone = fakegen.phone_number()
-    #Management
-        manager_id = random.choice(range(30,33))
-        start_date = datetime(year + random.choice(range(5)), month, day)
-        end_date = null
 
     #Create a fake Employee
-        emp = Employee.objects.get_or_create(employee_id,is_manager,first_name,last_name,gender,birth_date,hire_date,termination_date,position,email,phone)
+        emp = Employee.objects.get_or_create(employee_id,is_manager,first_name,last_name,gender,birth_date,hire_date,termination_date,position,operational_unit_id,email,phone)
     #Create managment relationships for that Employee
         for i in range(1,random.choice(range(1,3))):
-            mng = Management.objects.get_or_create(employee_id,manager_id,start_date,end_date)
-    #Create ratings for that Employee
-        for i in range(1,random.choice(range(1,9))):
-            potential = random.choice(range(1,11))
-            performance = random.choice(range(1,11))
-            timestamp = datetime(year + random.choice(range(5,10)), month, day)
-            notes = fakegen.text(max_nb_chars=200)
-            ratings = Rating.objects.get_or_create(employee_id,manager_id,potential,performance,timestamp,notes)
+            manager_id = random.choice([m1,m2,m3])
+            start_date = fakegen.date()
+            end_date = None
+            mng = Management.objects.get_or_create(emp,manager_id,start_date,end_date)
+        #Create ratings for that Employee
+            for i in range(1,random.choice(range(4))):
+                potential = random.choice(range(1,11))
+                performance = random.choice(range(1,11))
+                timestamp = fakegen.iso8601()
+                notes = fakegen.text(max_nb_chars=200)
+                rats = Rating.objects.get_or_create(mng,mng,potential,performance,timestamp,notes)
 
 if __name__ == '__main__':
-    populate()
+    populate(1)

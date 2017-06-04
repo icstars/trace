@@ -2,17 +2,17 @@ from django.db import models
 
 class Employee(models.Model):
     employee_id = models.IntegerField(primary_key=True)
-    is_manager = models.BooleanField()
+    is_manager = models.BooleanField(default=False)
     first_name = models.CharField(max_length=264)
     last_name = models.CharField(max_length=264)
-    gender = models.CharField(max_length=264)
+    gender = models.CharField(max_length=10)
     birth_date = models.DateField()
     hire_date = models.DateField()
     termination_date = models.DateField(null=True)
     position = models.CharField(max_length=264)
     operational_unit_id = models.IntegerField()
     email = models.EmailField(max_length=264, unique=True)
-    phone = models.IntegerField(unique=True)
+    phone = models.CharField(max_length=20, unique=True)
 
     def __str__(self):
         return self.f_name + " " + self.l_name
