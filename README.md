@@ -1,4 +1,4 @@
-# trace
+# Steps to run the project locally
 1. install python 3.6 (other versions may work but use this to ensure compatibility)
 2. install pip, the package manager for python
 3. install django 1.10
