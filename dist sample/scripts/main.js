@@ -22,6 +22,29 @@ $(document).ready(function() {
   //   $('#side-bar-list').css('height', $('#grid-wrapper').width());
   // })
 
+  //Hiding side-bar-section
+  var hiddenSidebar = $("#side-section").width();
+  var clicks = 0;
+      $("#side-bar-icon").click(function(event){
+        // event.preventDefault();
+        if(clicks == 0){
+          $("#side-section").hide({
+              width: 0
+          });
+          clicks++;
+        }else {$("#side-bar-icon").click(function(event){
+            $("#side-section").show({
+                width: hiddenSidebar
+            });
+        });
+        clicks--;
+
+        }
+
+      });
+
+
+
   //Tag SIDEBAR items with e_id
   $('#side-bar-list li').each(function(i) {
     $(this).data('e_id', employees[i]._id);

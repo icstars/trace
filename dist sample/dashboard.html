@@ -142,8 +142,12 @@
     </div>
     <!--ENDS CONTENTTITLE ROW-->
     <div class="gutter col-xs-1 padding-none"></div>
-    <div id="content-wrapper" class="row col-xs-10">
-      <div id="side-section" class="col-xs-3">
+    <div id="content-wrapper" class="row col-xs-10  c-header">
+
+      <!-- <div id="side-section" class="col-xs-3 hidden-xs-animated"> -->
+<div id="side-section" class="col-xs-3">
+
+
       <h3 id="side-bar-title" class="type-sectiontitle">Employees</h3>
       <div id="toolbar" class="button-group col-xs-12">
         <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
@@ -152,16 +156,30 @@
         <button id="reset-btn" class="button disabled icon-reset"></button>
       </div>
       <div id="side-bar" class="col-sm-3 padding-none border-right border-right-xs-none">
-        <ul id="side-bar-list" class="side-nav hidden-xs-animated">
+        <ul id="side-bar-list" class="side-nav">
         </ul>
       </div>
     </div>
       <div class="col-xs-9 border-left border-fix">
         <div class="row">
-          <div class="col-xs-12">
-            <h3 class="type-sectiontitle">Responsive Nav</h3>
-          </div>
-          <div id="gridtabs" class="button-group col-xs-12">
+          <!-- <div class="col-xs-12 c-header-menu"> -->
+  <!-- <div class="col-xs-12 c-header-menu"> -->
+            <!-- <ul class="c-header-menu-toggle">
+              <li>
+                <a href="#" class="cHeaderMenuBtn"><i id="side-bar-icon" class="icon-menu"></i></a>
+              </li>
+            </ul> -->
+            <!-- <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">&#9776;</label> -->
+            <!-- <h3 class="type-sectiontitle">Responsive Nav</h3> -->
+          <!-- </div> -->
+          <div id="gridtabs" class="button-group col-xs-12  c-header-menu" style="background:transparent;">
+
+            <ul id="side-bar-menu-toggle" class="c-header-menu-toggle" style="float:left;">
+              <li>
+                <a href="#" class="cHeaderMenuBtn"><i id="side-bar-icon" class="icon-menu"></i></a>
+              </li>
+            </ul>
             <button id="" class="button outline">Sales Associate</button>
             <button id="" class="button outline">Cashier</button>
             <button id="" class="button outline">Freight</button>

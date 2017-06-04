@@ -4,7 +4,7 @@
   /*background: #666666;*/
   text-align: center;
   margin-bottom: 0%;
-  margin-top: 6%;
+  /*margin-top: 6%;*/
 }
 
 button.button.outline {
@@ -115,29 +115,21 @@ cursor: zoom-in;
 .c1 {
 	border-left:white solid 6px;
 	border-right:white solid 6px;
-  /*margin-left: 7px;
-	margin-right: 7px;*/
 }
 
 .r1 {
 	border-top:white solid 6px;
 	border-bottom:white solid 6px;
-  /*margin-top: solid 7px;
-	margin-bottom: 7px;*/
 }
 
 .c3 {
 	border-right:white solid 6px;
 	border-left:white solid 6px;
-  /*margin-left: 7px;
-	margin-right: 7px;*/
 }
 
 .r3 {
 	border-bottom:white solid 6px;
 	border-top:white solid 6px;
-  /*margin-top: 7px;
-	margin-bottom: 7px;*/
 }
 
 .c1.zoomed {
@@ -166,39 +158,30 @@ cursor: zoom-in;
 }
 
 .green {/*green*/
-	/*background:#6CBC6B;*/
   background: #38CC2C;
 }
 
 .green:hover {/*dark green*/
-	/*background:#459644;*/
   background: #2D612C;
 }
 
 .blue {/*blue*/
-	/*background:#4BB1E6;*/
-  /*background: #1C8DC8;*/
   background: #1111B2;
 }
 
 .blue:hover {/*dark blue*/
-	/*background:#1C8DC8;*/
   background: #135E85;
 }
 
 .orange {/*orange*/
-	/*background:#FF8C5E;*/
   background: #FF4714;
-  /*background: #E88924;*/
 }
 
 .orange:hover {/*dark orange*/
-	/*background:#FF5511;*/
   background: #E88924;
 }
 
 .red {/*red*/
-	/*background:#DB6963;*/
   background: #E51616;
 }
 

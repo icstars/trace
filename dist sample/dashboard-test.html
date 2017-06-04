@@ -21,7 +21,7 @@
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
   <link rel="stylesheet" href="css/dashboard-test.css">
-  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <link rel="stylesheet" href="css/helpme.css">
   <link rel="stylesheet" href="css/main-test.css">
   <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
 
@@ -40,14 +40,18 @@
     <div id="logo-header" class="c-header-logo">
       <img id="img-logo" src="images/apple-logo-new.png" alt="logo">
     </div>
-    <div id="nav-bar" class="c-header-bar c-header-alert">
+    <div id="nav-bar" class="c-header-bar">
       <!-- <div class="c-header-notifications">
         <span>HELP</span>
       </div> -->
 
-      <div class="c-header-search-toggle">
+
+<!-- SEARCHBAR TOGGLE:DO WE WANT OR NEED IT?? -->
+      <!-- <div class="c-header-search-toggle">
         <a href="#"><i class="icon-search icon-bold size-medium"></i></a>
-      </div>
+      </div> -->
+
+
       <!-- <div class="c-header-notifications"> -->
         <!-- <span>2</span> -->
         <!-- <ul class="c-header-menu-dropdown"> -->
@@ -152,12 +156,19 @@
           <button id="reset-btn" class="button disabled icon-reset"></button>
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
-          <ul id="side-bar-list" class="side-nav hidden-xs-animated col-xs-12">
+          <ul id="side-bar-list" class="side-nav Scol-xs-12">
           </ul>
         </div>
       </div>
 
       <div class="col-xs-9 padding-none">
+          <div id="" class="row c-header-menu" style="background:transparent; border:none;">
+            <ul id="side-bar-menu-toggle" class="c-header-menu-toggle" style="float:left;">
+              <li>
+                <a href="#" class="cHeaderMenuBtn"><i id="side-bar-icon" class="icon-menu"></i></a>
+              </li>
+            </ul>
+          </div>
         <div id="gridtabs" class="button-group col-xs-12">
           <div class="gutter padding-none col-xs-1"></div>
           <button id="" class="button outline col-xs-3">Sales Associate</button>

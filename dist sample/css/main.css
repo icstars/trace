@@ -42,7 +42,7 @@ body, html, {
   /*background: white;*/
   /*height: 65px; experimenting with structure*/
   /*height: 150px;*/
-  
+
 }
 
 
@@ -112,7 +112,18 @@ h2.type-contenttitle {
   border-right: solid transparent 1px;
   padding:0;
   background: #666666;
+  /*position: absolute;
+  left: -500px;
+  transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;*/
 }
+
+/*#menuToggle { display: none; }
+
+#menuToggle:checked ~ #side-section { position: absolute; left: 0; }*/
 
 #side-bar-title {
   height: 42px;

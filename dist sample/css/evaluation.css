@@ -60,7 +60,7 @@ textarea {
   margin-top: 5%;
 }
 
-h2.col-xs-12.eval-headers {
+#eval-pot-header, #eval-perf-header {
   width: 10%;
   padding: 0;
   background-color: #666666;
@@ -78,7 +78,7 @@ h2.col-xs-12.eval-headers {
   margin-bottom: 5%;
 }
 
-h2::after {
+#eval-pot-header::after, #eval-perf-header::after {
   /*background-color: #666666;*/
   border-bottom: 27px solid transparent;
   border-left: 14px solid #666666;

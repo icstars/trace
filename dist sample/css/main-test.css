@@ -31,6 +31,7 @@ body, html, {
 }
 
 #header-wrapper {
+  background: white;
   /*background: #333333 !important;*/
 }
 
@@ -65,7 +66,7 @@ width: 0;*/
 
 #img-logo {
   margin: 2% 0 0 0;
-  width: 100%
+  width: 12%
   auto;
 }
 span.c-header-searchbar {
@@ -86,7 +87,8 @@ span.c-header-searchbar {
 }
 
 #nav-bar {
-  background: #E88924;
+  background: #333333;
+  /*background: #E88924;*/
   border-bottom: 2px solid #666666;
 }
 /*******************************CONTENT-AREA**********************************/
@@ -124,7 +126,6 @@ h2.type-contenttitle {
   border: none;
   border-top: solid 1px #757575 !important;
   border-bottom: solid 1px #757575 !important;
-  /*margin: 5% 0;*/
 }
 
 /*************************TOOLBAR END***************************/
