@@ -301,8 +301,11 @@ img.soc-med-icons {
 }
 
 
-/******************************************MEDIA QUERIES***********************************/
 
+
+/*___________________________________________________________________________________________*/
+/******************************************MEDIA QUERIES***********************************/
+/*___________________________________________________________________________________________*/
 @media only screen and (max-width: 768px)
 {
   /*ALL STYLING FOR HEADER, NAV, SIDEBAR OR FOOTER GOES HERE*/
@@ -319,14 +322,18 @@ img.soc-med-icons {
     height: 19px;
   }
 
+#header-wrapper {
+  margin-bottom: 2%;
+}
+
   .c-header-user-portrait {
     width: 46px;
     margin-right: -3%;
   }/*put an id in html*/
 
-  img {
+  #paylocity-profile-img {
     height: 46%;
-    width: 46%;
+    width: 53%;
   }/*put an id on this profile image*/
 
   /*******************************CONTENT-AREA**********************************/
@@ -336,15 +343,18 @@ img.soc-med-icons {
     width: 102%;
   }
 
-  /*#content-wrapper {
-    background: white !important;
+  #content-wrapper {
+    width: 100%;
+    margin: 2% 0 -2% -17%;
+    height: 385px;
+    /*background: white !important;
     margin: 2% 0;
     padding: 0;
     border-radius: 4px;
     -moz-box-shadow:    1px 0px 5px 6px #ccc;
     -webkit-box-shadow: 1px 0px 5px 6px #ccc;
-    box-shadow:         1px 0px 5px 6px #ccc;
-  }*/
+    box-shadow:         1px 0px 5px 6px #ccc;*/
+  }
   /********************************H2: TITLE OF PAGE*************************************/
   /*h2.type-contenttitle {
     margin-right: -28px;
@@ -363,27 +373,21 @@ img.soc-med-icons {
 
   /***********************************SIDEBAR***********************************/
   #side-section {
-    display: block;
+      display: none;
   }
+  /*#side-section {
+    height: 385px;
+    display: block;
+  }*/
 
   #side-bar-title {
     font-size: small;
+    height: 6px;
   }
 
-  /*#side-bar {*/
-    /*padding: 3%;
-    background: #505050;*/
-    /*width: 100%;*/
-    /*margin-bottom: 18%;*/
-    /*padding: inherit;
-    margin: 0;
-  }*/
-
-  /*#side-bar-list {
-    overflow-y: auto;
-    padding: inherit;
-    margin-bottom: 15%;
-  }*/
+  #side-bar {
+    height: 321px;
+  }
 
   #side-bar-list li {
     height: 13%;
@@ -393,14 +397,20 @@ img.soc-med-icons {
     font-size: smaller;
   }
 
-#side-bar-menu-toggle {
-  float: left;
-  margin: -2% 0 0 4%;
-}
+  #side-bar-menu-toggle {
+    float: left;
+    margin: -2% 0 0 4%;
+  }
   /***********************************SIDEBAR END***********************************/
+/**************************************MAIN SECTION STARTS************************************/
+  #main-section-wrap {
+    margin: 0 -2% 0 -19%;
+  }
+/**************************************MAIN SECTION ENDS************************************/
 /****************************************GRIDTABS and BUTTONS START****************************************/
   #gridtabs {
-    margin: -15% 0 -8% 13%;
+    /*margin: -15% 0 -8% 13%;*/
+    margin: -15% 0 -8% 0;
     height: 49px;
   }
 
@@ -410,10 +420,10 @@ img.soc-med-icons {
     /*padding: 1px;*/
   }
 
-#gridtabs-add {
-  height: 30px;
-  padding: 1%;
-}
+  #gridtabs-add {
+    height: 30px;
+    padding: 1%;
+  }
 
   /****************************************GRIDTABS and BUTTONS END******************************************/
   /************************************BUTTONS START**************************************/
@@ -428,13 +438,17 @@ img.soc-med-icons {
 
 
   /************************************BUTTONS END**************************************/
-
+/********************************************GRID ELEMENTS START*************************************/
 #grid-wrapper{
   margin-left: 14%;
   width: 116%;
   padding: 0;
 }
 
+#gb6, #gb3, #gb0, #gb7, #gb4,#gb1, #gb8, #gb5, #gb2,{
+    height: 80px;
+}
+/********************************************GRID ELEMENTS END*********************************/
 
   /***********************************SCROLL BAR START******************************/
   /*#side-bar-list::-webkit-scrollbar {
@@ -466,30 +480,20 @@ img.soc-med-icons {
 
 #x-axis {
   letter-spacing: 6px;
-  margin: 0% 0 0 -10%;
+  margin: 2% 0 0 2%;
 
 }
 
   /***********************************FOOTER***************************************/
-  footer {
+footer {
     background: #333333;
-    margin-top: 15px;
+    margin-top: 6%;
+    height: 186px;
     /*position: relative;
     padding-bottom: 26%;
     height: 0;
     overflow: hidden; AN ATTEMPT TO GET HEIGHT RESPONSIVE*/
   }
-
-  /*#sections {
-    margin-top: 3%;
-  }*/
-
-  /*#footer-info-sec {
-    margin: 30px 0px 25px 0px;
-    position: absolute;*/
-    /*width: 100%;
-    height: 100%;*/
-  /*} AN ATTEMPT TO GET HEIGHT RESPONSIVE*/
 
   h3#About-us, h3#developers {
     margin-top: 20px;
@@ -502,54 +506,52 @@ img.soc-med-icons {
   #footer-section-1 {
     text-align: center;
     border-right: 1px solid whitesmoke;
-    margin-top: 2%;
+    border-bottom: solid 1px white;
+    margin-top: -2%;
+    height: 184px;
+    width: 100%;
   }
+
+ul.footer-list {
+  margin-top: 1%;
+}
 
   #footer-section-2 {
     text-align: center;
-    margin-top: 2%;
+    margin-top: -1%;
+    height: 180px;
+    background: #333333;
+    width: 100%;
+    border-top: solid 1px white;
   }
 
-  ul.footer-list {
-    padding: 0;
-  }
-
-  li.footer-list-items {
-    list-style: none;
-    /*display: flex;
-    justify-content: center*/
-    color: #E88924;
-    line-height: 22px;
-  }
-
-  a.footer-anchors {
-    text-decoration: none;
-    color: #E88924 !important;
-  }
   /*******************************CONNECT WITH US SECTION START************************/
-  h2#connect-p {
-    color: white;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
+#connect {
+  background: #333333;
+}
+
+#connect-with-us {
+  margin-top: 4%;
+}
+
+h2#connect-p {
+    /*color: white;*/
+    font-size: small;
+    /*letter-spacing: 2px;*/
+    width: 140%;
+    margin-bottom: 5%;
   }
 
   span {
-    font-size: 18px;
-    letter-spacing: normal;
+    font-size: xx-small;
   }
   /**********************************SOCIAL MEDIA ICONS START**************************************/
-  img.soc-med-icons {
-    width: 5%;
-    height: auto;
-    margin-right: 1%;
-    float: right;
-    margin-bottom: 10px;
-    /*border: orange;*/
+  #soc-media {
+    margin-top: 3%;
   }
 
-
-  #side-section {
-      display: none;
+  img.soc-med-icons {
+    width: 10%;
   }
 
 }
