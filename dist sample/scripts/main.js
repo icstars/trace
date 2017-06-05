@@ -43,7 +43,16 @@ $(document).ready(function() {
 
       });
 
-
+      // 
+      // $("#side-bar-icon").click(function(){
+      //   $("#side-section").style.width = "250px";
+      //   $("#main").style.marginLeft = "250px";
+      // });
+      //
+      // $('.closebtn').click(function(){
+      //   $('#sideNavigation').style.width = "0";
+      //   $("#main").style.marginLeft = "0";
+      // });
 
   //Tag SIDEBAR items with e_id
   $('#side-bar-list li').each(function(i) {

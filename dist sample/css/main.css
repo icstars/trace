@@ -285,3 +285,14 @@ img.soc-med-icons {
   margin-bottom: 10px;
   /*border: orange;*/
 }
+
+
+/******************************************MEDIA QUERIES***********************************/
+
+@media only screen and (max-width: 768px)
+{
+  #side-section {
+      display: none;
+  }
+
+}

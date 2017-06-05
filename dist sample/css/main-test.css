@@ -299,3 +299,257 @@ img.soc-med-icons {
   margin-bottom: 10px;
   /*border: orange;*/
 }
+
+
+/******************************************MEDIA QUERIES***********************************/
+
+@media only screen and (max-width: 768px)
+{
+  /*ALL STYLING FOR HEADER, NAV, SIDEBAR OR FOOTER GOES HERE*/
+  body, html, {
+    height:100%;
+  }
+  #img-logo {
+    /*margin: 2% 0 0 0;*/
+    width: 17%;
+    height: auto;
+  }
+
+  #nav-bar {
+    height: 19px;
+  }
+
+  .c-header-user-portrait {
+    width: 46px;
+    margin-right: -3%;
+  }/*put an id in html*/
+
+  img {
+    height: 46%;
+    width: 46%;
+  }/*put an id on this profile image*/
+
+  /*******************************CONTENT-AREA**********************************/
+  .content-area {
+    margin-left: 0%;
+    height: 35%;
+    width: 102%;
+  }
+
+  /*#content-wrapper {
+    background: white !important;
+    margin: 2% 0;
+    padding: 0;
+    border-radius: 4px;
+    -moz-box-shadow:    1px 0px 5px 6px #ccc;
+    -webkit-box-shadow: 1px 0px 5px 6px #ccc;
+    box-shadow:         1px 0px 5px 6px #ccc;
+  }*/
+  /********************************H2: TITLE OF PAGE*************************************/
+  /*h2.type-contenttitle {
+    margin-right: -28px;
+    -moz-box-shadow: inset 0 0 10px #666666;
+    -webkit-box-shadow: inset 0 0 10px #666666;
+    box-shadow: inset 0px 0 10px #666666;
+    background: rgba(128,128,128,.5) !important;
+  }*/
+  /*****************************TOOLBAR************************************/
+
+  #toolbar {
+    height: 32px;
+  }
+
+  /*************************TOOLBAR END***************************/
+
+  /***********************************SIDEBAR***********************************/
+  #side-section {
+    display: block;
+  }
+
+  #side-bar-title {
+    font-size: small;
+  }
+
+  /*#side-bar {*/
+    /*padding: 3%;
+    background: #505050;*/
+    /*width: 100%;*/
+    /*margin-bottom: 18%;*/
+    /*padding: inherit;
+    margin: 0;
+  }*/
+
+  /*#side-bar-list {
+    overflow-y: auto;
+    padding: inherit;
+    margin-bottom: 15%;
+  }*/
+
+  #side-bar-list li {
+    height: 13%;
+  }
+
+  #side-bar-list li span {
+    font-size: smaller;
+  }
+
+#side-bar-menu-toggle {
+  float: left;
+  margin: -2% 0 0 4%;
+}
+  /***********************************SIDEBAR END***********************************/
+/****************************************GRIDTABS and BUTTONS START****************************************/
+  #gridtabs {
+    margin: -15% 0 -8% 13%;
+    height: 49px;
+  }
+
+  button.button.outline {
+    font-size: x-small;
+    height: 30px;
+    /*padding: 1px;*/
+  }
+
+#gridtabs-add {
+  height: 30px;
+  padding: 1%;
+}
+
+  /****************************************GRIDTABS and BUTTONS END******************************************/
+  /************************************BUTTONS START**************************************/
+  #eval-btn, #profile-btn, #checklist-btn, #reset-btn {
+    padding: 4px;
+    font-size: smaller;
+  }
+/*
+  #profile-btn, #checklist-btn, #reset-btn{
+    border-left: solid 1px #757575;
+  }*/
+
+
+  /************************************BUTTONS END**************************************/
+
+#grid-wrapper{
+  margin-left: 14%;
+  width: 116%;
+  padding: 0;
+}
+
+
+  /***********************************SCROLL BAR START******************************/
+  /*#side-bar-list::-webkit-scrollbar {
+      width: 0 !important;
+  }
+*/
+  /*
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }*/
+  /**********************************SCROLL BAR END***************************************/
+.row.c-header-menu{
+  font-size: x-small;
+  background: transparent;
+  border: none;
+  margin-top: 4%;
+}/*make an id for this*/
+
+#y-axis {
+  margin-top: 6%;
+  letter-spacing: 6px;
+}
+
+#x-axis {
+  letter-spacing: 6px;
+  margin: 0% 0 0 -10%;
+
+}
+
+  /***********************************FOOTER***************************************/
+  footer {
+    background: #333333;
+    margin-top: 15px;
+    /*position: relative;
+    padding-bottom: 26%;
+    height: 0;
+    overflow: hidden; AN ATTEMPT TO GET HEIGHT RESPONSIVE*/
+  }
+
+  /*#sections {
+    margin-top: 3%;
+  }*/
+
+  /*#footer-info-sec {
+    margin: 30px 0px 25px 0px;
+    position: absolute;*/
+    /*width: 100%;
+    height: 100%;*/
+  /*} AN ATTEMPT TO GET HEIGHT RESPONSIVE*/
+
+  h3#About-us, h3#developers {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    letter-spacing: 9px;
+  }
+
+  #footer-section-1 {
+    text-align: center;
+    border-right: 1px solid whitesmoke;
+    margin-top: 2%;
+  }
+
+  #footer-section-2 {
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  ul.footer-list {
+    padding: 0;
+  }
+
+  li.footer-list-items {
+    list-style: none;
+    /*display: flex;
+    justify-content: center*/
+    color: #E88924;
+    line-height: 22px;
+  }
+
+  a.footer-anchors {
+    text-decoration: none;
+    color: #E88924 !important;
+  }
+  /*******************************CONNECT WITH US SECTION START************************/
+  h2#connect-p {
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+
+  span {
+    font-size: 18px;
+    letter-spacing: normal;
+  }
+  /**********************************SOCIAL MEDIA ICONS START**************************************/
+  img.soc-med-icons {
+    width: 5%;
+    height: auto;
+    margin-right: 1%;
+    float: right;
+    margin-bottom: 10px;
+    /*border: orange;*/
+  }
+
+
+  #side-section {
+      display: none;
+  }
+
+}
