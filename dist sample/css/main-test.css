@@ -319,7 +319,7 @@ img.soc-med-icons {
   }
 
   #nav-bar {
-    height: 43px;
+    height: 30px;
   }
 
 #header-wrapper {
@@ -332,8 +332,8 @@ img.soc-med-icons {
   }/*put an id in html*/
 
   #paylocity-profile-img {
-    height: 46%;
-    width: 53%;
+    height: 73%;
+    width: 73%;
   }/*put an id on this profile image*/
 
   /*******************************CONTENT-AREA**********************************/
@@ -345,15 +345,8 @@ img.soc-med-icons {
 
   #content-wrapper {
     width: 100%;
-    margin: 2% 0 -2% -17%;
+    margin: -2% 0 -6% 0%;
     height: 385px;
-    /*background: white !important;
-    margin: 2% 0;
-    padding: 0;
-    border-radius: 4px;
-    -moz-box-shadow:    1px 0px 5px 6px #ccc;
-    -webkit-box-shadow: 1px 0px 5px 6px #ccc;
-    box-shadow:         1px 0px 5px 6px #ccc;*/
   }
   /********************************H2: TITLE OF PAGE*************************************/
   /*h2.type-contenttitle {
@@ -375,10 +368,6 @@ img.soc-med-icons {
   #side-section {
       display: none;
   }
-  /*#side-section {
-    height: 385px;
-    display: block;
-  }*/
 
   #side-bar-title {
     font-size: small;
@@ -410,18 +399,23 @@ img.soc-med-icons {
 /****************************************GRIDTABS and BUTTONS START****************************************/
   #gridtabs {
     /*margin: -15% 0 -8% 13%;*/
-    margin: -15% 0 -8% 0;
+    margin: -12% 0 -8% 13%;
     height: 49px;
   }
 
   button.button.outline {
     font-size: x-small;
-    height: 30px;
-    /*padding: 1px;*/
+    height: 54%;
+    padding: 2% 0 0 2%;
   }
 
+#button-1 {
+  padding-left: 1%;
+  width: 23%;
+}
+
   #gridtabs-add {
-    height: 30px;
+    height: 54%;
     padding: 1%;
   }
 
@@ -491,13 +485,18 @@ footer {
     height: 186px;
   }
 
-  h3#About-us, h3#developers {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    letter-spacing: 9px;
+  h3#About-us {
+    letter-spacing: 3px;
+    font-size: small;
+    padding: 0;
   }
+
+ h3#developers{
+   margin-left: -8%;
+   margin-top: 12px;
+   font-size: small;
+   letter-spacing: 6px;
+ }
 
   #footer-section-1 {
     text-align: center;
@@ -505,21 +504,26 @@ footer {
     border-bottom: solid 1px white;
     margin-top: -2%;
     height: 184px;
-    width: 100%;
+    width: 50%;
+    padding: 0;
+    border: none;
   }
 
-ul.footer-list {
-  margin-top: 1%;
-}
+  #section-1-footer-list {
+    border-right: solid 1px white;
+  }
 
   #footer-section-2 {
-    text-align: center;
-    margin-top: -1%;
-    height: 180px;
-    background: #333333;
-    width: 100%;
-    border-top: solid 1px white;
+    margin: initial;
+    width: 50%;
+    border: 0;
+    padding: 0;
   }
+
+  #section-2-footer-list {
+    margin-left: -9%;
+  }
+
 
   /*******************************CONNECT WITH US SECTION START************************/
 #connect {
