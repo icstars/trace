@@ -319,7 +319,7 @@ img.soc-med-icons {
   }
 
   #nav-bar {
-    height: 19px;
+    height: 43px;
   }
 
 #header-wrapper {
@@ -445,8 +445,8 @@ img.soc-med-icons {
   padding: 0;
 }
 
-#gb6, #gb3, #gb0, #gb7, #gb4,#gb1, #gb8, #gb5, #gb2,{
-    height: 80px;
+#gb6, #gb3, #gb0, #gb7, #gb4,#gb1, #gb8, #gb5, #gb2{
+    height: 60px;
 }
 /********************************************GRID ELEMENTS END*********************************/
 
@@ -480,7 +480,7 @@ img.soc-med-icons {
 
 #x-axis {
   letter-spacing: 6px;
-  margin: 2% 0 0 2%;
+  margin: 2% 0 0 -24%;
 
 }
 
@@ -489,10 +489,6 @@ footer {
     background: #333333;
     margin-top: 6%;
     height: 186px;
-    /*position: relative;
-    padding-bottom: 26%;
-    height: 0;
-    overflow: hidden; AN ATTEMPT TO GET HEIGHT RESPONSIVE*/
   }
 
   h3#About-us, h3#developers {

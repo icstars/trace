@@ -22,37 +22,12 @@ $(document).ready(function() {
   //   $('#side-bar-list').css('height', $('#grid-wrapper').width());
   // })
 
-  //Hiding side-bar-section
+//slides side bar in and out
   var hiddenSidebar = $("#side-section").width();
-  var clicks = 0;
       $("#side-bar-icon").click(function(event){
-        // event.preventDefault();
-        if(clicks == 0){
-          $("#side-section").hide({
-              width: 0
-          });
-          clicks++;
-        }else {$("#side-bar-icon").click(function(event){
-            $("#side-section").show({
-                width: hiddenSidebar
-            });
-        });
-        clicks--;
-
-        }
-
+          $("#side-section").toggle();
       });
 
-      // 
-      // $("#side-bar-icon").click(function(){
-      //   $("#side-section").style.width = "250px";
-      //   $("#main").style.marginLeft = "250px";
-      // });
-      //
-      // $('.closebtn').click(function(){
-      //   $('#sideNavigation').style.width = "0";
-      //   $("#main").style.marginLeft = "0";
-      // });
 
   //Tag SIDEBAR items with e_id
   $('#side-bar-list li').each(function(i) {
