@@ -4,3 +4,7 @@
 3. install django 1.10
 4. navigate to [YOUR_WORKSPACE_DIRECTORY]/trace/django_stack/paytential
 4. run this command: python manage.py runserver
+
+#ADMIN
+user:trace
+pw:traceProject
