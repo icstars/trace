@@ -2,6 +2,9 @@ from django.db import models
 from django.utils import timezone
 
 class Employee(models.Model):
+    class Meta:
+        ordering = ('first_name',)
+
     employee_id = models.PositiveIntegerField(unique=True,default=0)
     managment_relationships = models.ManyToManyField('self', through='Supervision',symmetrical=False,related_name='refers_to')
     first_name = models.CharField(max_length=50)
@@ -11,34 +14,47 @@ class Employee(models.Model):
     hire_date = models.DateField(default=timezone.now)
     termination_date = models.DateField(null=True,default=None)
     position = models.CharField(max_length=30)
-    operational_unit_id = models.PositiveIntegerField(default=0)
     email = models.EmailField(max_length=100)
     phone = models.CharField(max_length=20)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.first_name + " " + self.last_name
+        return "%s. %s"% (self.first_name[0],self.last_name)
 
 class Manager(Employee):
     username = models.CharField(max_length=50)
     password = models.CharField(max_length=100)
     permissions_level = models.PositiveIntegerField(default=0)
 
+class Location(models.Model):
+    assigned_employee = models.ForeignKey(Employee,related_name=None)
+    location_id = models.PositiveIntegerField(default=0)
+    location_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return str(self.assigned_employee)+" is assigned to the location: "+self.location_name
+
+class Location_lookup(models.Model):
+    location_id = models.PositiveIntegerField(default=0)
+    location_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.location_name+": "+self.location_name
+#TODO: 'no such column subordinate_id'
 class Supervision(models.Model):
-    subordiante = models.ForeignKey('Employee', related_name='employees')
+    subordinate = models.ForeignKey('Employee', related_name='employees')
     supervisor = models.ForeignKey('Manager', related_name='supervisors')
-    start_date = models.DateField(timezone.now)
+    start_date = models.DateField(default=timezone.now)
     end_date = models.DateField(null=True, default=None)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return str(self.manager_id + ":" + self.employee_id)
+        return str(self.supervisor) + ":" + str(self.subordinate)
 
 class Rating(models.Model):
-    subordiante = models.ForeignKey('Supervision', related_name='employees', null=True)
-    supervisor = models.ForeignKey('Supervision', related_name='supervisors', null=True)
+    managment_relationship = models.ForeignKey(Supervision,null=True)
     potential = models.PositiveSmallIntegerField(default=0)
     performance = models.PositiveSmallIntegerField(default=0)
     notes = models.TextField(max_length=1000)
@@ -46,4 +62,4 @@ class Rating(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return str(self.potential + ":" + self.performance)
+        return str(self.potential) + ":" + str(self.performance)

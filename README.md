@@ -7,4 +7,9 @@
 
 #ADMIN
 user:trace
-pw:traceProject
+pw:tproject
+
+
+if you can't log in try this command and reenter the same credentials
+
+python manage.py createsuperuser
