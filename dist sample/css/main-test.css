@@ -1,6 +1,7 @@
 /*ALL STYLING FOR HEADER, NAV, SIDEBAR OR FOOTER GOES HERE*/
 body, html, {
   height:100%;
+  background: white;
 }
 
 
@@ -366,7 +367,7 @@ img.soc-med-icons {
 
   /***********************************SIDEBAR***********************************/
   #side-section {
-      display: none;
+    display: none;
   }
 
   #side-bar-title {
@@ -502,7 +503,7 @@ footer {
     text-align: center;
     border-right: 1px solid whitesmoke;
     border-bottom: solid 1px white;
-    margin-top: -2%;
+    margin:-2% 0 0 -2%;
     height: 184px;
     width: 50%;
     padding: 0;
