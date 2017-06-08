@@ -10,9 +10,9 @@ $(document).ready(function() {
     employees[emp._id] = emp;
   }
   //Populate SIDEBAR
-  for (var i in employees) {
-    $('#side-bar-list').append("<li><span>" + employees[i].fname + " " + employees[i].lname + "</span></li>");
-  }
+  // for (var i in employees) {
+  //   $('#side-bar-list').append("<li><span>" + employees[i].fname + " " + employees[i].lname + "</span></li>");
+  // }
 
   //KEEPS SIDEBAR IN SHAPE AS WINDOW RESIZES
   //SIDEBAR can't be dependant on the grid as it is only on the dashboard
@@ -21,6 +21,13 @@ $(document).ready(function() {
   // $(window).resize(function() {
   //   $('#side-bar-list').css('height', $('#grid-wrapper').width());
   // })
+
+//slides side bar in and out
+  var hiddenSidebar = $("#side-section").width();
+      $("#side-bar-icon").click(function(event){
+          $("#side-section").toggle();
+      });
+
 
   //Tag SIDEBAR items with e_id
   $('#side-bar-list li').each(function(i) {

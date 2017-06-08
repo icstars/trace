@@ -1,55 +1,50 @@
 /*ALL STYLING FOR HEADER, NAV, SIDEBAR OR FOOTER GOES HERE*/
 body, html, {
   height:100%;
+  background: white;
 }
 
 
 /**************************HEADER**************************************/
 
-.c-impersonation-bar {
-  /*background: #E88924 !important;*/
-  height:40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 132%;
-  background: linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* fallback */
-  /*background: url(images/linear_bg_2.png);*/
-  background-repeat: repeat-x;
-  /* Safari 4-5, Chrome 1-9 */
-  /*background: -webkit-gradient(linear, 0% 0%, 0%, 100%, from(#1a82f7), to(#2F2727));*/
-  background: -webkit-gradient(linear, 0% 0%, 0%, 100%, from(#FF6208), to(#E88924));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* IE 10 */
-  background: -ms-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-}
-
 #header-wrapper {
-  background: #333333 !important;
+  background: white;
+  /*background: #333333 !important;*/
 }
 
 #logo-header{
-/*.c-header-bar.c-header-alert {*/
-  /*background: #E88924;*/
-  /*background: white;*/
-  /*height: 65px; experimenting with structure*/
-  height: 150px;
+  /*height: 150px;*/
+  /*text-align: center;*/
+  margin: 0 0 2% 0;
   text-align: center;
-  margin: 0 0 4% 0;
+/*border-bottom: 27px solid transparent;
+border-left: 14px solid #666666;
+border-top: 27px solid transparent;
+content: "";
+height: 0;
+right: -14px;
+top: 0;
+position: absolute;
+width: 0;*/
+
+}
+
+#logo-header:after {
+  /*border-bottom: 27px solid transparent;
+  border-left: 14px solid #666666;
+  border-top: 27px solid transparent;
+  content: "";
+  height: 0;
+  right: -14px;
+  top: 0;
+  position: absolute;
+  width: 0;*/
 }
 
 #img-logo {
-  border: solid 2px orange;
-  border-radius: 100%;
-  width: 150px;
-  height: 150px;
   margin: 2% 0 0 0;
+  width: 12%
+  auto;
 }
 span.c-header-searchbar {
   padding-top: 0;
@@ -69,11 +64,13 @@ span.c-header-searchbar {
 }
 
 #nav-bar {
-  background: #E88924;
+  background: #333333;
+  /*background: #E88924;*/
   border-bottom: 2px solid #666666;
 }
 /*******************************CONTENT-AREA**********************************/
 .content-area {
+  height: 845px;
   padding-right: 2%;
   /*padding-bottom: 2%;*/
   margin-bottom: 2%;
@@ -106,7 +103,6 @@ h2.type-contenttitle {
   border: none;
   border-top: solid 1px #757575 !important;
   border-bottom: solid 1px #757575 !important;
-  /*margin: 5% 0;*/
 }
 
 /*************************TOOLBAR END***************************/
@@ -120,12 +116,13 @@ h2.type-contenttitle {
 
 #side-bar-title {
   height: 42px;
-  width: 100%;
+  width: 97%;
   font-size: 2em;
   color:white;
-  /*margin: 7% 0 5% 0;*/
-  padding: 0 0 5%;
+  padding:9% 0 10%;
   border-bottom: solid 1px #757575;
+  margin-top: 6%;
+  margin-left: 3%;
 }
 
 #side-bar {
@@ -140,6 +137,7 @@ h2.type-contenttitle {
 #side-bar-list {
   overflow-y: auto;
   padding: inherit;
+  margin-bottom: 15%;
 }
 
 #side-bar-list li {
@@ -277,4 +275,171 @@ img.soc-med-icons {
   float: right;
   margin-bottom: 10px;
   /*border: orange;*/
+}
+
+
+
+
+/*___________________________________________________________________________________________*/
+/******************************************MEDIA QUERIES***********************************/
+/*___________________________________________________________________________________________*/
+@media only screen and (max-width: 768px)
+{
+  /*ALL STYLING FOR HEADER, NAV, SIDEBAR MAIN SECTION OR FOOTER GOES HERE*/
+
+  #img-logo {
+    /*margin: 2% 0 0 0;*/
+    width: 17%;
+    height: auto;
+  }
+
+  #nav-bar {
+    height: 30px;
+  }
+
+#header-wrapper {
+  margin-bottom: 2%;
+}
+
+  .c-header-user-portrait {
+    width: 46px;
+    margin-right: -3%;
+  }/*put an id in html*/
+
+  #paylocity-profile-img {
+    height: 73%;
+    width: 73%;
+  }/*put an id on this profile image*/
+
+  /*******************************CONTENT-AREA**********************************/
+  .content-area {
+    margin-left: 0%;
+    height: 35%;
+    width: 102%;
+  }
+
+  #content-wrapper {
+    width: 100%;
+    margin: -2% 0 -6% 0%;
+    height: 375px;
+  }
+  /********************************H2: TITLE OF PAGE*************************************/
+  /*h2.type-contenttitle {
+    margin-right: -28px;
+    -moz-box-shadow: inset 0 0 10px #666666;
+    -webkit-box-shadow: inset 0 0 10px #666666;
+    box-shadow: inset 0px 0 10px #666666;
+    background: rgba(128,128,128,.5) !important;
+  }*/
+  /*****************************TOOLBAR************************************/
+
+  #toolbar {
+    height: 32px;
+  }
+
+  /*************************TOOLBAR END***************************/
+
+  /***********************************SIDEBAR***********************************/
+  #side-section {
+    display: none;
+  }
+
+  #side-bar-title {
+    font-size: small;
+    height: 6px;
+  }
+
+  #side-bar {
+    height: 321px;
+  }
+
+  #side-bar-list li {
+    height: 13%;
+  }
+
+  #side-bar-list li span {
+    font-size: smaller;
+  }
+
+  #side-bar-menu-toggle {
+    float: left;
+    margin: -2% 0 0 4%;
+  }
+  /***********************************SIDEBAR END***********************************/
+  /***********************************FOOTER***************************************/
+footer {
+    background: #333333;
+    margin-top: 6%;
+    height: 186px;
+  }
+
+  h3#About-us {
+    letter-spacing: 3px;
+    font-size: small;
+    padding: 0;
+  }
+
+ h3#developers{
+   margin-left: -8%;
+   margin-top: 12px;
+   font-size: small;
+   letter-spacing: 6px;
+ }
+
+  #footer-section-1 {
+    text-align: center;
+    border-right: 1px solid whitesmoke;
+    border-bottom: solid 1px white;
+    margin:-2% 0 0 -2%;
+    height: 184px;
+    width: 50%;
+    padding: 0;
+    border: none;
+  }
+
+  #section-1-footer-list {
+    border-right: solid 1px white;
+  }
+
+  #footer-section-2 {
+    margin: initial;
+    width: 50%;
+    border: 0;
+    padding: 0;
+  }
+
+  #section-2-footer-list {
+    margin-left: -9%;
+  }
+
+
+  /*******************************CONNECT WITH US SECTION START************************/
+#connect {
+  background: #333333;
+}
+
+#connect-with-us {
+  margin-top: 4%;
+}
+
+h2#connect-p {
+    /*color: white;*/
+    font-size: small;
+    /*letter-spacing: 2px;*/
+    width: 140%;
+    margin-bottom: 5%;
+  }
+
+  span {
+    font-size: xx-small;
+  }
+  /**********************************SOCIAL MEDIA ICONS START**************************************/
+  #soc-media {
+    margin-top: 3%;
+  }
+
+  img.soc-med-icons {
+    width: 10%;
+  }
+
 }
