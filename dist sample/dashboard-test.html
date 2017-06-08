@@ -20,12 +20,10 @@
   <link rel="shortcut icon" href="citrus/images/favicon.png">
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="css/dashboard-test.css">
-  <link rel="stylesheet" href="css/helpme.css">
   <link rel="stylesheet" href="css/main-test.css">
-  <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
-
+  <link rel="stylesheet" href="css/dashboard-test.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
   <script src="scripts/jquery-3.2.1.min.js"></script>
@@ -150,10 +148,12 @@
       <div id="side-section" class="col-xs-3 padding-none border-right border-right-xs-none">
         <h3 id="side-bar-title">Employees</h3>
         <div id="toolbar" class="button-group col-xs-12">
+
           <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
           <button id="profile-btn" class="button disabled icon-group"></button>
           <button id="checklist-btn" class="button icon-checklist"></button>
           <button id="reset-btn" class="button disabled icon-reset"></button>
+
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
           <ul id="side-bar-list" class="side-nav col-xs-12">
@@ -170,10 +170,12 @@
             </ul>
           </div>
         <div id="gridtabs" class="button-group col-xs-12">
-          <div class="gutter padding-none col-xs-1"></div>
-          <button id="" class="button outline col-xs-3">Sales Assoc</button>
-          <button id="" class="button outline col-xs-3">Cashier</button>
-          <button id="" class="button outline col-xs-3">Freight</button>
+          <!-- <div class="gutter padding-none col-xs-1"></div> -->
+          <button id="gridtabs-back" class="button secondary outline icon col-xs-2"><i class="icon-back"></i></button>
+          <button class="button outline col-xs-2">Sales Assoc</button>
+          <button class="button outline col-xs-2">Cashier</button>
+          <button class="button outline col-xs-2">Freight</button>
+          <button id="gridtabs-forward" class="button secondary outline icon col-xs-2"><i class="icon-forward"></i></button>
           <button id="gridtabs-add" class="button secondary icon-plus-circle col-xs-2"></button>
           <!-- <div class="gutter padding-none col-xs-1"></div> -->
         </div>
