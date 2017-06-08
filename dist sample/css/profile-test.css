@@ -2,6 +2,12 @@
   height: 450px;
 }
 
+#profile-content-wrapper {
+  width: 100%;
+  margin: -2% 0 -6% 0%;
+  height: 375px;
+}
+
 #emp-info-and-graph {
   margin-bottom: 3%;
 }
@@ -36,6 +42,11 @@ button.button.outline {
   border: none;
 }
 
+#profile-c-header-menu {
+  background: none;
+  border: none;
+}
+
 #graph {
 
 }
@@ -59,6 +70,13 @@ overflow-y:overlay;
   padding-left: 7%;
 }
 
+.ratings-comments {
+  max-width: 100px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
 table {
   /*height: */
   margin: 10% 0 0 5%;
@@ -78,22 +96,17 @@ thead {
 @media only screen and (max-width: 768px)
 {
 
-  /*#profile-maincontent-section {
-    height: 450px;
-  }*/
+#content-wrapper {
+  height: 765px;
+}
+
+#profile-maincontent-section {
+      margin-top: 3%;
+}
 
   #employee-info {
     width: 130%;
   }
-
-  /*#profile-commentsgridtabs {
-    margin: 3% 1% 0 5%;
-    width: 91%;
-  }
-
-  button.button.outline {
-
-  }*/
 
   .table-col-1 {
     width: 37%;
@@ -106,8 +119,8 @@ thead {
   #save-btn, #edit-btn, #rate-btn, #share-btn, #delete-btn {
     height: 35px;
     width: 35px;
-    /*padding: 0;
-    background: #666666 !important;
+    padding: 1%;
+  /*  background: #666666 !important;
     border: none;
     color: white !important;
     border-left: solid 1px #757575 !important;*/
@@ -122,6 +135,11 @@ thead {
   #profile-header {
     font-size: large;
   }
+/*
+  #profile-c-header-menu {
+    border-color: none;
+    background: none;
+  }*/
 
   #profile-graph {
     display: none;
@@ -131,9 +149,9 @@ thead {
    display: flow-root;
    margin-left: 2%;
    width: 93%;
-  height: 230px;
+   height: 230px;
   /*overflow-x:none;*/
-  overflow-y:overlay;
+   overflow-y:overlay;
   }
 
 
@@ -144,11 +162,12 @@ thead {
 
   #ratings-header {
     padding-left: 7%;
+    margin-left: 6%;
   }
 
   table {
     /*height: */
-    margin: 10% 0 0 5%;
+    margin: 10% 0 0 6%;
 
   }
 
@@ -156,5 +175,5 @@ thead {
 
   }
 
-  
+
 }

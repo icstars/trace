@@ -7,30 +7,6 @@ body, html, {
 
 /**************************HEADER**************************************/
 
-.c-impersonation-bar {
-  /*background: #E88924 !important;*/
-  height:40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 132%;
-  background: linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* fallback */
-  /*background: url(images/linear_bg_2.png);*/
-  background-repeat: repeat-x;
-  /* Safari 4-5, Chrome 1-9 */
-  /*background: -webkit-gradient(linear, 0% 0%, 0%, 100%, from(#1a82f7), to(#2F2727));*/
-  background: -webkit-gradient(linear, 0% 0%, 0%, 100%, from(#FF6208), to(#E88924));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* IE 10 */
-  background: -ms-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(#FF6208, #E88924, #FF6208) !important;
-}
-
 #header-wrapper {
   background: white;
   /*background: #333333 !important;*/
@@ -309,10 +285,8 @@ img.soc-med-icons {
 /*___________________________________________________________________________________________*/
 @media only screen and (max-width: 768px)
 {
-  /*ALL STYLING FOR HEADER, NAV, SIDEBAR OR FOOTER GOES HERE*/
-  body, html, {
-    height:100%;
-  }
+  /*ALL STYLING FOR HEADER, NAV, SIDEBAR MAIN SECTION OR FOOTER GOES HERE*/
+
   #img-logo {
     /*margin: 2% 0 0 0;*/
     width: 17%;
@@ -347,7 +321,7 @@ img.soc-med-icons {
   #content-wrapper {
     width: 100%;
     margin: -2% 0 -6% 0%;
-    height: 385px;
+    height: 375px;
   }
   /********************************H2: TITLE OF PAGE*************************************/
   /*h2.type-contenttitle {
@@ -392,93 +366,6 @@ img.soc-med-icons {
     margin: -2% 0 0 4%;
   }
   /***********************************SIDEBAR END***********************************/
-/**************************************MAIN SECTION STARTS************************************/
-  #main-section-wrap {
-    margin: 0 -2% 0 -19%;
-  }
-/**************************************MAIN SECTION ENDS************************************/
-/****************************************GRIDTABS and BUTTONS START****************************************/
-  #gridtabs {
-    /*margin: -15% 0 -8% 13%;*/
-    margin: -12% 0 -8% 13%;
-    height: 49px;
-  }
-
-  button.button.outline {
-    font-size: x-small;
-    height: 54%;
-    padding: 2% 0 0 2%;
-  }
-
-#button-1 {
-  padding-left: 1%;
-  width: 23%;
-}
-
-  #gridtabs-add {
-    height: 54%;
-    padding: 1%;
-  }
-
-  /****************************************GRIDTABS and BUTTONS END******************************************/
-  /************************************BUTTONS START**************************************/
-  #eval-btn, #profile-btn, #checklist-btn, #reset-btn {
-    padding: 4px;
-    font-size: smaller;
-  }
-/*
-  #profile-btn, #checklist-btn, #reset-btn{
-    border-left: solid 1px #757575;
-  }*/
-
-
-  /************************************BUTTONS END**************************************/
-/********************************************GRID ELEMENTS START*************************************/
-#grid-wrapper{
-  margin-left: 14%;
-  width: 116%;
-  padding: 0;
-}
-
-#gb6, #gb3, #gb0, #gb7, #gb4,#gb1, #gb8, #gb5, #gb2{
-    height: 60px;
-}
-/********************************************GRID ELEMENTS END*********************************/
-
-  /***********************************SCROLL BAR START******************************/
-  /*#side-bar-list::-webkit-scrollbar {
-      width: 0 !important;
-  }
-*/
-  /*
-  ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-  }*/
-  /**********************************SCROLL BAR END***************************************/
-.row.c-header-menu{
-  font-size: x-small;
-  background: transparent;
-  border: none;
-  margin-top: 4%;
-}/*make an id for this*/
-
-#y-axis {
-  margin-top: 6%;
-  letter-spacing: 6px;
-}
-
-#x-axis {
-  letter-spacing: 6px;
-  margin: 2% 0 0 -24%;
-
-}
-
   /***********************************FOOTER***************************************/
 footer {
     background: #333333;
