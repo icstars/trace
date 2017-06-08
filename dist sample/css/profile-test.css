@@ -28,7 +28,7 @@ button.button.outline {
 #save-btn:hover, #edit-btn:hover, #rate-btn:hover, #share-btn:hover, #delete-btn:hover {
   background-color: #E88924 !important;
   color: white !important;
- 
+
 }
 
 #profile-header {
@@ -48,7 +48,7 @@ height: 230px;
 /*overflow-x:none;*/
 overflow-y:overlay;
 }
-}
+
 
 #ratings-content-area {
   padding-left: 2%;
@@ -63,8 +63,98 @@ table {
   /*height: */
   margin: 10% 0 0 5%;
 
-}*/
+}
 
 thead {
 
+}
+
+
+
+
+/*___________________________________________________________________________________________*/
+/******************************************MEDIA QUERIES***********************************/
+/*___________________________________________________________________________________________*/
+@media only screen and (max-width: 768px)
+{
+
+  /*#profile-maincontent-section {
+    height: 450px;
+  }*/
+
+  #employee-info {
+    width: 130%;
+  }
+
+  /*#profile-commentsgridtabs {
+    margin: 3% 1% 0 5%;
+    width: 91%;
+  }
+
+  button.button.outline {
+
+  }*/
+
+  .table-col-1 {
+    width: 37%;
+  }
+
+  #profile-commentsgridtabs {
+    margin: -11% 0 0 36%;
+  }
+
+  #save-btn, #edit-btn, #rate-btn, #share-btn, #delete-btn {
+    height: 35px;
+    width: 35px;
+    /*padding: 0;
+    background: #666666 !important;
+    border: none;
+    color: white !important;
+    border-left: solid 1px #757575 !important;*/
+  }
+
+  /*#save-btn:hover, #edit-btn:hover, #rate-btn:hover, #share-btn:hover, #delete-btn:hover {
+    background-color: #E88924 !important;
+    color: white !important;
+
+  }*/
+
+  #profile-header {
+    font-size: large;
+  }
+
+  #profile-graph {
+    display: none;
+  }
+
+  #ratings-table-section {
+   display: flow-root;
+   margin-left: 2%;
+   width: 93%;
+  height: 230px;
+  /*overflow-x:none;*/
+  overflow-y:overlay;
+  }
+
+
+  #ratings-content-area {
+    padding-left: 2%;
+    border: none !important;
+  }
+
+  #ratings-header {
+    padding-left: 7%;
+  }
+
+  table {
+    /*height: */
+    margin: 10% 0 0 5%;
+
+  }
+
+  thead {
+
+  }
+
+  
 }
