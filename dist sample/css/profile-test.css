@@ -120,11 +120,7 @@ thead {
     height: 35px;
     width: 35px;
     padding: 1%;
-  /*  background: #666666 !important;
-    border: none;
-    color: white !important;
-    border-left: solid 1px #757575 !important;*/
-  }
+    }
 
   /*#save-btn:hover, #edit-btn:hover, #rate-btn:hover, #share-btn:hover, #delete-btn:hover {
     background-color: #E88924 !important;
