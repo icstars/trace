@@ -6,7 +6,7 @@ class Employee(models.Model):
         ordering = ('first_name',)
 
     employee_id = models.PositiveIntegerField(unique=True,default=0)
-    managment_relationships = models.ManyToManyField('self', through='Supervision',symmetrical=False,related_name='refers_to')
+    managment_relationships = models.ManyToManyField('Manager', through='Supervision',symmetrical=False,related_name='refers_to')
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     gender = models.CharField(max_length=10)
@@ -20,7 +20,7 @@ class Employee(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return "%s. %s"% (self.first_name[0],self.last_name)
+        return "%s. %s: %s"% (self.first_name[0],self.last_name,self.position)
 
 class Manager(Employee):
     username = models.CharField(max_length=50)
@@ -39,9 +39,13 @@ class Location_lookup(models.Model):
     location_id = models.PositiveIntegerField(default=0)
     location_name = models.CharField(max_length=50)
 
+    #JUNK: this is an example of how to write Model class methods
+    # def getLoc(cls,loc_id):
+    #     pass
+
     def __str__(self):
-        return self.location_name+": "+self.location_name
-#TODO: 'no such column subordinate_id'
+        return str(self.location_id)+": "+self.location_name
+
 class Supervision(models.Model):
     subordinate = models.ForeignKey('Employee', related_name='employees')
     supervisor = models.ForeignKey('Manager', related_name='supervisors')
