@@ -25,11 +25,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
   <script src="{% static "scripts/jquery-3.2.1.min.js" %}"></script>
-  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
-  <script src="{% static "scripts/main.js" %}"></script>
+  <link rel="stylesheet" href="{% static "static/css/main.css" %}"/>
+  <script src="{% static "static/scripts/main.js" %}"></script>
 
-  <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
-  <script src="{% static "scripts/dashboard.js" %}"></script>
+  <link rel="stylesheet" href="{% static "static/css/dashboard.css" %}"/>
+  <script src="{% static "static/scripts/dashboard.js" %}"></script>
 </head>
 
 <body class="citrus">
@@ -41,7 +41,7 @@
     <div class="c-header-bar c-header-alert">
       <div class="c-header-logo">
         <!--STAND-IN LOGO-->
-        <img src="{% static "images/apple-logo.png" %}" alt="logo" style="width: 50px; height: 50px">
+        <img src="{% static "static/images/apple-logo.png" %}" alt="logo" style="width: 50px; height: 50px">
       </div>
       <span class="c-header-searchfield">
         <input id="searchfield" placeholder="Search for People &amp; Co IDs">
