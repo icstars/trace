@@ -77,6 +77,11 @@
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
           <ul id="side-bar-list" class="side-nav col-xs-12">
+            {% if employees %}
+              {% for emp in employees %}
+               <li data-id="{{ emp.employee_id }}"><span> {{ emp.first_name }} {{ emp.last_name }} </span></li>
+              {% endfor %}
+            {% endif %}
           </ul>
         </div>
       </div>
