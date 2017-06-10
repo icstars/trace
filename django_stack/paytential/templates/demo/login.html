@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 
 <!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
@@ -7,7 +8,7 @@
 <!--<![endif]-->
 
 <head>
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="{% static "login.css" %}"/>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
@@ -23,16 +24,16 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Paytential</title>
   <!-- CITRUS Styles -->
-  <link rel="stylesheet" href="citrus/css/citrus.all.min.css">
-  <link rel="stylesheet" href="citrus/css/citrus.open-sans.min.css">
-  <link rel="stylesheet" href="citrus/css/citrus.icon-font.min.css">
+  <link rel="stylesheet" href="{% static  "citrus/css/citrus.all.min.css" %}"/>
+  <link rel="stylesheet" href="{% static  "citrus/css/citrus.open-sans.min.css" %}"/>
+  <link rel="stylesheet" href="{% static  "citrus/css/citrus.icon-font.min.css" %}"/>
   <!-- Global Header -->
-  <link rel="stylesheet" href="citrus/css/components/citrus.header.min.css">
-  <link rel="stylesheet" href="citrus/css/components/citrus.status-bar.min.css">
-  <link rel="shortcut icon" href="citrus/images/favicon.png">
+  <link rel="stylesheet" href="{% static  "citrus/css/components/citrus.header.min.css" %}"/>
+  <link rel="stylesheet" href="{% static  "citrus/css/components/citrus.status-bar.min.css" %}"/>
+  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!--OUR STYLES-->
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="{% static  "css/login.css" %}"/>
 </head>
 
 
