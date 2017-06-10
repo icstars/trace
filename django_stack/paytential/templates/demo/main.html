@@ -21,14 +21,15 @@
   <script src="{% static "citrus/scripts/libs/modernizr.js" %}"></script>
   <!-- OUR STYLES -->
   <link rel="stylesheet" href="{% static "css/main.css" %}"/>
-  <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
   <script src="{% static "scripts/jquery-3.2.1.min.js"  %}"></script>
   <script src="{% static "scripts/main.js" %}"></script>
-  <script src="{% static "scripts/dashboard.js" %}"></script>
+  {% block page_sheets %}
+
+  {% endblock page_sheets %}
 </head>
 
 
@@ -36,12 +37,11 @@
   <!-- start of logo banner -->
   <div id="header-wrapper" class="c-header">
     <div id="logo-header" class="c-header-logo">
-      <img id="img-logo" src="{% static "images/apple-logo.png" %}" alt="logo">
+      <img id="img-logo" src="{% static "images/apple-logo-new.png" %}" alt="logo"/>
     </div>
     <div id="nav-bar" class="c-header-bar">
       <div class="c-header-user-portrait">
-        <!-- <span class="c-header-alert">2</span> -->
-        <img id="paylocity-profile-img" src="{% static "https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png" %}">
+        <img id="paylocity-profile-img" src="https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png">
         <ul class="c-header-menu-dropdown">
           <li class="c-header-user-name">
             <p>Clark Kent</p>ckent [ck1]</li>
