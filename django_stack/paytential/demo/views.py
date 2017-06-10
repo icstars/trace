@@ -7,6 +7,8 @@ employee_dict = {'employees': employee_list }
 
 positions = Employee.objects.order_by('position').distinct('position')
 def index(request):
+    employee_list = Employee.objects.order_by('first_name')
+    employee_dict = {'employees': employee_list }
     return render(request,'demo/dashboard.html',context=employee_dict)
 
 def profile(request):

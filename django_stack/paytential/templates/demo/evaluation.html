@@ -1,3 +1,146 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="XXXXXXXXXXXXXXXX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Paytential</title>
+  <!-- CITRUS Styles -->
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.all.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.open-sans.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.icon-font.min.css" %}"/>
+  <!-- Global Header -->
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.header.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.status-bar.min.css" %}"/>
+  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
+  <script src="{% static "citrus/scripts/libs/modernizr.js" %}"></script>
+  <!-- OUR STYLES -->
+  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
+  <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- OUR STYLES -->
+  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
+  <link rel="stylesheet" href="{% static "css/evaluation.css" %}"/>
+  <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
+  <script src="{% static "scripts/jquery-3.2.1.min.js" %}"></script>
+  <script src="{% static "scripts/main.js" %}"></script>
+  <!-- <script src="{% static "scripts/dashboard.js" %}"></script> -->
+</head>
+
+
+<body class="citrus">
+  <!-- start of logo banner -->
+  <div id="header-wrapper" class="c-header">
+    <div id="logo-header" class="c-header-logo">
+      <img id="img-logo" src="{% static "images/apple-logo-new.png" %}" alt="logo">
+    </div>
+    <div id="nav-bar" class="c-header-bar">
+      <!-- <div class="c-header-notifications">
+        <span>HELP</span>
+      </div> -->
+
+
+<!-- SEARCHBAR TOGGLE:DO WE WANT OR NEED IT?? -->
+      <!-- <div class="c-header-search-toggle">
+        <a href="#"><i class="icon-search icon-bold size-medium"></i></a>
+      </div> -->
+
+
+      <!-- <div class="c-header-notifications"> -->
+        <!-- <span>2</span> -->
+        <!-- <ul class="c-header-menu-dropdown"> -->
+          <!-- <li>
+            <h3>2 Unread Messages</h3>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 09/01/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...
+              </p>
+            </a>
+          </li> -->
+
+          <!-- <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 08/28/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...</p>
+            </a>
+          </li>
+ -->
+          <!-- <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4>08/25/2015</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+              </p>
+            </a>
+          </li> -->
+
+          <!-- <li><a href="#">View all messages</a></li>
+        </ul>
+      </div> -->
+
+
+      <!-- <div class="c-header-notifications"></div>
+      <div class="c-header-notifications">
+        <span>2</span>
+        <ul class="c-header-menu-dropdown">
+          <li>
+            <h3>2 Unread Messages</h3>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 09/01/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 08/28/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4>08/25/2015</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+              </p>
+            </a>
+          </li>
+
+          <li><a href="#">View all messages</a></li>
+        </ul>
+      </div> -->
+
+      <div class="c-header-user-portrait">
+        <!-- <span class="c-header-alert">2</span> -->
+        <img id="paylocity-profile-img" src="https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png">
+        <ul class="c-header-menu-dropdown">
+          <li class="c-header-user-name">
+            <p>Clark Kent</p>ckent [ck1]</li>
+          <li><a href="#"><i class="icon-edit"></i> Edit Profile</a></li>
+          <!-- <li><a href="#"><i class="icon-settings"></i> User Preferences</a></li> -->
+          <li><a href="#"><i class="icon-notifications"></i> Notifications</a></li>
+          <!-- <li><a href="#"><i class="icon-about"></i> About</a></li> -->
+          <li><a href="helpme.html"><i class="icon-help"></i> Help</a></li>
+          <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li>
+          <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
+        </ul>
+      </div>
+=======
 <!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %}
 {% block page_sheets %}
   <link rel="stylesheet" href="{% static "css/evaluation.css" %}"/>
@@ -11,6 +154,7 @@
           <a href="#" class="cHeaderMenuBtn"><i id="side-bar-icon" class="icon-menu"></i></a>
         </li>
       </ul>
+>>>>>>> 021410d0ef7af3b01587446a63082e4fb16ae300
     </div>
     <div id="eval-content-area" class="col-xs-12">
       <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" -->
