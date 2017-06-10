@@ -115,10 +115,16 @@ button.button.outline:active, #gridtabs-add:active {
   clip-path:circle(10px at center);
 }
 .dataPoint{/*colors are set for contrast, feel free to change*/
-  background-color: #000 !important;
+  background-color: transparent !important;
   border: #000 solid 2px !important;
+  /*font-size: 2rem;
+  font-weight: 500;*/
 }
 
+a#dp6, a#dp3, a#dp0, a#dp7, a#dp4, a#dp1, a#dp8, a#dp5, a#dp2, a#dp4{
+  font-size: 2rem;
+  font-weight: bolder;
+}
 .c1 {
   border-left:white solid 6px;
   border-right:white solid 6px;
