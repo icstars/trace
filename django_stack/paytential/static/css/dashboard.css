@@ -4,7 +4,7 @@
   width: 78%;
   text-align: center;
   margin: 0 0 0 12%;
-  background: red !important;
+  /*background: red !important;*/
 }
 
 button.button.outline {
@@ -108,18 +108,24 @@ button.button.outline:active, #gridtabs-add:active {
 }
 
 .grid-apple {
-  height: 1px;
-  width: 1px;
+  height: 100px;
+  width: 100px;
 }
 
-#dp6, #dp5, #dp4, #dp9, #dp3, #dp2, #dp1, #dp8, #dp7, #dp0 {
+#dp6, #dp3, #dp0, #dp7, #dp4, #dp1, #dp8, #dp5, #dp2, #dp4 {
   position: absolute;
   clip-path:circle(10px at center);
 }
-
 .dataPoint{/*colors are set for contrast, feel free to change*/
-  background-color: #000 !important;
+  background-color: transparent !important;
   border: #000 solid 2px !important;
+  /*font-size: 2rem;
+  font-weight: 500;*/
+}
+
+a#dp6, a#dp3, a#dp0, a#dp7, a#dp4, a#dp1, a#dp8, a#dp5, a#dp2, a#dp4{
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
 .c1 {
@@ -214,7 +220,7 @@ button.button.outline:active, #gridtabs-add:active {
   /****************************************GRIDTABS START****************************************/
     #gridtabs {
       width: 100%;
-      margin: -12% 0 -8% 84%;
+      margin: -12% 0 -8% 23%;
       height: 49px;
     }
 
@@ -261,26 +267,18 @@ button.button.outline:active, #gridtabs-add:active {
     padding: 0;
   }
 
-  #gb6, #gb3, #gb0, #gb7, #gb4,#gb1, #gb8, #gb5, #gb2{
-      height: 60px;
+  .grid-apple {
+    height: 60px;
+    width: 60px;
+    padding-top: 6%;
   }
 
-  /***********************************SCROLL BAR START******************************/
-    /*#side-bar-list::-webkit-scrollbar {
-        width: 0 !important;
-    }
-  */
-    /*
-    ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-        border-radius: 10px;
-    }
+  a#dp6, a#dp3, a#dp0, a#dp7, a#dp4, a#dp1, a#dp8, a#dp5, a#dp2, a#dp4{
+    font-size: 1.4rem;
+    /*font-weight: bolder;*/
+    padding-top: 10%;
+  }
 
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    }*/
-  /**********************************SCROLL BAR END***************************************/
   .row.c-header-menu{
     font-size: x-small;
     background: none;

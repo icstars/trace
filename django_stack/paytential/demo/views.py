@@ -5,11 +5,8 @@ from demo.models import Employee,Manager,Location,Location_lookup,Supervision,Ra
 employee_list = Employee.objects.order_by('first_name')
 employee_dict = {'employees': employee_list }
 def index(request):
-<<<<<<< HEAD
     employee_list = Employee.objects.order_by('first_name')
     employee_dict = {'employees': employee_list }
-=======
->>>>>>> 021410d0ef7af3b01587446a63082e4fb16ae300
     return render(request,'demo/dashboard.html',context=employee_dict)
 
 def profile(request):
