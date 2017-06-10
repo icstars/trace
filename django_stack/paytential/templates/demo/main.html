@@ -1,0 +1,131 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="XXXXXXXXXXXXXXXX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Paytential</title>
+  <!-- CITRUS Styles -->
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.all.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.open-sans.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.icon-font.min.css" %}"/>
+  <!-- Global Header -->
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.header.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.status-bar.min.css" %}"/>
+  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
+  <script src="{% static "citrus/scripts/libs/modernizr.js" %}"></script>
+  <!-- OUR STYLES -->
+  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
+  <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
+  <script src="{% static "scripts/jquery-3.2.1.min.js"  %}"></script>
+  <script src="{% static "scripts/main.js" %}"></script>
+  <script src="{% static "scripts/dashboard.js" %}"></script>
+</head>
+
+
+<body class="citrus">
+  <!-- start of logo banner -->
+  <div id="header-wrapper" class="c-header">
+    <div id="logo-header" class="c-header-logo">
+      <img id="img-logo" src="{% static "images/apple-logo.png" %}" alt="logo">
+    </div>
+    <div id="nav-bar" class="c-header-bar">
+      <div class="c-header-user-portrait">
+        <!-- <span class="c-header-alert">2</span> -->
+        <img id="paylocity-profile-img" src="{% static "https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png" %}">
+        <ul class="c-header-menu-dropdown">
+          <li class="c-header-user-name">
+            <p>Clark Kent</p>ckent [ck1]</li>
+          <li><a href="#"><i class="icon-edit"></i> Edit Profile</a></li>
+          <li><a href="#"><i class="icon-notifications"></i> Notifications</a></li>
+          <li><a href="{% static "helpme.html" %}"><i class="icon-help"></i> Help</a></li>
+          <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li>
+          <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- T.R.A.C.E. CODE START -->
+  <div class="content-area">
+    <div class="gutter col-xs-1 padding-none"></div>
+    <div id="content-wrapper" class="row col-xs-10">
+      <div id="side-section" class="col-xs-3 padding-none border-right border-right-xs-none">
+        <h3 id="side-bar-title">Employees</h3>
+        <div id="toolbar" class="button-group col-xs-12">
+
+          <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
+          <button id="profile-btn" class="button disabled icon-group"></button>
+          <button id="checklist-btn" class="button icon-checklist"></button>
+          <button id="reset-btn" class="button disabled icon-reset"></button>
+
+        </div>
+        <div id="side-bar" class="col-xs-3 padding-none">
+          <ul id="side-bar-list" class="side-nav col-xs-12">
+            {% for employee in employees %}
+            <li data-id="{{ emp.employee_id }}"><span> {{ employee.first_name }} {{ employee.last_name }} </span></li>
+            {% empty %}
+            <h3>No Employees</h3> {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% block main_panel %}
+
+      {% endblock main_panel %}
+      <!--END GRID-->
+    </div>
+    <!--end of row with side bar and grid -->
+  </div>
+  <!--end of content-area-->
+  <div class="gutter col-xs-1 padding-none"></div>
+  <!-- FOOTER INFO SECTION START -->
+  <footer class="col-xs-12">
+    <div id="sections" class="row">
+      <div id="footer-section-1" class="col-xs-6">
+        <h3 id="About-us">ABOUT PAYLOCITY</h3>
+        <ul id="section-1-footer-list" class="footer-list">
+          <li class="footer-list-items"><a class="footer-anchors" href="#">TESTIMONIALS</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">AWARDS</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">LEADERSHIP</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">PRODUCT TOUR</a></li>
+          <li class="footer-list-items"><a class="footer-anchors" href="#">RESOURCES</a></li>
+        </ul>
+      </div>
+      <div id="footer-section-2" class="col-xs-6">
+        <h3 id="developers">DEVELOPERS</h3>
+        <ul class="footer-list">
+          <li class="footer-list-items">VANESSA FLORES</li>
+          <li class="footer-list-items">CARLOS MARTINEZ</li>
+          <li class="footer-list-items">MARILYN NICHOLS</li>
+          <li class="footer-list-items">DAN RODGERS</li>
+          <li class="footer-list-items">TINA RODRIGUEZ</li>
+        </ul>
+      </div>
+      <!-- FOOTER INFO SECTION END -->
+    </div>
+    <!--  CONNECT SECTION START -->
+    <div id="connect" class="row col-xs-12">
+      <div id="connect-with-us" class="col-xs-4">
+        <h2 id="connect-p">CONNECT <span>with</span> US</h2>
+      </div>
+      <div id="soc-media" class="col-xs-8">
+        <img class="soc-med-icons" src={% static "images/facebook.png" %} alt="facebook logo">
+        <img class="soc-med-icons" src={% static "images/linkedin.png" %} alt="linkedin logo">
+        <img class="soc-med-icons" src={% static "images/google+.png" %} alt="google plus logo">
+        <img class="soc-med-icons" src={% static "images/twitter.png" %} alt="twitter logo">
+        <img class="soc-med-icons" src={% static "images/youtube.png" %} alt="youtube logo">
+      </div>
+    </div>
+    <!--  CONNECT SECTION END-->
+  </footer>
+</body>
+
+</html>
