@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 {% load staticfiles %}
 
@@ -139,184 +140,119 @@
           <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
         </ul>
       </div>
+=======
+<!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %}
+{% block page_sheets %}
+  <link rel="stylesheet" href="{% static "css/evaluation.css" %}"/>
+  <script src="{% static "scripts/evaluation.js" %}"></script>
+{% endblock page_sheets %}
+{% block main_panel %}
+  <div id="eval-section" class="col-xs-9 padding-none">
+    <div class="row c-header-menu" style="background:transparent; border:none;">
+      <ul id="side-bar-menu-toggle" class="c-header-menu-toggle" style="float:left;">
+        <li>
+          <a href="#" class="cHeaderMenuBtn"><i id="side-bar-icon" class="icon-menu"></i></a>
+        </li>
+      </ul>
+>>>>>>> 021410d0ef7af3b01587446a63082e4fb16ae300
     </div>
-  </div>
-  <!-- T.R.A.C.E. CODE STARTS HERE -->
-  <div class="content-area">
-    <!-- <div class="row">
-      <h2 class="type-contenttitle col-xs-12">Evaluation</h2>
-      <a href="dashboard.html"><button id="back-page-btn" class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button></a>
-    </div> -->
-    <!--ENDS CONTENTTITLE ROW-->
-    <div class="gutter col-xs-1 padding-none"></div>
-    <div id="content-wrapper" class="row col-xs-10 padding-none">
-      <!-- COLUMN WITH SIDEBAR CONTENTS STARTS -->
-      <div id="side-section" class="col-xs-3">
-        <h3 id="side-bar-title">Employees</h3>
-        <div id="toolbar" class="col-xs-12">
-          <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-back"></i></button> -->
-          <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
-          <button id="profile-btn" class="button disabled icon-group"></button>
-          <button id="checklist-btn" class="button icon-checklist"></button>
-          <button id="reset-btn" class="button disabled icon-x-circle"></button>
-          <!-- <button class="button secondary outline icon gridtabs-arrows"><i class="icon-forward"></i></button> -->
-        </div>
-        <div id="side-bar" class="col-xs-3 padding-none">
-          <ul id="side-bar-list" class="side-nav col-xs-12">
-          </ul>
-        </div>
-      </div>
+    <div id="eval-content-area" class="col-xs-12">
+      <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" -->
+      <div id="eval-content-area" id="" class="row content-area">
+        <!--START EVALUATION SECTION-->
+        <div id="eval-progressbar" class="col-xs-12">
+          <!-- performance evaluation bar:START -->
+          <div class="row eval-categories">
 
-      <!-- COLUMN WITH EVALUATION ELEMENTS STARTS -->
-      <div id="eval-section" class="col-xs-9 padding-none">
-        <div class="row c-header-menu" style="background:transparent; border:none;">
-          <ul id="side-bar-menu-toggle" class="c-header-menu-toggle" style="float:left;">
-            <li>
-              <a href="#" class="cHeaderMenuBtn"><i id="side-bar-icon" class="icon-menu"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div id="eval-content-area" class="col-xs-12">
-          <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" -->
-          <div id="eval-content-area" id="" class="row content-area">
-            <!--START EVALUATION SECTION-->
-            <div id="eval-progressbar" class="col-xs-12">
-              <!-- performance evaluation bar:START -->
-              <div class="row eval-categories">
-
-                <h2 id="eval-perf-header" class="col-xs-12 eval-headers">Performance</h2>
-                <!-- <p>Performance Standard Rule</p> -->
-                <div id="performance" class="eval-progressbar col-xs-12">
-                  <!-- low -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <!-- medium -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <!-- high -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                </div>
+            <h2 id="eval-perf-header" class="col-xs-12 eval-headers">Performance</h2>
+            <!-- <p>Performance Standard Rule</p> -->
+            <div id="performance" class="eval-progressbar col-xs-12">
+              <!-- low -->
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
               </div>
-              <!-- potential evaluation bar:START -->
-              <div class="row eval-headers">
-                <h2 id="eval-pot-header" class="col-xs-12 eval-headers">Potential</h2>
-                <!-- <p>Potential Standard Rule</p> -->
-                <!-- </div> -->
-                <div id="potential" class="eval-progressbar col-xs-12">
-                  <!-- low -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <!-- medium -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <!-- high -->
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                  <div class="bar data rounded col-xs-1">
-                    <span class="progress"><a class="count"><img class="eval-apples-btn" src="images/apple5969.png" alt="apple for evaluation page"></a></span>
-                  </div>
-                </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <!-- medium -->
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <!-- high -->
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
               </div>
             </div>
-            <div id="eval-comments" class="form-group col-xs-9">
-              <label>Notes</label>
-              <textarea cols="30" rows="10"></textarea>
-            </div>
-            <div class="col-xs-9">
-              <button id="submit-button" type="button" class="button size-medium">Submit</button>
+          </div>
+          <!-- potential evaluation bar:START -->
+          <div class="row eval-headers">
+            <h2 id="eval-pot-header" class="col-xs-12 eval-headers">Potential</h2>
+            <!-- <p>Potential Standard Rule</p> -->
+            <!-- </div> -->
+            <div id="potential" class="eval-progressbar col-xs-12">
+              <!-- low -->
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <!-- medium -->
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <!-- high -->
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
+              <div class="bar data rounded col-xs-1">
+                <span class="progress"><a class="count"><img class="eval-apples-btn" src="{% static "images/apple5969.png" %}" alt="apple for evaluation page"></a></span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" ENDS-->
+        <div id="eval-comments" class="form-group col-xs-9">
+          <label>Notes</label>
+          <textarea cols="30" rows="10"></textarea>
+        </div>
+        <div class="col-xs-9">
+          <button id="submit-button" type="button" class="button size-medium">Submit</button>
+        </div>
       </div>
-      <!-- COLUMN WITH EVALUATION ELEMENTS ENDS -->
     </div>
-    <footer class="row col-xs-12">
-      <div id="footer-info-sec" class="col-xs-12">
-        <div id="footer-section-1" class="col-xs-6">
-          <h3 id="About-us">ABOUT PAYLOCITY</h3>
-          <ul class="footer-list">
-            <li class="footer-list-items"><a class="footer-anchors" href="#">TESTIMONIALS</a></li>
-            <li class="footer-list-items"><a class="footer-anchors" href="#">AWARDS</a></li>
-            <li class="footer-list-items"><a class="footer-anchors" href="#">LEADERSHIP</a></li>
-            <li class="footer-list-items"><a class="footer-anchors" href="#">PRODUCT TOUR</a></li>
-            <li class="footer-list-items"><a class="footer-anchors" href="#">RESOURCES</a></li>
-          </ul>
-        </div>
-        <div id="footer-section-2" class="col-xs-6">
-          <h3 id="developers">DEVELOPERS</h3>
-          <ul class="footer-list">
-            <li class="footer-list-items">VANESSA FLORES</li>
-            <li class="footer-list-items">CARLOS MARTINEZ</li>
-            <li class="footer-list-items">MARILYN NICOLS</li>
-            <li class="footer-list-items">DAN RODGERS</li>
-            <li class="footer-list-items">TINA RODRIGUEZ</li>
-          </ul>
-        </div>
-      </div>
-      <!-- FOOTER INFO SECTION END -->
-      <!--  CONNECT SECTION START -->
-      <!-- <div class="row"> -->
-      <div id="connect" class="row col-xs-12">
-        <div id="connect-with-us" class="col-xs-4">
-          <h2 id="connect-p">CONNECT <span>with</span> US</h2>
-        </div>
-        <div id="soc-media" class="col-xs-8">
-          <img class="soc-med-icons" src="images/facebook.png" alt="facebook logo">
-          <img class="soc-med-icons" src="images/linkedin.png" alt="linkedin logo">
-          <img class="soc-med-icons" src="images/google+.png" alt="google plus logo">
-          <img class="soc-med-icons" src="images/twitter.png" alt="twitter logo">
-          <img class="soc-med-icons" src="images/youtube.png" alt="youtube logo">
-        </div>
-      </div>
-      <!--  CONNECT SECTION END-->
-    </footer>
-</body>
-
-</html>
+    <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" ENDS-->
+  </div>
+{% endblock main_panel %}
