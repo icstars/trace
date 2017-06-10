@@ -1,3 +1,10 @@
+
+body, html {
+  height:100%;
+  background: white;
+  overflow-x: hidden;
+}
+
 /***********************************evaluation section:directhires-section:START***********************************/
 
 #side-nav.col-xs-3 {

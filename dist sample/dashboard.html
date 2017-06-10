@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load staticfiles %}
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,24 +11,25 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Paytential</title>
   <!-- CITRUS Styles -->
-  <link rel="stylesheet" href="{% static "citrus/css/citrus.all.min.css" %}"/>
-  <link rel="stylesheet" href="{% static "citrus/css/citrus.open-sans.min.css" %}"/>
-  <link rel="stylesheet" href="{% static "citrus/css/citrus.icon-font.min.css" %}"/>
+  <link rel="stylesheet" href="citrus/css/citrus.all.min.css">
+  <link rel="stylesheet" href="citrus/css/citrus.open-sans.min.css">
+  <link rel="stylesheet" href="citrus/css/citrus.icon-font.min.css">
   <!-- Global Header -->
-  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.header.min.css" %}"/>
-  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.status-bar.min.css" %}"/>
-  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
-  <script src="{% static "citrus/scripts/libs/modernizr.js" %}"></script>
+  <link rel="stylesheet" href="citrus/css/components/citrus.header.min.css">
+  <link rel="stylesheet" href="citrus/css/components/citrus.status-bar.min.css">
+  <link rel="shortcut icon" href="citrus/images/favicon.png">
+  <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
-  <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
+
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
-  <script src="{% static "scripts/jquery-3.2.1.min.js"  %}"></script>
-  <script src="{% static "scripts/main.js" %}"></script>
-  <script src="{% static "scripts/dashboard.js" %}"></script>
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/dashboard.js"></script>
 </head>
 
 
@@ -37,20 +37,101 @@
   <!-- start of logo banner -->
   <div id="header-wrapper" class="c-header">
     <div id="logo-header" class="c-header-logo">
-      <img id="img-logo" src="{% static "images/apple-logo-new.png" %}" alt="logo">
+      <img id="img-logo" src="images/apple-logo-new.png" alt="logo">
     </div>
     <div id="nav-bar" class="c-header-bar">
+      <!-- <div class="c-header-notifications">
+        <span>HELP</span>
+      </div> -->
+
+
+<!-- SEARCHBAR TOGGLE:DO WE WANT OR NEED IT?? -->
+      <!-- <div class="c-header-search-toggle">
+        <a href="#"><i class="icon-search icon-bold size-medium"></i></a>
+      </div> -->
+
+
+      <!-- <div class="c-header-notifications"> -->
+        <!-- <span>2</span> -->
+        <!-- <ul class="c-header-menu-dropdown"> -->
+          <!-- <li>
+            <h3>2 Unread Messages</h3>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 09/01/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...
+              </p>
+            </a>
+          </li> -->
+
+          <!-- <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 08/28/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...</p>
+            </a>
+          </li>
+ -->
+          <!-- <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4>08/25/2015</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+              </p>
+            </a>
+          </li> -->
+
+          <!-- <li><a href="#">View all messages</a></li>
+        </ul>
+      </div> -->
+
+
+      <!-- <div class="c-header-notifications"></div>
+      <div class="c-header-notifications">
+        <span>2</span>
+        <ul class="c-header-menu-dropdown">
+          <li>
+            <h3>2 Unread Messages</h3>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 09/01/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4><i class="icon-important"></i> 08/28/2015</h4>
+              <p>Priority: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0);" class="c-header-notification">
+              <h4>08/25/2015</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+              </p>
+            </a>
+          </li>
+
+          <li><a href="#">View all messages</a></li>
+        </ul>
+      </div> -->
+
       <div class="c-header-user-portrait">
         <!-- <span class="c-header-alert">2</span> -->
         <img id="paylocity-profile-img" src="https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png">
         <ul class="c-header-menu-dropdown">
           <li class="c-header-user-name">
-            <!-- <p>Clark Kent</p>ckent [ck1]</li> -->
+            <p>Clark Kent</p>ckent [ck1]</li>
           <li><a href="#"><i class="icon-edit"></i> Edit Profile</a></li>
           <!-- <li><a href="#"><i class="icon-settings"></i> User Preferences</a></li> -->
           <li><a href="#"><i class="icon-notifications"></i> Notifications</a></li>
           <!-- <li><a href="#"><i class="icon-about"></i> About</a></li> -->
-          <li><a href="{% static "helpme.html" %}"><i class="icon-help"></i> Help</a></li>
+          <li><a href="helpme.html"><i class="icon-help"></i> Help</a></li>
           <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li>
           <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
         </ul>
@@ -77,11 +158,6 @@
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
           <ul id="side-bar-list" class="side-nav col-xs-12">
-            {% if employees %}
-              {% for emp in employees %}
-               <li data-id="{{ emp.employee_id }}"><span> {{ emp.first_name }} {{ emp.last_name }} </span></li>
-              {% endfor %}
-            {% endif %}
           </ul>
         </div>
       </div>
@@ -117,35 +193,44 @@
 
           <div id="grid" class="row col-xs-10">
             <div class="col-xs-4 padding-none gc">
-              <div id="gb6" class="gridbox c1 r1 yellow">
+               <div id="gb6" class="gridbox c1 r1 yellow">
+              <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp6" class="button count dataPoint"></a>
               </div>
               <div id="gb3" class="gridbox c1 r2 orange">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp3" class="button count dataPoint"></a>
               </div>
               <div id="gb0" class="gridbox c1 r3 red">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp0" class="button count dataPoint"></a>
               </div>
             </div>
             <div class="col-xs-4 padding-none gc">
               <div id="gb7" class="gridbox c2 r1 green">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp7" class="button count dataPoint"></a>
               </div>
               <div id="gb4" class="gridbox c2 r2 yellow">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp4" class="button count dataPoint"></a>
               </div>
               <div id="gb1" class="gridbox c2 r3 orange">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp1" class="button count dataPoint"></a>
               </div>
             </div>
             <div class="col-xs-4 padding-none gc">
               <div id="gb8" class="gridbox c3 r1 blue">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp8" class="button count dataPoint"></a>
               </div>
               <div id="gb5" class="gridbox c3 r2 green">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp5" class="button count dataPoint"></a>
               </div>
               <div id="gb2" class="gridbox c3 r3 yellow">
+                <img class="grid-apple" src="images/apple.png" alt="apples representing employees on dashboard">
                 <a id="dp2" class="button count dataPoint"></a>
               </div>
             </div>
@@ -202,11 +287,11 @@
         <h2 id="connect-p">CONNECT <span>with</span> US</h2>
       </div>
       <div id="soc-media" class="col-xs-8">
-        <img class="soc-med-icons" src={% static "images/facebook.png" %} alt="facebook logo">
-        <img class="soc-med-icons" src={% static "images/linkedin.png" %} alt="linkedin logo">
-        <img class="soc-med-icons" src={% static "images/google+.png" %} alt="google plus logo">
-        <img class="soc-med-icons" src={% static "images/twitter.png" %} alt="twitter logo">
-        <img class="soc-med-icons" src={% static "images/youtube.png" %} alt="youtube logo">
+        <img class="soc-med-icons" src="images/facebook.png" alt="facebook logo">
+        <img class="soc-med-icons" src="images/linkedin.png" alt="linkedin logo">
+        <img class="soc-med-icons" src="images/google+.png" alt="google plus logo">
+        <img class="soc-med-icons" src="images/twitter.png" alt="twitter logo">
+        <img class="soc-med-icons" src="images/youtube.png" alt="youtube logo">
       </div>
     </div>
     <!--  CONNECT SECTION END-->

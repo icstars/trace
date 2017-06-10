@@ -4,6 +4,7 @@
   width: 78%;
   text-align: center;
   margin: 0 0 0 12%;
+  background: red !important;
 }
 
 button.button.outline {
@@ -25,19 +26,20 @@ button.button.outline {
   height: 54px;
   width: 12%;
   background: #666666 !important;
+  /*background: red !important;testing */
   border: none;
   color: orange !important;
   border-left: solid 1px #757575 !important;
   border-right: solid 1px #757575 !important;
 }
-
+/*
 button.button.outline:hover, #gridtabs-add:hover {
   background-color: #E88924 !important;
   color: white !important;
-}
+}*/
 
 button.button.outline:active, #gridtabs-add:active {
- background-color: #E88924 !important;/*talk to dan about active state selector*/
+ background-color: #E88924 !important;
 }
 
 /**********************************AXIS FOR X AND Y START***************************************/
@@ -101,8 +103,18 @@ button.button.outline:active, #gridtabs-add:active {
   justify-content: center;
 }
 
-.gridbox.zoomed{
+.gridbox.zoomed {
   cursor: zoom-out;
+}
+
+.grid-apple {
+  height: 1px;
+  width: 1px;
+}
+
+#dp6, #dp5, #dp4, #dp9, #dp3, #dp2, #dp1, #dp8, #dp7, #dp0 {
+  position: absolute;
+  clip-path:circle(10px at center);
 }
 
 .dataPoint{/*colors are set for contrast, feel free to change*/
@@ -196,15 +208,13 @@ button.button.outline:active, #gridtabs-add:active {
   /*___________________________________________________________________________________________*/
   @media only screen and (max-width: 768px)
   {
-  /**************************************MAIN SECTION START************************************/
     #main-section-wrap {
       margin: 0 -2% 0 -19%;
     }
   /****************************************GRIDTABS START****************************************/
     #gridtabs {
-      /*margin: -15% 0 -8% 13%;*/
-      /*margin: -12% 0 -8% 21%;*/
-      margin: -12% 0 -8% 24%;
+      width: 100%;
+      margin: -12% 0 -8% 84%;
       height: 49px;
     }
 
@@ -219,14 +229,16 @@ button.button.outline:active, #gridtabs-add:active {
       width: 23%;
     }
 
-     #gridtabs-forward, #gridtabs-back {
-      width: 7%;
-      padding: 1% 8% 0 0;
-      padding-right: 8%;
+    #gridtabs-back {
+      /*width: 7%;*/
+      padding: 1% 5% 1% 0;
+      /*padding-right: 8%;*/
     }
 
+     #gridtabs-forward {}
+
     .icon-forward, .icon-back {
-      font-size: 1rem;
+      font-size: medium;
     }
 
     #gridtabs-add {

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load staticfiles %}
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,27 +11,25 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Paytential</title>
   <!-- CITRUS Styles -->
-  <link rel="stylesheet" href="{% static "citrus/css/citrus.all.min.css" %}"/>
-  <link rel="stylesheet" href="{% static "citrus/css/citrus.open-sans.min.css" %}"/>
-  <link rel="stylesheet" href="{% static "citrus/css/citrus.icon-font.min.css" %}"/>
+  <link rel="stylesheet" href="citrus/css/citrus.all.min.css">
+  <link rel="stylesheet" href="citrus/css/citrus.open-sans.min.css">
+  <link rel="stylesheet" href="citrus/css/citrus.icon-font.min.css">
   <!-- Global Header -->
-  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.header.min.css" %}"/>
-  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.status-bar.min.css" %}"/>
-  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
-  <script src="{% static "citrus/scripts/libs/modernizr.js" %}"></script>
+  <link rel="stylesheet" href="citrus/css/components/citrus.header.min.css">
+  <link rel="stylesheet" href="citrus/css/components/citrus.status-bar.min.css">
+  <link rel="shortcut icon" href="citrus/images/favicon.png">
+  <script src="citrus/scripts/libs/modernizr.js"></script>
   <!-- OUR STYLES -->
-  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
-  <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="css/evaluation.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
 
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- OUR STYLES -->
-  <link rel="stylesheet" href="{% static "css/main.css" %}"/>
-  <link rel="stylesheet" href="{% static "css/evaluation.css" %}"/>
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
-  <script src="{% static "scripts/jquery-3.2.1.min.js" %}"></script>
-  <script src="{% static "scripts/main.js" %}"></script>
-  <!-- <script src="{% static "scripts/dashboard.js" %}"></script> -->
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/dashboard.js"></script>
 </head>
 
 
@@ -40,7 +37,7 @@
   <!-- start of logo banner -->
   <div id="header-wrapper" class="c-header">
     <div id="logo-header" class="c-header-logo">
-      <img id="img-logo" src="{% static "images/apple-logo-new.png" %}" alt="logo">
+      <img id="img-logo" src="images/apple-logo-new.png" alt="logo">
     </div>
     <div id="nav-bar" class="c-header-bar">
       <!-- <div class="c-header-notifications">
