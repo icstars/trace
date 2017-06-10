@@ -32,7 +32,6 @@
   {% endblock page_sheets %}
 </head>
 
-
 <body class="citrus">
   <!-- start of logo banner -->
   <div id="header-wrapper" class="c-header">
@@ -73,7 +72,7 @@
             {% for employee in employees %}
             <li data-id="{{ emp.employee_id }}"><span> {{ employee.first_name }} {{ employee.last_name }} </span></li>
             {% empty %}
-            <h3>No Employees</h3> {% endfor %}
+            <h3>Could not load employees</h3> {% endfor %}
           </ul>
         </div>
       </div>
