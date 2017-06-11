@@ -4,6 +4,8 @@ from demo.models import Employee,Manager,Location,Location_lookup,Supervision,Ra
 # Create your views here.
 employee_list = Employee.objects.order_by('first_name')
 employee_dict = {'employees': employee_list }
+
+positions = Employee.objects.order_by('position').distinct('position')
 def index(request):
     employee_list = Employee.objects.order_by('first_name')
     employee_dict = {'employees': employee_list }
