@@ -3,12 +3,12 @@
 2. navigate to [YOUR_WORKSPACE_DIRECTORY]/trace/django_stack/paytential
 3. install pip, the package manager for python
 4. install django 1.10
-#NEW STEP
-#5. install rest_framework using the command:
+# NEW STEP
+# 5. install rest_framework using the command:
 #  pip install djangorestframework
 6. run this command: python manage.py runserver
 
-#ADMIN
+# ADMIN
 user:trace
 pw:tproject
 
