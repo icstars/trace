@@ -20,7 +20,7 @@ class Employee(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return "%s. %s: %s"% (self.first_name[0],self.last_name,self.position)
+        return "%s. %s ID: %s"% (self.first_name[0],self.last_name,self.employee_id)
 
 class Manager(Employee):
     username = models.CharField(max_length=50)
@@ -28,7 +28,7 @@ class Manager(Employee):
     permissions_level = models.PositiveIntegerField(default=0)
 
 class Location(models.Model):
-    assigned_employee = models.ForeignKey(Employee,related_name=None)
+    assigned_employee = models.ForeignKey(Employee,related_name='assigned_location')
     location_id = models.PositiveIntegerField(default=0)
     location_name = models.CharField(max_length=50)
 
@@ -47,21 +47,22 @@ class Location_lookup(models.Model):
         return str(self.location_id)+": "+self.location_name
 
 class Supervision(models.Model):
-    subordinate = models.ForeignKey('Employee', related_name='employees')
-    supervisor = models.ForeignKey('Manager', related_name='supervisors')
+    subordinate = models.ForeignKey('Employee', related_name='supervisors')
+    supervisor = models.ForeignKey('Manager', related_name='employees')
     start_date = models.DateField(default=timezone.now)
     end_date = models.DateField(null=True, default=None)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return str(self.supervisor) + ":" + str(self.subordinate)
+        return str(self.supervisor) + ": " + str(self.subordinate)
 
 class Rating(models.Model):
-    managment_relationship = models.ForeignKey(Supervision,null=True)
+    managment_relationship = models.ForeignKey(Supervision,related_name='ratings',null=True)
     potential = models.PositiveSmallIntegerField(default=0)
     performance = models.PositiveSmallIntegerField(default=0)
     notes = models.TextField(max_length=1000)
+    date = models.DateField(default=timezone.now)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
 

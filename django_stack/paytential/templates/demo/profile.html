@@ -21,7 +21,7 @@
     </div>
     <div class="col-xs-12">
       <div class="col-xs-8">
-        <h2 id="profile-header" class="type-sectiontitle col-xs-12">fName lName</h2>
+        <h2 id="profile-header" class="type-sectiontitle col-xs-12">{{ employees.first.first_name }} {{ employees.first.last_name }}</h2>
       </div>
       <!-- PROFILE HEADER AND GRIDTABS START -->
     </div>
@@ -35,44 +35,40 @@
         <table class="lists fixed-layout">
           <tbody>
             <tr>
+              <td class="table-col-1">Manager:</td>
+              <td id="id_field">{{ employees.first.managment_relationships.first }}</td>
+            </tr>
+            <tr>
               <td class="table-col-1">Employee ID:</td>
-              <td id="id_field">000</td>
+              <td id="id_field">{{ employees.first.employee_id }}</td>
             </tr>
             <tr>
               <td class="table-col-1">Gender:</td>
-              <td id="gender_field">Male</td>
+              <td id="gender_field">{{ employees.first.gender }}</td>
             </tr>
             <tr>
               <td class="table-col-1">Birthday:</td>
-              <td id="bday_field">6/28/1985</td>
+              <td id="bday_field">{{ employees.first.birth_date }}</td>
+            </tr>
+            <tr>
+              <td class="table-col-1">Hire Date:</td>
+              <td id="pos_field">{{ employees.first.hire_date }}</td>
             </tr>
             <tr>
               <td class="table-col-1">Position:</td>
-              <td id="pos_field">Sales Associate</td>
+              <td id="pos_field">{{ employees.first.position }}</td>
             </tr>
             <tr>
-              <td class="table-col-1">Department:</td>
-              <td id="dep_field">Sales</td>
-            </tr>
-            <tr>
-              <td class="table-col-1">Starting Date:</td>
-              <td id="startDate_field">9/12/2002</td>
-            </tr>
-            <tr>
-              <td class="table-col-1">Location:</td>
-              <td id="location_field">Lockport, IL</td>
-            </tr>
-            <tr>
-              <td class="table-col-1">E-Mail:</td>
-              <td id="email_field">fnamelname@company.org</td>
+              <td class="table-col-1">Email:</td>
+              <td id="pos_field">{{ employees.first.email }}</td>
             </tr>
             <tr>
               <td class="table-col-1">Phone:</td>
-              <td id="phone_field">000-111-2222</td>
+              <td id="dep_field">{{ employees.first.phone }}</td>
             </tr>
             <tr>
-              <td class="table-col-1">Extension:</td>
-              <td id="ext_field">33</td>
+              <td class="table-col-1">Location:</td>
+              <td id="location_field">{{ employees.first.assigned_location.first.location_name|truncatechars:50 }}</td>
             </tr>
           </tbody>
         </table>
@@ -98,21 +94,23 @@
                     <tr>
                       <th class="toggle" width="16"></th>
                       <th>Date</th>
-                      <th>Pot</th>
-                      <th>Perf</th>
+                      <th>Potential</th>
+                      <th>Performance</th>
                       <th>Comments</th>
-                      <th>Mgr ID</th>
+                      <th>Supervisor ID</th>
                     </tr>
                   </thead>
                   <tbody id="ratings-history-list">
+                    {% for rating in ratings %}
                     <tr>
                       <td class="toggle"><i class="icon-expand"></i></td>
-                      <td>7/12/02</td>
-                      <td>8</td>
-                      <td>8</td>
-                      <td>afjsdlfjsfs</td>
-                      <td>35</td>
+                      <td>{{ rating.date }}</td>
+                      <td>{{ rating.potential }}</td>
+                      <td>{{ rating.performance }}</td>
+                      <td>{{ rating.notes |truncatechars:30 }}</td>
+                      <td>{{ rating.managment_relationship.subordinate }}</td>
                     </tr>
+                    {% endfor %}
                     <!-- <tr class="details"></tr> -->
                     <!--TODO I think this is supposed to be the dropdown-->
                   </tbody>

@@ -22,13 +22,13 @@ def populate(M=3,N=5,L=3):
     email= fname[0].lower()+lname.lower()+"@companyname.org"
 
     distmng = Manager.objects.get_or_create(username=uname,password=pw,\
-    permissions_level=1,employee_id=0,first_name=fname,last_name=lname,\
+    permissions_level=2,employee_id=0,first_name=fname,last_name=lname,\
     gender=gender,birth_date=bdate,hire_date=hdate,position='District Manager',\
     email=email,phone=fakegen.phone_number())[0]
 
     for i in range(L):
         loc_id = i
-        loc_name = fakegen.company()
+        loc_name = fakegen.address()
 
         loclk = Location_lookup.objects.get_or_create(location_id=loc_id,location_name=loc_name)[0]
         #set District Manager to all locations
@@ -61,11 +61,14 @@ def populate(M=3,N=5,L=3):
 
         sprvs = Supervision.objects.get_or_create(subordinate=mng,supervisor=distmng,start_date=sdate)[0]
         #Rating
-        pot = fakegen.random_int(1,10)
-        perf = fakegen.random_int(1,10)
-        notes = fakegen.text(max_nb_chars=50)
+        R = fakegen.random_int(6,10)
+        for iR in range(R):
+            pot = fakegen.random_int(1,10)
+            perf = fakegen.random_int(1,10)
+            notes = fakegen.text(max_nb_chars=50)
+            date = fakegen.date()
 
-        rat = Rating.objects.get_or_create(managment_relationship=sprvs,potential=pot,performance=perf,notes=notes)[0]
+            rat = Rating.objects.get_or_create(managment_relationship=sprvs,potential=pot,performance=perf,notes=notes,date=date)[0]
         i+=1
         #Create N Employees for each manager
         j = i
@@ -94,11 +97,14 @@ def populate(M=3,N=5,L=3):
 
             sprvs = Supervision.objects.get_or_create(subordinate=emp,supervisor=mng,start_date=sdate)[0]
             #Rating
-            pot = fakegen.random_int(1,10)
-            perf = fakegen.random_int(1,10)
-            notes = fakegen.text(max_nb_chars=50)
+            R = fakegen.random_int(6,10)
+            for iR in range(R):
+                pot = fakegen.random_int(1,10)
+                perf = fakegen.random_int(1,10)
+                notes = fakegen.text(max_nb_chars=50)
+                date = fakegen.date()
 
-            rat = Rating.objects.get_or_create(managment_relationship=sprvs,potential=pot,performance=perf,notes=notes)[0]
+                rat = Rating.objects.get_or_create(managment_relationship=sprvs,potential=pot,performance=perf,notes=notes,date=date)[0]
             i+=1
 
 if __name__ == '__main__':
