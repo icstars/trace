@@ -23,13 +23,11 @@
   <link rel="stylesheet" href="{% static "css/main.css" %}"/>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
   <script src="{% static "scripts/jquery-3.2.1.min.js"  %}"></script>
   <script src="{% static "scripts/main.js" %}"></script>
-  {% block page_sheets %}
-
-  {% endblock page_sheets %}
+  {% block page_sheets %}{% endblock page_sheets %}
 </head>
 
 <body class="citrus">
@@ -60,25 +58,22 @@
       <div id="side-section" class="col-xs-3 padding-none border-right border-right-xs-none">
         <h3 id="side-bar-title">Employees</h3>
         <div id="toolbar" class="button-group col-xs-12">
-
           <button id="eval-btn" class="button disabled icon-checkmark-circle"></button>
           <button id="profile-btn" class="button disabled icon-group"></button>
           <button id="checklist-btn" class="button icon-checklist"></button>
           <button id="reset-btn" class="button disabled icon-reset"></button>
-
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
           <ul id="side-bar-list" class="side-nav col-xs-12">
             {% for employee in employees %}
-            <li data-id="{{ emp.employee_id }}"><span> {{ employee.first_name }} {{ employee.last_name }} </span></li>
+            <li><span> {{ employee.first_name }} {{ employee.last_name }} </span></li>
             {% empty %}
-            <h3>Could not load employees</h3> {% endfor %}
+            <h3>Could not load employees</h3>
+            {% endfor %}
           </ul>
         </div>
       </div>
-      {% block main_panel %}
-
-      {% endblock main_panel %}
+      {% block main_panel %}{% endblock main_panel %}
       <!--END GRID-->
     </div>
     <!--end of row with side bar and grid -->

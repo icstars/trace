@@ -41,7 +41,6 @@ button.button.outline {
 #save-btn:hover, #edit-btn:hover, #rate-btn:hover, #share-btn:hover, #delete-btn:hover {
   background-color: #E88924 !important;
   color: white !important;
-
 }
 
 #profile-header {
@@ -93,8 +92,6 @@ table {
 thead {
 
 }
-
-
 
 
 /*___________________________________________________________________________________________*/
