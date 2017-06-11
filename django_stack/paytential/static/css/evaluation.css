@@ -157,6 +157,10 @@ label {
 
 @media only screen and (max-width: 768px)
 {
+ #side-section {
+   width: 33%;
+   display: block;
+ }
 
   #content-wrapper {
     height: 600px;

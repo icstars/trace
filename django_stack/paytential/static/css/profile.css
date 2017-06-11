@@ -7,6 +7,7 @@ body, html {
 
 #profile-maincontent-section {
   height: 450px;
+  /*background: red !important;*/
 }
 
 #profile-content-wrapper {
@@ -32,8 +33,8 @@ button.button.outline {
   height: 45px;
   /*height: 54px;*/
   width: 20%;
-  background: red !important;/*testing for css linking to html doc*/
-  /*background: #666666 !important;*/
+  /*background: red !important;/*testing for css linking to html doc*/
+  background: #666666 !important;
   border: none;
   color: white !important;
   border-left: solid 1px #757575 !important;
@@ -59,7 +60,7 @@ button.button.outline {
  margin-left: 2%;
  width: 93%;
  height: 230px;
- overflow-y:overlay;
+ /*overflow-y:overlay;*/
 }
 
 #ratings-content-area {
@@ -77,6 +78,29 @@ button.button.outline {
    text-overflow: ellipsis;
    white-space: nowrap;
 }
+
+.table-fixed{
+  width: 100%;
+  background-color: #f3f3f3;
+}
+  .table-fixed tbody{
+    height:200px;
+    overflow-y:auto;
+    width: 100%;
+    }
+  .table-fixed thead,.table-fixed tbody,.table-fixed tr,.table-fixed td,.table-fixed th{
+    display:block;
+  }
+  tbody td{
+      float:left;
+    }
+
+  thead tr, thead th {
+        float:left;
+       /*background-color: #f39c12;*/
+       /*border-color:#e67e22;*/
+      }
+
 
   /*___________________________________________________________________________________________*/
   /******************************************MEDIA QUERIES***********************************/
@@ -135,7 +159,7 @@ button.button.outline {
    width: 93%;
    height: 230px;
   /*overflow-x:none;*/
-   overflow-y:overlay;
+   /*overflow-y:overlay;*/
    }
 
 
