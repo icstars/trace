@@ -162,6 +162,10 @@ label {
     height: 600px;
   }
 
+  #eval-section {
+    width: 66%;
+  }
+
   #eval-pot-header, #eval-perf-header {
     height: 42px;
     line-height: 40px;
@@ -170,9 +174,9 @@ label {
 
   #eval-pot-header::after, #eval-perf-header::after {
     border-bottom: 21px solid transparent;
-border-top: 21px solid transparent;
-border-left: 10px solid #666666;
-right: -9px;
+    border-top: 21px solid transparent;
+    border-left: 10px solid #666666;
+    right: -9px;
   }
 
   h2#eval-pot-header{
