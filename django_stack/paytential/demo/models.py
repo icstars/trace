@@ -12,7 +12,7 @@ class Employee(models.Model):
     gender = models.CharField(max_length=10)
     birth_date = models.DateField(default=timezone.now)
     hire_date = models.DateField(default=timezone.now)
-    termination_date = models.DateField(null=True,default=None)
+    termination_date = models.DateField(blank=True,null=True,default=None)
     position = models.CharField(max_length=30)
     email = models.EmailField(max_length=100)
     phone = models.CharField(max_length=20)

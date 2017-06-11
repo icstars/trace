@@ -101,7 +101,7 @@
                     </tr>
                   </thead>
                   <tbody id="ratings-history-list">
-                    {% for rating in ratings %}
+                    {% for rating in  employees.first.supervisors.ratings %}
                     <tr>
                       <td class="toggle"><i class="icon-expand"></i></td>
                       <td>{{ rating.date }}</td>

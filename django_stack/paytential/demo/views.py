@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 from django.http import HttpResponse, JsonResponse
 from demo.models import Employee,Manager,Location,Location_lookup,Supervision,Rating
+from demo.serializers import EmployeeDataSerializer
 # Create your views here.
 employee_list = Employee.objects.order_by('first_name')
 
@@ -25,3 +29,12 @@ def help(request):
 
 def registration(request):
     return render(request,'demo/registration.html')
+
+class EmployeeList(APIView):
+    def get(self, request):
+        employees = Employee.objects.all()
+        serializer = EmployeeDataSerializer(employees, many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
