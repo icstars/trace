@@ -1,4 +1,6 @@
-<!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %} {% block page_sheets %}
+<!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %}
+{% block title %}<title>Paytential - Employee Profile</title>{% endblock title %}
+{% block page_sheets %}
 <link rel="stylesheet" href="{% static "css/profile.css" %}"/>
 <script src="{% static "scripts/profile.js" %}"></script>
 {% endblock page_sheets %}

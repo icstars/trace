@@ -50,7 +50,7 @@ class Supervision(models.Model):
     subordinate = models.ForeignKey('Employee', related_name='supervisors')
     supervisor = models.ForeignKey('Manager', related_name='employees')
     start_date = models.DateField(default=timezone.now)
-    end_date = models.DateField(null=True, default=None)
+    end_date = models.DateField(blank=True,null=True, default=None)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
 

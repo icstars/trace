@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.http import HttpResponse, JsonResponse
 from demo.models import Employee,Manager,Location,Location_lookup,Supervision,Rating
-from demo.serializers import EmployeeDataSerializer
+from demo.serializers import EmployeeSerializer
 # Create your views here.
 employee_list = Employee.objects.order_by('first_name')
 
@@ -33,8 +33,11 @@ def registration(request):
 class EmployeeList(APIView):
     def get(self, request):
         employees = Employee.objects.all()
-        serializer = EmployeeDataSerializer(employees, many=True)
+        serializer = EmployeeSerializer(employees, many=True)
         return Response(serializer.data)
 
     def post(self):
         pass
+
+class EmployeeDetail(APIView):
+    pass
