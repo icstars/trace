@@ -240,7 +240,7 @@ img.soc-med-icons {
     height: 30px;
   }
 
-#header-wrapper {
+  #header-wrapper {
     margin-bottom: 2%;
 }
 
@@ -274,11 +274,15 @@ img.soc-med-icons {
     box-shadow: inset 0px 0 10px #666666;
     background: rgba(128,128,128,.5) !important;
   }*/
-  /*****************************TOOLBAR************************************/
+  /*****************************TOOLBAR AND ITS BUTTONS************************************/
 
   #toolbar {
     height: 32px;
   }
+
+  /*#profile-btn ::before {
+    display: none;wanted to remove words for mobile view
+  }this does not work;tried commenting out in main.js as well...*/
 
   /*************************TOOLBAR END***************************/
 
