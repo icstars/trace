@@ -8,20 +8,19 @@ $(document).ready(function() {
       $.each(data, function(i, employee) {
         employees[employee.employee_id] = employee;
       });
-      console.log('GOT employees');
-      activateSidbar()
-    },
-    error: function() {
-      alert('Error loading data')
+      setupSideBar();
     }
   });
+  //slides side bar in and out
+  var hiddenSidebar = $("#side-section").width();
+  $("#side-bar-icon").click(function(event) {
+    $("#side-section").toggle();
+  });
 
-  function activateSidbar() {
-    //Populate
+  var setupSideBar = function() {
     for (var i in employees) {
-      $('#side-bar-list').append("<li><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
+      $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
     }
-    //attach listener
     $('#side-bar-list li').on('click', function(e) {
       //TODO link to profile page based on e_id
       if ($(this).hasClass('selected')) {
@@ -32,14 +31,6 @@ $(document).ready(function() {
       updateSideBarBtns();
     })
   }
-
-  //slides side bar in and out
-  var hiddenSidebar = $("#side-section").width();
-  $("#side-bar-icon").click(function(event) {
-    $("#side-section").toggle();
-  });
-
-
   //toggles disabled on SIDEBAR buttons that require selected employees
   var updateSideBarBtns = function() {
     if ($('#side-bar-list li.selected').length > 0) { //checks if any side-bar-list items are selected
