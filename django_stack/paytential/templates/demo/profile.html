@@ -1,9 +1,8 @@
 <!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %}
 {% block title %}<title>Paytential - Employee Profile</title>{% endblock title %}
-{% block page_sheets %}
+{% block styles %}
 <link rel="stylesheet" href="{% static "css/profile.css" %}"/>
-<script src="{% static "scripts/profile.js" %}"></script>
-{% endblock page_sheets %}
+{% endblock styles %}
 {% block main_panel %}
   <div id="profile-maincontent-section" class="col-xs-9 padding-none">
     <div id="profile-c-header-menu" class="row c-header-menu">
@@ -150,7 +149,6 @@
                     <!--TODO I think this is supposed to be the dropdown-->
                   </tbody>
                 </table>
->>>>>>> 19b04a140ce6b694baef7bf2691de55e23f89899
               </div>
             </div>
           </div>
@@ -159,3 +157,6 @@
     </div>
   </div>
 {% endblock main_panel %}
+{% block scripts %}
+<script src="{% static "scripts/profile.js" %}"></script>
+{% endblock scripts %}

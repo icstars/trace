@@ -8,29 +8,24 @@ $(document).ready(function() {
       $.each(data, function(i, employee) {
         employees[employee.employee_id] = employee;
       });
-      setupSideBar();
     }
-  });
+  }).done(function(){
+    for (var i in employees) {
+      $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
+    }
+  })
   //slides side bar in and out
   var hiddenSidebar = $("#side-section").width();
   $("#side-bar-icon").click(function(event) {
     $("#side-section").toggle();
   });
-
-  var setupSideBar = function() {
-    for (var i in employees) {
-      $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
-    }
-    $('#side-bar-list li').on('click', function(e) {
-      //TODO link to profile page based on e_id
-      if ($(this).hasClass('selected')) {
-        $(this).removeClass('selected');
-      } else {
-        $(this).addClass('selected');
-      }
-      updateSideBarBtns();
-    })
-  }
+  //TODO link to profile page based on e_id
+  $(document).on("click", '#side-bar-list li',function() {
+    $('#side-bar-list li').removeClass('selected');
+    $(this).addClass('selected');
+    sessionStorage.setItem('id',$(this).data('id'));
+    updateSideBarBtns();
+  })
   //toggles disabled on SIDEBAR buttons that require selected employees
   var updateSideBarBtns = function() {
     if ($('#side-bar-list li.selected').length > 0) { //checks if any side-bar-list items are selected

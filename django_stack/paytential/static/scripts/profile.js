@@ -1,14 +1,5 @@
 $(document).ready(function() {
-  //read in data
-  //Read in sample data
-  // var data = JSON.parse(jsonData);
-  // var employees = {};
-  //
-  // for (var i = 0, emp; i < data.length; i++) {
-  //   emp = data[i];
-  //   employees[emp._id] = emp;
-  // }
-
+  //Profile toolbar buttons
   $('#save-btn').hover(function() {
     $(this).text(' Save');
   }, function() {
@@ -42,6 +33,7 @@ $(document).ready(function() {
   //Load employee info when selected in SIDEBAR
   $('#side-bar-list li').click(function() {
     //Some fields are commented because they're not yet in the sample data
+    console.log('hit');
     endex = $(this).data('e_id');
     $('#profile-header').text(employees[endex].fname + ' ' + employees[endex].lname);
     $('#id_field').text(employees[endex]._id);
@@ -70,16 +62,4 @@ $(document).ready(function() {
   $(window).resize(function() {
     $('#side-bar-list').css('height', $('#profile-maincontent-section').width());
   })
-
-
-// function for ellipsis for comments with table??
-//   function shorten(text, maxLength) {
-// var ret = text;
-// if (ret.length > maxLength) {
-// ret = ret.substr(0,maxLength-3) + “…”;
-// }
-// return ret;
-// }
-
-
 });
