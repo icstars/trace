@@ -9,15 +9,29 @@ $(document).ready(function() {
         employees[employee.employee_id] = employee;
       });
       console.log('GOT employees');
-      for (var i in employees) {
-
-
-        $('#side-bar-list').append("<li><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
-      }
+      activateSidbar()
+    },
+    error: function() {
+      alert('Error loading data')
     }
   });
-  //Populate SIDEBAR
 
+  function activateSidbar() {
+    //Populate
+    for (var i in employees) {
+      $('#side-bar-list').append("<li><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
+    }
+    //attach listener
+    $('#side-bar-list li').on('click', function(e) {
+      //TODO link to profile page based on e_id
+      if ($(this).hasClass('selected')) {
+        $(this).removeClass('selected');
+      } else {
+        $(this).addClass('selected');
+      }
+      updateSideBarBtns();
+    })
+  }
 
   //slides side bar in and out
   var hiddenSidebar = $("#side-section").width();
@@ -26,20 +40,6 @@ $(document).ready(function() {
   });
 
 
-  //Tag SIDEBAR items with e_id
-  // $('#side-bar-list li').each(function(i) {
-  //   $(this).data('e_id', employees[i]._id);
-  // })
-
-  $('#side-bar-list li').on('click', function(e) {
-    //TODO link to profile page based on e_id
-    if ($(this).hasClass('selected')) {
-      $(this).removeClass('selected');
-    } else {
-      $(this).addClass('selected');
-    }
-    updateSideBarBtns();
-  })
   //toggles disabled on SIDEBAR buttons that require selected employees
   var updateSideBarBtns = function() {
     if ($('#side-bar-list li.selected').length > 0) { //checks if any side-bar-list items are selected
