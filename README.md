@@ -1,11 +1,14 @@
-# Steps to run the project locally
+# Steps to run the project locally (UPDATED 6/11/2017)
 1. install python 3.6 (other versions may work but use this to ensure compatibility)
-2. install pip, the package manager for python
-3. install django 1.10
-4. navigate to [YOUR_WORKSPACE_DIRECTORY]/trace/django_stack/paytential
-4. run this command: python manage.py runserver
+2. navigate to [YOUR_WORKSPACE_DIRECTORY]/trace/django_stack/paytential
+3. install pip, the package manager for python
+4. install django 1.10
+# NEW STEP
+# 5. install rest_framework using the command:
+#  pip install djangorestframework
+6. run this command: python manage.py runserver
 
-#ADMIN
+# ADMIN
 user:trace
 pw:tproject
 
