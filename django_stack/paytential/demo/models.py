@@ -2,8 +2,8 @@ from django.db import models
 from django.utils import timezone
 
 class Employee(models.Model):
-    class Meta:
-        ordering = ('first_name',)
+    # class Meta:
+    #     ordering = ('first_name',)
 
     employee_id = models.PositiveIntegerField(unique=True,default=0)
     managment_relationships = models.ManyToManyField('Manager', through='Supervision',symmetrical=False,related_name='refers_to')
@@ -28,12 +28,15 @@ class Manager(Employee):
     permissions_level = models.PositiveIntegerField(default=0)
 
 class Location(models.Model):
-    assigned_employee = models.ForeignKey(Employee,related_name='assigned_location')
+    assigned_employee = models.ForeignKey(Employee,related_name='assigned_locations')
     location_id = models.PositiveIntegerField(default=0)
     location_name = models.CharField(max_length=50)
 
     def __str__(self):
         return str(self.assigned_employee)+" is assigned to the location: "+self.location_name
+
+    def __unicode__(self):
+        return self.location_name
 
 class Location_lookup(models.Model):
     location_id = models.PositiveIntegerField(default=0)
@@ -48,7 +51,7 @@ class Location_lookup(models.Model):
 
 class Supervision(models.Model):
     subordinate = models.ForeignKey('Employee', related_name='supervisors')
-    supervisor = models.ForeignKey('Manager', related_name='employees')
+    supervisor = models.ForeignKey('Manager', related_name='subordinates')
     start_date = models.DateField(default=timezone.now)
     end_date = models.DateField(blank=True,null=True, default=None)
     created_at = models.DateTimeField(default=timezone.now)

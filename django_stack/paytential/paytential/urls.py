@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^demo/',include('demo.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^api/$', views.EmployeeList.as_view()),
-    url(r'^api/(?P<employee_id>[0-9]+)/$', views.EmployeeDetail.as_view()),
+    url(r'^api/(?P<pk>[0-9]+)/$', views.EmployeeDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

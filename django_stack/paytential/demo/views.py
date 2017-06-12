@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.http import HttpResponse, JsonResponse
 from demo.models import Employee,Manager,Location,Location_lookup,Supervision,Rating
-from demo.serializers import EmployeeSerializer
+from demo.serializers import EmployeeSerializer,ManagerSerializer,LocationSerializer,SupervisiorSerializer,SubordinateSerializer,RatingSerializer
 # Create your views here.
 employee_list = Employee.objects.order_by('first_name')
 
@@ -33,11 +33,33 @@ def registration(request):
 class EmployeeList(APIView):
     def get(self, request):
         employees = Employee.objects.all()
-        serializer = EmployeeSerializer(employees, many=True)
-        return Response(serializer.data)
+        employee_serializer = EmployeeSerializer(employees, many=True)
+        return Response(employee_serializer.data)
 
     def post(self):
         pass
 
 class EmployeeDetail(APIView):
-    pass
+    def get(self, request, pk):
+        #employee
+        emp = Employee.objects.filter(employee_id=pk)
+        employee_serializer = EmployeeSerializer(emp, many=True)
+        #location
+        loc = Location.objects.filter(assigned_employee=emp)
+        location_serializer = LocationSerializer(loc, many=True)
+        #supervision
+        sprv = Supervision.objects.filter(subordinate=emp)
+        supervisior_serializer = SupervisiorSerializer(sprv, many=True)
+        sub = Supervision.objects.filter(supervisor=emp)
+        subordinate_serializer = SubordinateSerializer(sub, many=True)
+        #ratings
+        rat = Rating.objects.filter(managment_relationship__subordinate=emp)
+        rating_serializer = RatingSerializer(rat, many=True)
+
+        return Response({
+            'details': employee_serializer.data,
+            'assigned_locations': location_serializer.data,
+            'supervisors': supervisior_serializer.data,
+            'subordinates': subordinate_serializer.data,
+            'ratings': rating_serializer.data,
+        })

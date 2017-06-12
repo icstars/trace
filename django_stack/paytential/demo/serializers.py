@@ -4,25 +4,31 @@ from .models import Employee,Manager,Location,Location_lookup,Supervision,Rating
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employee
-        exclude = ('id','managment_relationships','termination_date','created_at','updated_at',)
+        depth = 1
+        fields = ('employee_id','first_name','last_name','gender','birth_date','hire_date','position','email','phone',)
 
 class ManagerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Manager
-        exclude = ('id','managment_relationships','termination_date','created_at','updated_at','username','password','permissions_level',)
+        fields = ('employee_id','first_name','last_name','gender','birth_date','hire_date','position','email','phone',)
 
 class LocationSerializer(serializers.ModelSerializer):
-    assigned_employee = EmployeeSerializer()
+    # assigned_employee = EmployeeSerializer()
     class Meta:
         model = Location
-        fields = ('assigned_employee','location_id', 'location_name',)
+        fields = ('location_id', 'location_name',)
 
-class SupervisionSerializer(serializers.ModelSerializer):
-    subordinate = EmployeeSerializer()
+class SupervisiorSerializer(serializers.ModelSerializer):
     supervisor = ManagerSerializer()
     class Meta:
         model = Supervision
-        fields = ('subordinate','supervisor','start_date',)
+        fields = ('supervisor','start_date',)
+
+class SubordinateSerializer(serializers.ModelSerializer):
+    subordinate = EmployeeSerializer()
+    class Meta:
+        model = Supervision
+        fields = ('subordinate','start_date',)
 
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:
