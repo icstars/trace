@@ -32,8 +32,8 @@ def registration(request):
 
 class EmployeeList(APIView):
     def get(self, request):
-        employees = Employee.objects.all()
-        employee_serializer = EmployeeSerializer(employees, many=True)
+        emp = Employee.objects.all()
+        employee_serializer = EmployeeSerializer(emp, many=True)
         return Response(employee_serializer.data)
 
     def post(self):

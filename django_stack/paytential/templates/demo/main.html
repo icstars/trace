@@ -65,11 +65,7 @@
         </div>
         <div id="side-bar" class="col-xs-3 padding-none">
           <ul id="side-bar-list" class="side-nav col-xs-12">
-            {% for employee in employees %}
-            <li><span> {{ employee.first_name }} {{ employee.last_name }} </span></li>
-            {% empty %}
-            <h3>Could not load employees</h3>
-            {% endfor %}
+            
           </ul>
         </div>
       </div>

@@ -1,4 +1,24 @@
 $(document).ready(function() {
+  var employees = {};
+
+  $.ajax({
+    type: 'GET',
+    url: '/api/employees',
+    success: function(data) {
+      $.each(data, function(i, employee) {
+        employees[employee.employee_id] = employee;
+      });
+      console.log('GOT employees');
+      for (var i in employees) {
+
+
+        $('#side-bar-list').append("<li><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
+      }
+    }
+  });
+  //Populate SIDEBAR
+
+
   //slides side bar in and out
   var hiddenSidebar = $("#side-section").width();
   $("#side-bar-icon").click(function(event) {

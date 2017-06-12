@@ -2,8 +2,8 @@ from django.db import models
 from django.utils import timezone
 
 class Employee(models.Model):
-    # class Meta:
-    #     ordering = ('first_name',)
+    class Meta:
+        ordering = ('first_name',)
 
     employee_id = models.PositiveIntegerField(unique=True,default=0)
     managment_relationships = models.ManyToManyField('Manager', through='Supervision',symmetrical=False,related_name='refers_to')

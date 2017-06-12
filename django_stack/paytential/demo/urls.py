@@ -8,5 +8,4 @@ urlpatterns = [
     url(r'^evaluation/',views.evaluation,name='evaluation'),
     url(r'^registration/',views.registration,name='registration'),
     url(r'^help/',views.help,name='help'),      
-
 ]
