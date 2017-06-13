@@ -245,37 +245,116 @@
     <div>
   <div>
   <h2 id="ratings-header">Rating History</h2>
-  <div id="ratings-table-section" class="bounding-box width-1280">
-    <div id="ratings-content-area" class="content-area">
-        <div class="row">
-          <div class="col-xs-12 padding-none">
-          <table class="table" style="margin-top:0;margin-bottom:0;">
+
+  <table id="table-ratings" class="table table-fixed">
             <thead>
               <tr>
-                <th class="toggle" width="16"></th>
-                <th>Date</th>
-                <th>Pot</th>
-                <th>Perf</th>
-                <th>Comments</th>
-                <th>Mgr ID</th>
+                <th class="col-xs-2">#</th>
+                <th class="col-xs-8">Name</th>
+                <th class="col-xs-2">Points</th>
               </tr>
             </thead>
-            <tbody id="ratings-history-list">
-              <tr>
-                <td class="toggle"><i class="icon-expand"></i></td>
-                <td>7/12/02</td>
-                <td>8</td>
-                <td>8</td>
-                <td>afjsdlfjsfs</td>
-                <td>35</td>
+            <!-- <thead col-xs-12>
+              <tr id="thead-ratings" col-xs-12>
+                <th  id="thead-ratings-toggle" class="toggle col-xs-1" width="16"></th>
+                <th class="col-xs-1" id="thead-ratings-date">Date</th>
+                <th class="col-xs-2" id="thead-ratings-potential">Potential</th>
+                <th class="col-xs-2" id="thead-ratings-performance">Performance</th>
+                <th class="col-xs-4" id="thead-ratings-comments">Comments</th>
+                <th class="col-xs-2" id="thead-ratings-mgrid">Mgr ID</th>
               </tr>
-              <!-- <tr class="details"></tr> -->
-              <!--TODO I think this is supposed to be the dropdown-->
+            </thead> -->
+            <tbody>
+              <tr>
+                <td class="col-xs-2">1</td><td class="col-xs-8">Mike Adams</td><td class="col-xs-2">23</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">2</td><td class="col-xs-8">Holly Galivan</td><td class="col-xs-2">44</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">3</td><td class="col-xs-8">Mary Shea</td><td class="col-xs-2">86</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">4</td><td class="col-xs-8">Jim Adams</td><td>23</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">5</td><td class="col-xs-8">Henry Galivan</td><td class="col-xs-2">44</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">6</td><td class="col-xs-8">Bob Shea</td><td class="col-xs-2">26</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">7</td><td class="col-xs-8">Andy Parks</td><td class="col-xs-2">56</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">8</td><td class="col-xs-8">Bob Skelly</td><td class="col-xs-2">96</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">9</td><td class="col-xs-8">William Defoe</td><td class="col-xs-2">13</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">10</td><td class="col-xs-8">Will Tripp</td><td class="col-xs-2">16</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">11</td><td class="col-xs-8">Bill Champion</td><td class="col-xs-2">44</td>
+              </tr>
+              <tr>
+                <td class="col-xs-2">12</td><td class="col-xs-8">Lastly Jane</td><td class="col-xs-2">6</td>
+              </tr>
             </tbody>
+            <!-- <tbody id="ratings-history-list col-xs-12">
+              {% for rating in ratings %}
+              <tr id="tr-ratings" col-xs-12>
+                <td id="td-ratings-toggle" class="toggle col-xs-1"><i class="icon-expand"></i></td>
+                <td class="col-xs-1" id="td-ratings-date">date</td>
+                <td class="col-xs-2" id="td-ratings-potential">{{ rating }}</td>
+                <td class="col-xs-2" id="td-ratings-performance">{{ rating }}</td>
+                <td class="col-xs-4" id="td-ratings-comments">{{ rating.notes }}</td>
+                <td class="col-xs-2" id="td-ratings-mgrid">{{ rating }}</td>
+              </tr>
+              <tr>
+                <td id="td-ratings-toggle" class="toggle col-xs-1"><i class="icon-expand"></i></td>
+                <td class="col-xs-1" id="td-ratings-date">date</td>
+                <td class="col-xs-2" id="td-ratings-potential">{{ rating.potential }}</td>
+                <td class="col-xs-2" id="td-ratings-performance">{{ rating.performance }}</td>
+                <td class="col-xs-4" id="td-ratings-comments">{{ rating.notes |truncatechars:30 }}</td>
+                <td class="col-xs-2" id="td-ratings-mgrid">{{ rating.managment_relationship.subordinate }}</td>
+              </tr>
+              <tr>
+                <td id="td-ratings-toggle" class="toggle col-xs-1"><i class="icon-expand"></i></td>
+                <td class="col-xs-1" id="td-ratings-date">{{ rating.date }}</td>
+                <td class="col-xs-2" id="td-ratings-potential">{{ rating.potential }}</td>
+                <td class="col-xs-2" id="td-ratings-performance">{{ rating.performance }}</td>
+                <td class="col-xs-4" id="td-ratings-comments">{{ rating.notes |truncatechars:30 }}</td>
+                <td class="col-xs-2" id="td-ratings-mgrid">{{ rating.managment_relationship.subordinate }}</td>
+              </tr>
+              {% endfor %} -->
+              <!-- <tr class="details"></tr> -->
+              <!--TOdo I think this is supposed to be the dropdown-->
+            <!-- </tbody> -->
           </table>
-        </div>
-      </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 </div>
 </div>

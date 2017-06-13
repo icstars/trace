@@ -79,28 +79,63 @@ button.button.outline {
    white-space: nowrap;
 }
 
-.table-fixed{
-  width: 100%;
-  background-color: #f3f3f3;
+.table-fixed thead {
+  width: 97%;
 }
-  .table-fixed tbody{
-    height:200px;
-    overflow-y:auto;
-    width: 100%;
-    }
-  .table-fixed thead,.table-fixed tbody,.table-fixed tr,.table-fixed td,.table-fixed th{
-    display:block;
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}
+/*
+#thead-ratings {
+  width: 98%;
+}
+
+#thead-ratings-toggle {
+  width: 4%;
+}
+
+#thead-ratings-date {
+  width: 15%;
+}
+
+#thead-ratings-potential {
+  width: 11%;
+}
+
+#thead-ratings-performance, #td-ratings-performance {}
+#thead-ratings-comments {
+  width: 35%;
+}
+#thead-ratings-mgrid {
+  width: 9%;
+  padding-right: 0;
+  padding-left: 1%;
+}
+
+#td-ratings-toggle{
+  float: left;
+  width: 12%;
+
   }
-  tbody td{
-      float:left;
-    }
+   #td-ratings-date {
+     float: left;
+ width: 42%;
+   }
 
-  thead tr, thead th {
-        float:left;
-       /*background-color: #f39c12;*/
-       /*border-color:#e67e22;*/
-      }
-
+#td-ratings-mgrid {
+  float: left;
+}
+  #td-ratings-comments, #td-ratings-potential {
+*/
 
   /*___________________________________________________________________________________________*/
   /******************************************MEDIA QUERIES***********************************/
@@ -152,6 +187,9 @@ button.button.outline {
   #profile-graph {
     display: none;
     }
+  #table-ratings {
+    margin:0 0 0 4%;
+  }
 
   #ratings-table-section {
    display: flow-root;
