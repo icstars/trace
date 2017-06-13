@@ -5,11 +5,13 @@ $(document).ready(function() {
     type: 'GET',
     url: '/api/employees',
     success: function(data) {
+      //load data into employees
       $.each(data, function(i, employee) {
         employees[employee.employee_id] = employee;
       });
     }
   }).done(function(){
+    //populate sidebar
     for (var i in employees) {
       $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
     }
@@ -74,7 +76,7 @@ $(document).ready(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
     alert("Whoops this isn't implemented yet");
-    //TODO load eval page w/ e_id from selected
+    //TODO load eval page using sessionStorage.getItem('id')
   })
   //seleects only the employees that are currently visible in the side-bar-list
   $('#checklist-btn').click(function() {
@@ -103,13 +105,11 @@ $(document).ready(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
     alert("Whoops this isn't implemented yet");
-    //TODO load profile page w/ e_id from selected
+    //TODO load profile page using sessionStorage.getItem('id')
   })
 
   $('#reset-btn').click(function() {
-    console.log("hit")
     if ($(this).hasClass('disabled'))
-
       return; //prevents button from working if it should be disabled
     $('#side-bar-list li').show();
     updateSideBarBtns();
