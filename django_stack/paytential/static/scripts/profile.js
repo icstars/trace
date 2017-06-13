@@ -32,31 +32,33 @@ $(document).ready(function() {
 
   //Load employee info when selected in SIDEBAR
   $(document).on("click", '#side-bar-list li',function() {
-    employee = {};
+    $("body").css("cursor", "progress");
+    var employee = {};
+    var id = $(this).data('id');
     $.ajax({
       type: 'GET',
-      url: '/api/employees/'+$(this).data('id')
+      url: '/api/employees/'+id,
       success: function(data) {
         employee = data;
       }
     }).done(function(){
-      $('#profile-header').text(employee.details.first_name + ' ' + employee.details.last_name);
-      $('#id_field').text(employee.details.employee_id);
-      $('#gender_field').text(employee.details.gender);
-      $('#bday_field').text(employee.details.birth_date);
-      $('#pos_field').text(employee.details.position);
-      $('#startDate_field').text(employee.details.hire_date);
-      $('#location_field').text(employee.assigned_locations.location_name);
-      //CONTACT INFO
-      $('#email_field').text(employee.details.email);
-      $('#phone_field').text(employee.details.phone);
+      $('#profile-header').text(employee.details[0].first_name + ' ' + employee.details[0].last_name);
+      $('#id_field').text(employee.details[0].employee_id);
+      $('#gender_field').text(employee.details[0].gender);
+      $('#bday_field').text(employee.details[0].birth_date);
+      $('#hire_field').text(employee.details[0].hire_date);
+      $('#pos_field').text(employee.details[0].position);
+      $('#email_field').text(employee.details[0].email);
+      $('#startDate_field').text(employee.details[0].hire_date);
+      $('#phone_field').text(employee.details[0].phone);
+      $('#location_field').text(employee.assigned_locations[0].location_name);
       //RATING HISTORY
       $('#ratings-history-list').empty();
       for (var i in employee.ratings) {
-        $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employee.ratings[i].date+"</td><td class='type-centeralign'>"+employee.ratings[i].potential+"</td><td class='type-centeralign'>"+employee.ratings[i].performance+"</td><td class='ratings-comments'>"+employee.ratings[i].notes+"</td><td class='type-centeralign'>"+employee.supervisors[0]+"</td></tr>");
+        $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employee.ratings[i].date+"</td><td class='type-centeralign'>"+employee.ratings[i].potential+"</td><td class='type-centeralign'>"+employee.ratings[i].performance+"</td><td class='ratings-comments'>"+employee.ratings[i].notes+"</td><td class='type-centeralign'>"+employee.supervisors[0].supervisor.employee_id+"</td></tr>");
       }
     })
-
+    $("body").css("cursor", "default");
   })
 
   $('#side-bar-list').css('height', $('#profile-maincontent-section').width());
