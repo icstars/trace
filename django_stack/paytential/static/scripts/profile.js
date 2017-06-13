@@ -1,14 +1,5 @@
 $(document).ready(function() {
-  //read in data
-  //Read in sample data
-  // var data = JSON.parse(jsonData);
-  // var employees = {};
-  //
-  // for (var i = 0, emp; i < data.length; i++) {
-  //   emp = data[i];
-  //   employees[emp._id] = emp;
-  // }
-
+  //Profile toolbar buttons
   $('#save-btn').hover(function() {
     $(this).text(' Save');
   }, function() {
@@ -40,46 +31,38 @@ $(document).ready(function() {
   })
 
   //Load employee info when selected in SIDEBAR
-  $('#side-bar-list li').click(function() {
-    //Some fields are commented because they're not yet in the sample data
-    endex = $(this).data('e_id');
-    $('#profile-header').text(employees[endex].fname + ' ' + employees[endex].lname);
-    $('#id_field').text(employees[endex]._id);
-    $('#gender_field').text(employees[endex].gender);
-    $('#bday_field').text(employees[endex].startDate);
-    $('#pos_field').text(employees[endex].department);
-    // $('#dep_field').text(employees[endex].department);
-    $('#startDate_field').text(employees[endex].startDate);
-    // $('#location_field').text(employees[endex]._id);
-    //CONTACT INFO
-    // $('#email_field').text(employees[endex].startDate);
-    // $('#phone_field').text(employees[endex].startDate);
-    // $('#ext_field').text(employees[endex].startDate);
-    //RATING HISTORY
-    populateRatings(endex);
+  $(document).on("click", '#side-bar-list li',function() {
+    $("body").css("cursor", "progress");
+    var employee = {};
+    var id = $(this).data('id');
+    $.ajax({
+      type: 'GET',
+      url: '/api/employees/'+id,
+      success: function(data) {
+        employee = data;
+      }
+    }).done(function(){
+      $('#profile-header').text(employee.details[0].first_name + ' ' + employee.details[0].last_name);
+      $('#id_field').text(employee.details[0].employee_id);
+      $('#gender_field').text(employee.details[0].gender);
+      $('#bday_field').text(employee.details[0].birth_date);
+      $('#hire_field').text(employee.details[0].hire_date);
+      $('#pos_field').text(employee.details[0].position);
+      $('#email_field').text(employee.details[0].email);
+      $('#startDate_field').text(employee.details[0].hire_date);
+      $('#phone_field').text(employee.details[0].phone);
+      $('#location_field').text(employee.assigned_locations[0].location_name);
+      //RATING HISTORY
+      $('#ratings-history-list').empty();
+      for (var i in employee.ratings) {
+        $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employee.ratings[i].date+"</td><td class='type-centeralign'>"+employee.ratings[i].potential+"</td><td class='type-centeralign'>"+employee.ratings[i].performance+"</td><td class='ratings-comments'>"+employee.ratings[i].notes+"</td><td class='type-centeralign'>"+employee.supervisors[0].supervisor.employee_id+"</td></tr>");
+      }
+    })
+    $("body").css("cursor", "default");
   })
-
-  var populateRatings = function(endex){
-    $('#ratings-history-list').empty();
-    for (var i in employees[endex].ratings) {
-      $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employees[endex].ratings[i].date+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].potential+"</td><td class='type-centeralign'>"+employees[endex].ratings[i].performance+"</td><td class='ratings-comments'>"+employees[endex].ratings[i].notes+"</td><td class='type-centeralign'>"+employees[endex].refersTo+"</td></tr>");
-    }
-  }
 
   $('#side-bar-list').css('height', $('#profile-maincontent-section').width());
   $(window).resize(function() {
     $('#side-bar-list').css('height', $('#profile-maincontent-section').width());
   })
-
-
-// function for ellipsis for comments with table??
-//   function shorten(text, maxLength) {
-// var ret = text;
-// if (ret.length > maxLength) {
-// ret = ret.substr(0,maxLength-3) + “…”;
-// }
-// return ret;
-// }
-
-
 });

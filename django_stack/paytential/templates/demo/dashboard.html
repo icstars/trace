@@ -1,9 +1,8 @@
 <!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %}
 {% block title %}<title>Paytential - Dashboard</title>{% endblock title %}
-{% block page_sheets %}
+{% block styles %}
   <link rel="stylesheet" href="{% static "css/dashboard.css" %}"/>
-  <script src="{% static "scripts/dashboard.js" %}"></script>
-{% endblock page_sheets %}
+{% endblock styles %}
 {% block main_panel %}
   <div class="col-xs-9 padding-none">
     <div id="" class="row c-header-menu" style="background:transparent; border:none;">
@@ -82,3 +81,6 @@
     </div>
   </div>
 {% endblock main_panel %}
+{% block scripts %}
+  <script src="{% static "scripts/dashboard.js" %}"></script>
+{% endblock scripts %}

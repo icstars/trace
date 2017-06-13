@@ -1,9 +1,8 @@
 <!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %}
 {% block title %}<title>Paytential - Employee Profile</title>{% endblock title %}
-{% block page_sheets %}
+{% block styles %}
 <link rel="stylesheet" href="{% static "css/profile.css" %}"/>
-<script src="{% static "scripts/profile.js" %}"></script>
-{% endblock page_sheets %}
+{% endblock styles %}
 {% block main_panel %}
   <div id="profile-maincontent-section" class="col-xs-9 padding-none">
     <div id="profile-c-header-menu" class="row c-header-menu">
@@ -37,40 +36,36 @@
           <table class="lists fixed-layout">
             <tbody>
               <tr>
-                <td class="table-col-1">Manager:</td>
-                <td id="id_field">{{ employees.first.managment_relationships.first }}</td>
-              </tr>
-              <tr>
                 <td class="table-col-1">Employee ID:</td>
-                <td id="id_field">{{ employees.first.employee_id }}</td>
+                <td id="id_field"></td>
               </tr>
               <tr>
                 <td class="table-col-1">Gender:</td>
-                <td id="gender_field">{{ employees.first.gender }}</td>
+                <td id="gender_field"></td>
               </tr>
               <tr>
                 <td class="table-col-1">Birthday:</td>
-                <td id="bday_field">{{ employees.first.birth_date }}</td>
+                <td id="bday_field"></td>
               </tr>
               <tr>
                 <td class="table-col-1">Hire Date:</td>
-                <td id="pos_field">{{ employees.first.hire_date }}</td>
+                <td id="hire_field"></td>
               </tr>
               <tr>
                 <td class="table-col-1">Position:</td>
-                <td id="pos_field">{{ employees.first.position }}</td>
+                <td id="pos_field"></td>
               </tr>
               <tr>
                 <td class="table-col-1">Email:</td>
-                <td id="pos_field">{{ employees.first.email }}</td>
+                <td id="email_field"></td>
               </tr>
               <tr>
                 <td class="table-col-1">Phone:</td>
-                <td id="dep_field">{{ employees.first.phone }}</td>
+                <td id="phone_field"></td>
               </tr>
               <tr>
                 <td class="table-col-1">Location:</td>
-                <td id="location_field">{{ employees.first.assigned_location.first.location_name|truncatechars:50 }}</td>
+                <td id="location_field"></td>
               </tr>
             </tbody>
           </table>
@@ -118,6 +113,41 @@
                     </tbody>
                   </table>
                 </div>
+<<<<<<< HEAD
+=======
+=======
+        <h2 id="ratings-header">Rating History</h2>
+        <div id="ratings-table-section" class="bounding-box width-1280">
+          <div id="ratings-content-area" class="content-area">
+            <div class="row">
+              <div class="col-xs-12 padding-none">
+                <table class="table" style="margin-top:0;margin-bottom:0;">
+                  <thead>
+                    <tr>
+                      <th class="toggle" width="16"></th>
+                      <th>Date</th>
+                      <th>Potential</th>
+                      <th>Performance</th>
+                      <th>Comments</th>
+                      <th>Supervisor ID</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ratings-history-list">
+                    {% for rating in  employees.first.supervisors.ratings %}
+                    <tr>
+                      <td class="toggle"><i class="icon-expand"></i></td>
+                      <td>{{ rating.date }}</td>
+                      <td>{{ rating.potential }}</td>
+                      <td>{{ rating.performance }}</td>
+                      <td>{{ rating.notes |truncatechars:30 }}</td>
+                      <td>{{ rating.managment_relationship.subordinate }}</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- <tr class="details"></tr> -->
+                    <!--TODO I think this is supposed to be the dropdown-->
+                  </tbody>
+                </table>
+>>>>>>> 6922cd347e3aa17a793907d535b0289cf82d9a6d
               </div>
             </div>
           </div>
@@ -125,3 +155,6 @@
       </div>
     </div>
 {% endblock main_panel %}
+{% block scripts %}
+<script src="{% static "scripts/profile.js" %}"></script>
+{% endblock scripts %}

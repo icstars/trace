@@ -1,9 +1,8 @@
 <!DOCTYPE html> {% extends "demo/main.html" %} {% load staticfiles %}
 {% block title %}<title>Paytential - Employee Rating</title>{% endblock title %}
-{% block page_sheets %}
+{% block styles %}
   <link rel="stylesheet" href="{% static "css/evaluation.css" %}"/>
-  <script src="{% static "scripts/evaluation.js" %}"></script>
-{% endblock page_sheets %}
+{% endblock styles %}
 {% block main_panel %}
   <div id="eval-section" class="col-xs-9 padding-none">
     <div class="row c-header-menu" style="background:transparent; border:none;">
@@ -113,3 +112,6 @@
     <!-- COLUMN THAT OCCUPIES THE FULL WIDTH OF ABOVE COLUMN "WRAPPER" ENDS-->
   </div>
 {% endblock main_panel %}
+{% block scripts %}
+  <script src="{% static "scripts/evaluation.js" %}"></script>
+{% endblock scripts %}

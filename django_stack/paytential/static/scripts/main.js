@@ -5,41 +5,29 @@ $(document).ready(function() {
     type: 'GET',
     url: '/api/employees',
     success: function(data) {
+      //load data into employees
       $.each(data, function(i, employee) {
         employees[employee.employee_id] = employee;
       });
-      console.log('GOT employees');
-      activateSidbar()
-    },
-    error: function() {
-      alert('Error loading data')
     }
-  });
-
-  function activateSidbar() {
-    //Populate
+  }).done(function(){
+    //populate sidebar
     for (var i in employees) {
-      $('#side-bar-list').append("<li><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
+      $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
     }
-    //attach listener
-    $('#side-bar-list li').on('click', function(e) {
-      //TODO link to profile page based on e_id
-      if ($(this).hasClass('selected')) {
-        $(this).removeClass('selected');
-      } else {
-        $(this).addClass('selected');
-      }
-      updateSideBarBtns();
-    })
-  }
-
+  })
   //slides side bar in and out
   var hiddenSidebar = $("#side-section").width();
   $("#side-bar-icon").click(function(event) {
     $("#side-section").toggle();
   });
-
-
+  //TODO link to profile page based on e_id
+  $(document).on("click", '#side-bar-list li',function() {
+    $('#side-bar-list li').removeClass('selected');
+    $(this).addClass('selected');
+    sessionStorage.setItem('id',$(this).data('id'));
+    updateSideBarBtns();
+  })
   //toggles disabled on SIDEBAR buttons that require selected employees
   var updateSideBarBtns = function() {
     if ($('#side-bar-list li.selected').length > 0) { //checks if any side-bar-list items are selected
@@ -88,7 +76,7 @@ $(document).ready(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
     alert("Whoops this isn't implemented yet");
-    //TODO load eval page w/ e_id from selected
+    //TODO load eval page using sessionStorage.getItem('id')
   })
   //seleects only the employees that are currently visible in the side-bar-list
   $('#checklist-btn').click(function() {
@@ -117,13 +105,11 @@ $(document).ready(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
     alert("Whoops this isn't implemented yet");
-    //TODO load profile page w/ e_id from selected
+    //TODO load profile page using sessionStorage.getItem('id')
   })
 
   $('#reset-btn').click(function() {
-    console.log("hit")
     if ($(this).hasClass('disabled'))
-
       return; //prevents button from working if it should be disabled
     $('#side-bar-list li').show();
     updateSideBarBtns();
