@@ -7,10 +7,15 @@ class EmployeeSerializer(serializers.ModelSerializer):
         depth = 1
         fields = ('employee_id','first_name','last_name','gender','birth_date','hire_date','position','email','phone',)
 
+class EIDSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Employee
+        fields = ('employee_id',)
+
 class ManagerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Manager
-        fields = ('employee_id','first_name','last_name','gender','birth_date','hire_date','position','email','phone',)
+        fields = ('employee_id','first_name','last_name',)
 
 class LocationSerializer(serializers.ModelSerializer):
     # assigned_employee = EmployeeSerializer()
@@ -20,9 +25,10 @@ class LocationSerializer(serializers.ModelSerializer):
 
 class SupervisiorSerializer(serializers.ModelSerializer):
     supervisor = ManagerSerializer()
+    subordinate = EIDSerializer()
     class Meta:
         model = Supervision
-        fields = ('supervisor','start_date',)
+        fields = ('supervisor','subordinate',)
 
 class SubordinateSerializer(serializers.ModelSerializer):
     subordinate = EmployeeSerializer()
@@ -31,6 +37,8 @@ class SubordinateSerializer(serializers.ModelSerializer):
         fields = ('subordinate','start_date',)
 
 class RatingSerializer(serializers.ModelSerializer):
+    managment_relationship = SupervisiorSerializer()
     class Meta:
         model = Rating
-        exclude = ('id','managment_relationship','created_at','updated_at',)
+        depth = 1
+        fields = ('potential','performance','managment_relationship','date','notes')
