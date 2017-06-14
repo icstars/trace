@@ -86,68 +86,33 @@
             <div id="ratings-content-area" class="content-area">
               <div class="row">
                 <div class="col-xs-12 padding-none container">
-                  <table class="table table-fixed">
-                    <thead>
-                      <tr id="thead-ratings">
-                        <th id="thead-ratings-toggle" class="toggle" width="16"></th>
-                        <th id="thead-ratings-date">Date</th>
-                        <th id="thead-ratings-potential">Potential</th>
-                        <th id="thead-ratings-performance">Performance</th>
-                        <th id="thead-ratings-comments">Comments</th>
-                        <th id="thead-ratings-mgrid">Mgr ID</th>
-                      </tr>
-                    </thead>
-                    <tbody id="ratings-history-list">
-                      {% for rating in ratings %}
-                      <tr>
-                        <td id="td-ratings-toggle" class="toggle"><i class="icon-expand"></i></td>
-                        <td id="td-ratings-date">{{ rating.date }}</td>
-                        <td id="td-ratings-potential">{{ rating.potential }}</td>
-                        <td id="td-ratings-performance">{{ rating.performance }}</td>
-                        <td id="td-ratings-comments">{{ rating.notes |truncatechars:30 }}</td>
-                        <td id="td-ratings-mgrid">{{ rating.managment_relationship.subordinate }}</td>
-                      </tr>
-                      {% endfor %}
-                      <!-- <tr class="details"></tr> -->
-                      <!--TOdo I think this is supposed to be the dropdown-->
-                    </tbody>
-                  </table>
+                    <table id="table-ratings" class="table table-fixed col-xs-12">
+                              <thead>
+                                <tr id="thead-ratings" class="col-xs-12">
+                                  <th  id="thead-ratings-toggle" class="toggle col-xs-1" width="16"></th>
+                                  <th class="col-xs-1" id="thead-ratings-date">Date</th>
+                                  <th class="col-xs-2" id="thead-ratings-potential">Potential</th>
+                                  <th class="col-xs-2" id="thead-ratings-performance">Performance</th>
+                                  <th class="col-xs-4" id="thead-ratings-comments">Comments</th>
+                                  <th class="col-xs-2" id="thead-ratings-mgrid">Mgr ID</th>
+                                </tr>
+                              </thead>
+                              <tbody id="ratings-history-list" class="col-xs-12">
+                                {% for rating in ratings %}
+                                <tr id="tr-ratings" class="col-xs-12">
+                                  <td class="toggle col-xs-1 td-ratings-toggle"><i class="icon-expand"></i></td>
+                                  <td class="col-xs-1 td-ratings-date">{{ rating.date }}</td>
+                                  <td class="col-xs-2 td-ratings-potential">{{ rating.potential }}</td>
+                                  <td class="col-xs-2 td-ratings-performance">{{ rating.performance }}</td>
+                                  <td class="col-xs-4 td-ratings-comments">{{ rating.notes |truncatechars:30 }}</td>
+                                  <td class="col-xs-2 td-ratings-mgrid">{{ rating.managment_relationship.subordinate }}</td>
+                                </tr>
+                                {% endfor %}
+                                <!-- <tr class="details"></tr> -->
+                                <!--TOdo I think this is supposed to be the dropdown-->
+                               </tbody>
+                            </table>
                 </div>
-<<<<<<< HEAD
-=======
-=======
-        <h2 id="ratings-header">Rating History</h2>
-        <div id="ratings-table-section" class="bounding-box width-1280">
-          <div id="ratings-content-area" class="content-area">
-            <div class="row">
-              <div class="col-xs-12 padding-none">
-                <table class="table" style="margin-top:0;margin-bottom:0;">
-                  <thead>
-                    <tr>
-                      <th class="toggle" width="16"></th>
-                      <th>Date</th>
-                      <th>Potential</th>
-                      <th>Performance</th>
-                      <th>Comments</th>
-                      <th>Supervisor ID</th>
-                    </tr>
-                  </thead>
-                  <tbody id="ratings-history-list">
-                    {% for rating in  employees.first.supervisors.ratings %}
-                    <tr>
-                      <td class="toggle"><i class="icon-expand"></i></td>
-                      <td>{{ rating.date }}</td>
-                      <td>{{ rating.potential }}</td>
-                      <td>{{ rating.performance }}</td>
-                      <td>{{ rating.notes |truncatechars:30 }}</td>
-                      <td>{{ rating.managment_relationship.subordinate }}</td>
-                    </tr>
-                    {% endfor %}
-                    <!-- <tr class="details"></tr> -->
-                    <!--TODO I think this is supposed to be the dropdown-->
-                  </tbody>
-                </table>
->>>>>>> 6922cd347e3aa17a793907d535b0289cf82d9a6d
               </div>
             </div>
           </div>
