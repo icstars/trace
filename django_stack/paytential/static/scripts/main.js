@@ -1,6 +1,5 @@
 $(document).ready(function() {
   var employees = {};
-
   $.ajax({
     type: 'GET',
     url: '/api/employees',
@@ -23,9 +22,10 @@ $(document).ready(function() {
   });
   //TODO link to profile page based on e_id
   $(document).on("click", '#side-bar-list li',function() {
+    var e_id = $(this).data('id');
+    window.sessionStorage.setItem('id',e_id);
     $('#side-bar-list li').removeClass('selected');
     $(this).addClass('selected');
-    sessionStorage.setItem('id',$(this).data('id'));
     updateSideBarBtns();
   })
   //toggles disabled on SIDEBAR buttons that require selected employees
@@ -75,8 +75,12 @@ $(document).ready(function() {
   $('#eval-btn').click(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
-    alert("Whoops this isn't implemented yet");
-    //TODO load eval page using sessionStorage.getItem('id')
+    if (window.sessionStorage){
+      var e_id = window.sessionStorage.getItem('id');
+      window.location.href = "http://127.0.0.1:8000/demo/evaluation/"+e_id;
+    } else {
+      window.location.href = "http://127.0.0.1:8000/demo/evaluation/";
+    }
   })
   //seleects only the employees that are currently visible in the side-bar-list
   $('#checklist-btn').click(function() {
@@ -104,8 +108,12 @@ $(document).ready(function() {
   $('#profile-btn').click(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
-    alert("Whoops this isn't implemented yet");
-    //TODO load profile page using sessionStorage.getItem('id')
+    if (window.sessionStorage){
+      var e_id = window.sessionStorage.getItem('id');
+      window.location.href = "http://127.0.0.1:8000/demo/profile/"+e_id;
+    } else {
+      window.location.href = "http://127.0.0.1:8000/demo/profile/";
+    }
   })
 
   $('#reset-btn').click(function() {

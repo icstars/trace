@@ -22,7 +22,7 @@
       </div>
       <div class="col-xs-12">
         <div class="col-xs-8">
-          <h2 id="profile-header" class="type-sectiontitle col-xs-12">{{ employees.first.first_name }} {{ employees.first.last_name }}</h2>
+          <h2 id="profile-header" class="type-sectiontitle col-xs-12"></h2>
         </div>
         <!-- PROFILE HEADER AND GRIDTABS START -->
       </div>
@@ -113,6 +113,40 @@
                                </tbody>
                             </table>
                 </div>
+<<<<<<< HEAD
+=======
+        <h2 id="ratings-header">Rating History</h2>
+        <div id="ratings-table-section" class="bounding-box width-1280">
+          <div id="ratings-content-area" class="content-area">
+            <div class="row">
+              <div class="col-xs-12 padding-none">
+                <table class="table" style="margin-top:0;margin-bottom:0;">
+                  <thead>
+                    <tr>
+                      <th class="toggle" width="16"></th>
+                      <th>Date</th>
+                      <th>Potential</th>
+                      <th>Performance</th>
+                      <th>Comments</th>
+                      <th>Supervisor ID</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ratings-history-list">
+                    {% for rating in  employees.first.supervisors.ratings %}
+                    <tr>
+                      <td class="toggle"><i class="icon-expand"></i></td>
+                      <td>{{ rating.date }}</td>
+                      <td>{{ rating.potential }}</td>
+                      <td>{{ rating.performance }}</td>
+                      <td>{{ rating.notes |truncatechars:30 }}</td>
+                      <td>{{ rating.managment_relationship.subordinate }}</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- <tr class="details"></tr> -->
+                    <!--TODO I think this is supposed to be the dropdown-->
+                  </tbody>
+                </table>
+>>>>>>> 969af4e0b7ac7d17f4e8f091f8460773559bb444
               </div>
             </div>
           </div>
