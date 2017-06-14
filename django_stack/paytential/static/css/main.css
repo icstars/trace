@@ -44,10 +44,13 @@ span.c-header-searchbar {
 }
 
 #nav-bar {
-  background: #333333;
-  border-bottom: 2px solid #666666;
+  background: #333333 !important;
+  /*border-bottom: 2px solid #666666;*/
 }
 
+.nav-links {
+  color:white !important;
+}
 /*********************************NAV BAR***************************************/
 /*#nav-bar {
   background: #333333;
