@@ -43,14 +43,8 @@ span.c-header-searchbar {
   background: #E88924;
 }
 
-#nav-bar {
-  background: #333333 !important;
-  /*border-bottom: 2px solid #666666;*/
-}
 
-.nav-links {
-  color:white !important;
-}
+
 /*********************************NAV BAR***************************************/
 /*#nav-bar {
   background: #333333;
@@ -75,11 +69,11 @@ right: auto;
     z-index: 801;
 }
 
-#navbar {
-  height: 1px;
-  /*background: #333333 !important;*/
-}
 
+#nav-bar {
+  background: #333333 !important;
+  /*border-bottom: 2px solid #666666;*/
+}
 #responsive-menu {
   color: #E88924;
 }
@@ -89,7 +83,7 @@ right: auto;
 }
 
 .nav-links {
-
+  color:white !important;
 }
 .nav-links:hover {
   color: #E88924;
