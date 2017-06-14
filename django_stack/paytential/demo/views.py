@@ -24,8 +24,8 @@ def login(request):
 def evaluation(request):
     return render(request,'demo/evaluation.html',context=data_dict)
 
-def help(request):
-    return render(request,'demo/help.html')
+def helpme(request):
+    return render(request,'demo/helpme.html')
 
 def registration(request):
     return render(request,'demo/registration.html')

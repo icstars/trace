@@ -15,7 +15,7 @@ background-repeat: no-repeat;
   justify-content: center;
 }
 #logo {
-  background: white;
+  background: ;
 margin-bottom: 3%;
 }
 
@@ -31,20 +31,17 @@ margin-bottom: 3%;
   transform: translateY(15%);
 }
 
-/*img{
-padding-bottom: 8%;
-width: 100%;
-height: auto;
-
-}*/
 
 .inputs {
-  margin: 2% 0% 4% 0%;
+  margin: 4% 5% 4% 5%;
   /*padding-right: 20%;*/
   text-align: center;
   padding: 1%;
 }
 
+#registration-form{
+	width: 20%;
+}
 
 a{
   text-decoration: none;
@@ -61,4 +58,60 @@ br {
 
 button.button {
   margin: 3% 0 3% 0;
+}
+
+@media only screen and (max-width: 768px){
+
+
+
+#registration-wrapper {
+  display: flex;
+  justify-content: center;
+}
+#logo {
+  background: ;
+margin-bottom: 3%;
+}
+
+#registration-form{
+  /*width: 400px;
+  height: 475px;*/
+  padding-bottom: 1%;
+  border: solid 1px white;
+  text-align: center;
+  background-color: rgba(255, 225, 255, .3);
+  position: relative;
+  top:50%;
+  transform: translateY(15%);
+}
+
+
+.inputs {
+  margin: 4% 5% 4% 5%;
+  /*padding-right: 20%;*/
+  text-align: center;
+  padding: 1%;
+}
+
+#registration-form{
+	width: 60%;
+}
+
+a{
+  text-decoration: none;
+  color: cornsilk;
+}
+
+a#login-btn {
+    color:#333333 !important;
+}
+
+br {
+  line-height: 1%;
+}
+
+button.button {
+  margin: 3% 0 3% 0;
+}
+
 }
