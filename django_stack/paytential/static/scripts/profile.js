@@ -26,8 +26,8 @@ $(document).ready(function() {
       }
     })
   }
-  
-  if (window.sessionStorage){
+
+  if (window.sessionStorage.getItem('id') !== null){
     var e_id = window.sessionStorage.getItem('id');
     loadEmployeeInfo(e_id);
   }
