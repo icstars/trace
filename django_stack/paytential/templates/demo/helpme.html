@@ -1,30 +1,101 @@
-<html>
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!-->
+<!--<![endif]-->
+
 <head>
-<link rel="stylesheet" type="text/css" href="helpme.css"></link>
-<TITLE>Functions</TITLE>
+  <link rel="stylesheet" href="{% static "login.css" %}"/>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+
+  <title>Patential</title>
+
+  <meta name="description" content="XXXXXXXXXXXXXXXX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Paytential</title>
+  <!-- CITRUS Styles -->
+  <link rel="stylesheet" href="{% static  "citrus/css/citrus.all.min.css" %}"/>
+  <link rel="stylesheet" href="{% static  "citrus/css/citrus.open-sans.min.css" %}"/>
+  <link rel="stylesheet" href="{% static  "citrus/css/citrus.icon-font.min.css" %}"/>
+  <!-- Global Header -->
+  <link rel="stylesheet" href="{% static  "citrus/css/components/citrus.header.min.css" %}"/>
+  <link rel="stylesheet" href="{% static  "citrus/css/components/citrus.status-bar.min.css" %}"/>
+  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
+  <script src="citrus/scripts/libs/modernizr.js"></script>
+  <!--OUR STYLES-->
+  <link rel="stylesheet" href="{% static  "css/login.css" %}"/>
 </head>
+
+<body>
+  
+<div id="logo-header" class="c-header-logo">
+  <img id="img-logo" src="images/apple-logo-new.png" alt="logo">
+</div>
+
 <h1>Login</h1>
+<p>This page is for all managers to access into the application to view, evaulate, and manage profiles </p>
 <h2>Company Id</h2>
 <p>Manager inserts assigned company ID</p>
-<h2>username</h2>
+<h2>Username</h2>
 <p>Insert the username created</p>
-<h2>password</h2>
-<p>insert the password created</p>
-<h2>forgot password</h2>
-<p>directed to resset manager's password</p>
+<h2>Password</h2>
+<p>Insert the password created</p>
+<h2>Forgot password</h2>
+<p>Directed to resset manager's password</p>
 <h2>Register new users</h2>
 <p>Register new employee(s) to the </p>
-<h1>Dashboard</h1>
-<h2>Rate</h2>
-<p>Load the rating page with person selected</p>
-<h2>Profile</h2>
-<p>loads profile page of selecteed employees</p>
-<h2>select</h2>
-<p>Highlight the employee(s) selected and led to toggle to clear all</p>
-<h2>reset</h2>
-<p>This is to reset all the highlighted employee(s) </p>
-<h1>Employee profile</h1>
-<h1>Evaluation</h1>
 
+
+<h1>Dashboard</h1>
+<p>An over view of the company employees </p>
+<h2>Side bar</h2>
+<p>has mutliple functions that comply with the name(s)</p>
+<h2>Rate<img src="images/Rate.png"></h2>
+<p>Load the rating page with person selected</p>
+<h2>Profile<img src="images/profile-snippet.png"></h2>
+<p>loads profile page of selecteed employees</p>
+<h2>select<img src="images/Select-snippet.png"></h2>
+<p>Highlight the employee(s) selected and led to toggle to clear all</p>
+<h2>reset<img src="images/reset-snippet.png"></h2>
+<p>This is to reset all the highlighted employee(s) </p>
+
+
+<h1>Employee profile</h1>
+<p>This page has all information of employee(s) such as first name, last name, employee ID, company, email, and etc information needed.</p>
+<h2>Save</h2>
+<p>Save all edits made to profile</p>
+<h2>Edit</h2>
+<p>Edit the profile etc. company location, store number, or address</p>
+<h2>Rate</h2>
+<p>Rate cureent viewed employee</p>
+<h2>Share</h2>
+<p>The control to share an employee profiles to other high heirchry</p>
+<h2>Delete</h2>
+<p>Options to delete an employee profile</p>
+<h2>rating history</h2>
+<p>Past reports of employee</p>
+<h2>Chart Graph</h2>
+<p>An visual over view of employee over time</p>
+
+
+<h1>Evaluation</h1>
+<p></p>
+<p>has the consistant side bar with options and employee(s) names</p>
+<h2>performance</h2>
+<p>Employee performance scoring <br>By default scoring ranges from 1-10</p>
+<h2>Potential</h2>
+<p>Employee potential scoring<br>By default scoring ranges from 1-10wsd</p>
+<h2>Notes</h2>
+<p>comments or other information needed to the history</p>
 </body>
 </html>
