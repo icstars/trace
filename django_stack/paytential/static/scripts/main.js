@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var employees = {};
-  $.ajax({
+//TODO find out if you can store JSON in localStorage
+    $.ajax({
     type: 'GET',
     url: '/api/employees',
     success: function(data) {
@@ -75,7 +76,7 @@ $(document).ready(function() {
   $('#eval-btn').click(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
-    if (window.sessionStorage){
+    if (window.sessionStorage.getItem('id') !== null){
       var e_id = window.sessionStorage.getItem('id');
       window.location.href = "http://127.0.0.1:8000/demo/evaluation/"+e_id;
     } else {
@@ -108,7 +109,7 @@ $(document).ready(function() {
   $('#profile-btn').click(function() {
     if ($(this).hasClass('disabled'))
       return; //prevents button from working if it should be disabled
-    if (window.sessionStorage){
+    if (window.sessionStorage.getItem('id') !== null){
       var e_id = window.sessionStorage.getItem('id');
       window.location.href = "http://127.0.0.1:8000/demo/profile/"+e_id;
     } else {
