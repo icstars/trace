@@ -31,9 +31,7 @@ button.button.outline {
 
 #save-btn, #edit-btn, #rate-btn, #share-btn, #delete-btn {
   height: 45px;
-  /*height: 54px;*/
   width: 20%;
-  /*background: red !important;/*testing for css linking to html doc*/
   background: #666666 !important;
   border: none;
   color: white !important;
@@ -54,9 +52,6 @@ button.button.outline {
   background: none;
   border: none;
 }
-
-
-
 
 #table-ratings {
   width: 90%;
@@ -138,50 +133,6 @@ display: block;
   float: left;
   border-bottom-width: 0;
 }
-
-/*
-#thead-ratings {
-  width: 98%;
-}
-
-#thead-ratings-toggle {
-  width: 4%;
-}
-
-#thead-ratings-date {
-  width: 15%;
-}
-
-#thead-ratings-potential {
-  width: 11%;
-}
-
-#thead-ratings-performance, #td-ratings-performance {}
-#thead-ratings-comments {
-  width: 35%;
-}
-#thead-ratings-mgrid {
-  width: 9%;
-  padding-right: 0;
-  padding-left: 1%;
-}
-
-#td-ratings-toggle{
-  float: left;
-  width: 12%;
-
-  }
-   #td-ratings-date {
-     float: left;
- width: 42%;
-   }
-
-#td-ratings-mgrid {
-  float: left;
-}
-  #td-ratings-comments, #td-ratings-potential {
-*/
-
   /*___________________________________________________________________________________________*/
   /******************************************MEDIA QUERIES***********************************/
   /*___________________________________________________________________________________________*/
