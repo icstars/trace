@@ -41,17 +41,12 @@ span.c-header-searchbar {
 
 .c-header-menu {
   background: #333333;
-  height: 45px;
+  height: 44px;
 }
 
 
 
 /*********************************NAV BAR***************************************/
-/*#nav-bar {
-  background: #333333;
-  height: 45px;*/
-  /*border-bottom: 2px solid #666666;*/
-/*}*/
 
 .c-header-menu .c-header-menu-dropdown {
   top: 45px;
@@ -61,41 +56,33 @@ span.c-header-searchbar {
   z-index: 801;
 }
 
-
-.nav-bar {
-  /*border-bottom: 2px solid #666666;*/
-}
-
-.nav-anchors {}
 #responsive-menu:hover {
   color: #E88924;
 }
 
-#responsive-menu:hover {
-  color: orange;
-}
-
-#ul-nav-links{
+ul#ul-nav-links{
   width: 50%;
-}
-
-.nav-links {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  width: 20%;
-  height: 44px;
-}
-
-.nav-links:hover {
-  color: #E88924;
+  padding-left: 0;
+  display: inline;
 }
 
 .nav-anchors {
-  color:white !important;
+  color: white !important;
+}
+.nav-links {
+  color: white !important;
+  text-align: center;
+  width: 10%;
+  height: 44px;
 }
 
-
+.nav-links:hover,.nav-links:active {
+  color: white;
+  background: #666666 !important;
+  /*background: white !important;*/
+  border-bottom: 2px solid white;
+  height: 42px;
+}
 
 /*******************************CONTENT-AREA**********************************/
 .content-area {
@@ -418,6 +405,7 @@ footer {
   /*******************************CONNECT WITH US SECTION START************************/
 #connect {
   background: #333333;
+  margin-top: -7%;
 }
 
 #connect-with-us {
