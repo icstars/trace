@@ -15,10 +15,10 @@ $(document).ready(function() {
       });
     }
   }).done(function(){
-    //populate sidebar
-    for (var i in employees) {
-      $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
-    }
+    console.log('ajax done');
+    console.log(employees);
+    console.log(ratings);
+    plotScores();
   })
 
   //KEEPS GRID IN SHAPE AS WINDOW RESIZES
@@ -90,6 +90,7 @@ $(document).ready(function() {
   };
   //stores e_ids into scoreGrid dictionary in key cell that cooresponds to gridbox
   var plotScores = function() {
+    console.log('printing scores...');
     var perf = 0,
       pot = 0;
     //local version of scoreGrid for calculations
@@ -106,19 +107,18 @@ $(document).ready(function() {
     };
 
     var j = 0;
+    console.log('set j');
     for (var i in employees) {
       //PICK "LATEST" RATING
       var id = employees[i].employee_id;
+      if(ratings[j]!==undefined && ratings[j].managment_relationship.subordinate.employee_id!==id)
+        continue;//CASE 0
+      console.log(id);
+      console.log(ratings[j]);
 
       perf = ratings[j].performance;
       pot = ratings[j].potential;
 
-      if(ratings[j]!==null && ratings[j].management_relationship.subordinate.employee_id!==id)
-        continue;//CASE 0
-      while(ratings[j]!==null && ratings[j].management_relationship.subordinate.employee_id===id){
-        j++
-      }
-        //TODO START HERE MIGHT BE WORKING
       //STORE LATEST SCORES
       var k = 0;
       //k gets the gridbox id that cooresponds to this employee's scores
@@ -133,8 +133,11 @@ $(document).ready(function() {
         k += 2
       }
       scGrid['' + k].push(id);
+      while(ratings[j]!==undefined && ratings[j].managment_relationship.subordinate.employee_id===id){
+        j++
+      }
     }
-
+    console.log(scGrid);
     for (var i in scGrid) {
       var l = scGrid['' + i].length;
       if (l === 0) {
@@ -145,7 +148,6 @@ $(document).ready(function() {
     }
     scoreGrid = scGrid;
   }
-  plotScores();
 
   //Select dataPoint
   $('.dataPoint').click(function() {
