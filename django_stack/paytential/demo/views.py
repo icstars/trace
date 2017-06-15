@@ -34,7 +34,12 @@ class EmployeeList(APIView):
     def get(self, request):
         emp = Employee.objects.all()
         employee_serializer = EmployeeSerializer(emp, many=True)
-        return Response(employee_serializer.data)
+        rat = Rating.objects.all()
+        rating_serializer = RatingSerializer(rat, many=True)
+        return Response({
+            'employees': employee_serializer.data,
+            'ratings': rating_serializer.data
+        })
 
     def post(self):
         pass

@@ -112,13 +112,14 @@ button.button.outline:active, #gridtabs-add:active {
 
 #dp6, #dp3, #dp0, #dp7, #dp4, #dp1, #dp8, #dp5, #dp2, #dp4 {
   position: absolute;
-  clip-path:circle(10px at center);
+  clip-path:circle(12px at center);
   font-size: 1.6rem;
 }
 .dataPoint{
   background-color: transparent !important;
   border: #000 solid 2px !important;
-  }
+  cursor: pointer;
+}
 
 /*a#dp6, a#dp3, a#dp0, a#dp7, a#dp4, a#dp1, a#dp8, a#dp5, a#dp2, a#dp4{
   font-size: 1.6rem;

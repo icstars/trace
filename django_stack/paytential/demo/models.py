@@ -20,7 +20,7 @@ class Employee(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return "%s. %s ID: %s"% (self.first_name[0],self.last_name,self.employee_id)
+        return "%s,"% (self.employee_id)
 
 class Manager(Employee):
     username = models.CharField(max_length=50)
@@ -58,7 +58,7 @@ class Supervision(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return str(self.supervisor) + ": " + str(self.subordinate)
+        return "%s:%s"% (self.supervisor,self.ratings)
 
 class Rating(models.Model):
     managment_relationship = models.ForeignKey(Supervision,related_name='ratings',null=True)
@@ -70,4 +70,4 @@ class Rating(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return str(self.potential) + ":" + str(self.performance)
+        return str(self.potential) + "," + str(self.performance)
