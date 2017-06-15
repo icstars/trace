@@ -40,13 +40,63 @@ span.c-header-searchbar {
 }
 
 .c-header-menu {
-  background: #E88924;
+  background: #333333;
+  height: 45px;
 }
 
-#nav-bar {
+
+
+/*********************************NAV BAR***************************************/
+/*#nav-bar {
   background: #333333;
-  border-bottom: 2px solid #666666;
+  height: 45px;*/
+  /*border-bottom: 2px solid #666666;*/
+/*}*/
+
+.c-header-menu .c-header-menu-dropdown {
+  top: 45px;
+  left: -68px;
+  right: auto;
+  position: absolute;
+  z-index: 801;
 }
+
+
+.nav-bar {
+  /*border-bottom: 2px solid #666666;*/
+}
+
+.nav-anchors {}
+#responsive-menu:hover {
+  color: #E88924;
+}
+
+#responsive-menu:hover {
+  color: orange;
+}
+
+#ul-nav-links{
+  width: 50%;
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 20%;
+  height: 44px;
+}
+
+.nav-links:hover {
+  color: #E88924;
+}
+
+.nav-anchors {
+  color:white !important;
+}
+
+
+
 /*******************************CONTENT-AREA**********************************/
 .content-area {
   height: 845px;

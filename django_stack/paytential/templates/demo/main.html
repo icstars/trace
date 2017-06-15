@@ -26,7 +26,6 @@
   <!-- ADDED OFFLINE VERSION OF jQuery SO I CAN WORK ON THE TRAIN [DAN]-->
   {% block styles %}{% endblock styles %}
 </head>
-
 <body class="citrus">
   <!-- start of logo banner -->
   <div id="header-wrapper" class="c-header">
@@ -34,20 +33,42 @@
       <img id="img-logo" src="{% static "images/apple-logo-new.png" %}" alt="logo"/>
     </div>
     <div id="nav-bar" class="c-header-bar">
-      <div class="c-header-user-portrait">
-        <img id="paylocity-profile-img" src="https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png">
-        <ul class="c-header-menu-dropdown">
-          <li class="c-header-user-name">
-            <p>Clark Kent</p>ckent [ck1]</li>
-          <li><a href="#"><i class="icon-edit"></i> Edit Profile</a></li>
-          <li><a href="#"><i class="icon-notifications"></i> Notifications</a></li>
-          <li><a href="{% static "helpme.html" %}"><i class="icon-help"></i> Help</a></li>
-          <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li>
-          <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <div class="c-header-menu">
+        <ul id="ul-nav-links">
+          <!-- <ul class="c-header-menu-toggle"> -->
+              <!-- <li id="responsive-menu"> -->
+                  <!-- <a href="#" class="cHeaderMenuBtn">Menu</a> -->
+                  <!-- <ul class="c-header-menu-dropdown" data-has-sub-nav="true"> -->
+                      <li class="nav-links"><a class="nav-anchors col-xs-2" href="http://127.0.0.1:8000/demo/dashboard/">DASHBOARD</a></li>
+                      <li class="nav-links"><a class="nav-anchors col-xs-2" href="http://127.0.0.1:8000/demo/profile/">PROFILE</a></li>
+                      <li class="nav-links"><a class="nav-anchors col-xs-2" href="http://127.0.0.1:8000/demo/evaluation/">EVALUATION</a></li>
+              <!-- </li> -->
+          </ul>
+    <!-- </li> -->
+                <li class="c-header">
+                  <div class="">
+                      <!-- <div class="c-header-bar c-header-alert"> -->
+                          <div class="c-header-user-portrait">
+                              <!-- <span class="c-header-alert">2</span> -->
+                                <img id="paylocity-profile-img" src="https://pbs.twimg.com/profile_images/1261017244/eightbit-33b40a62-4aa7-4cae-ac42-231c0762a460.png">
+                              <ul style="float:left" class="c-header-menu-dropdown">
+                                  <li class="c-header-user-name">
+                                      <p>Clark Kent</p>ckent [ck1]</li>
+                                  <!-- <li><a href="#"><i class="icon-edit"></i> Edit Profile</a></li> -->
+                                  <!-- <li><a href="#"><i class="icon-settings"></i> User Preferences</a></li> -->
+                                  <!-- <li><a href="#"><i class="icon-notifications"></i> Notifications</a></li> -->
+                                  <!-- <li><a href="#"><i class="icon-about"></i> About</a></li> -->
+                                  <li><a href="http://127.0.0.1:8000/demo/helpme/"><i class="icon-help"></i> Help</a></li>
+                                  <!-- <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li> -->
+                                  <li><a href="#"><i class="icon-logout"></i> Logout</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
   <!-- T.R.A.C.E. CODE START -->
   <div class="content-area">
     <div class="gutter col-xs-1 padding-none"></div>
