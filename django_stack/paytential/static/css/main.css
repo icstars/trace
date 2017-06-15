@@ -69,6 +69,7 @@ ul#ul-nav-links{
 .nav-anchors {
   color: white !important;
 }
+
 .nav-links {
   color: white !important;
   text-align: center;
@@ -281,6 +282,19 @@ img.soc-med-icons {
   #navbar-evaluation-btn, #navbar-profile-btn {
     margin: 0 1% 0 10%;
   }
+
+  .nav-links:hover,.nav-links:active {
+    color: white;
+    background: #666666 !important;
+    width: 16%;
+    margin: 0 1% 0 10%;
+    /*background: white !important;*/
+    /*border-bottom: 2px solid whitesmoke;*/
+    height: 42px;
+    width: 20%;
+    margin: 1%;
+  }
+
   #header-wrapper {
     margin-bottom: 2%;
   }

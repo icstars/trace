@@ -159,7 +159,7 @@ display: block;
   /******************************************MEDIA QUERIES***********************************/
   /*___________________________________________________________________________________________*/
   @media only screen and (max-width: 768px)
-  {
+{
 
   #side-section {
       width: 32%;
@@ -177,7 +177,7 @@ display: block;
     margin-top: 3%;
   }
 
-  img#graph {
+  #graph {
   display: none;
   }
 
