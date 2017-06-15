@@ -12,6 +12,7 @@ $(document).ready(function() {
   }).done(function(){
     //populate sidebar
     for (var i in employees) {
+      if( employees[i].employee_id === 0 ){ continue; }//removes the District Manager
       $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
     }
   })
