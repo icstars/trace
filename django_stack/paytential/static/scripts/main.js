@@ -1,12 +1,11 @@
 $(document).ready(function() {
   var employees = {};
-//TODO find out if you can store JSON in localStorage
-    $.ajax({
+  $.ajax({
     type: 'GET',
     url: '/api/employees',
     success: function(data) {
       //load data into employees
-      $.each(data, function(i, employee) {
+      $.each(data.employees, function(i, employee) {
         employees[employee.employee_id] = employee;
       });
     }

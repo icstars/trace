@@ -119,11 +119,30 @@ h2#ratings-header {
 .table-fixed thead {
   width: 100%;
 }
+<<<<<<< HEAD
 
 .table-fixed tbody {
   height: 230px;
   overflow-y: auto;
   width: 93%;
+=======
+.table-fixed tbody{
+  height:200px;
+  overflow-y:auto;
+  width: 100%;
+}
+.table-fixed thead,.table-fixed tbody,.table-fixed tr,.table-fixed td,.table-fixed th{
+  display:block;
+}
+tbody td{
+  float:left;
+}
+
+thead tr, thead th {
+  float:left;
+ /*background-color: #f39c12;*/
+ /*border-color:#e67e22;*/
+>>>>>>> 38d2da90810e6273970763447d6cd86ececf0670
 }
 
 .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {

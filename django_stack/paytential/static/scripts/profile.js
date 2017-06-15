@@ -22,7 +22,7 @@ $(document).ready(function() {
       //RATING HISTORY
       $('#ratings-history-list').empty();
       for (var i in employee.ratings) {
-        $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employee.ratings[i].date+"</td><td class='type-centeralign'>"+employee.ratings[i].potential+"</td><td class='type-centeralign'>"+employee.ratings[i].performance+"</td><td class='ratings-comments'>"+employee.ratings[i].notes+"</td><td class='type-centeralign'>"+employee.supervisors[0].supervisor.employee_id+"</td></tr>");
+        $('#ratings-history-list').append("<tr><td class='toggle'><i class='icon-expand'></i></td><td class='type-centeralign'>"+employee.ratings[i].date+"</td><td class='type-centeralign'>"+employee.ratings[i].potential+"</td><td class='type-centeralign'>"+employee.ratings[i].performance+"</td><td class='ratings-comments'>"+employee.ratings[i].notes+"</td><td class='type-centeralign'>"+employee.supervisors[0].supervisor.employee_id+"</td></tr><br>");
       }
     })
   }
@@ -60,6 +60,35 @@ $(document).ready(function() {
     $(this).text(' Delete');
   }, function() {
     $(this).text('');
+  })
+
+  $('#edit-btn').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+    alert('Coming Soon');
+  })
+
+  $('#rate-btn').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+    if (window.sessionStorage.getItem('id') !== null){
+      var e_id = window.sessionStorage.getItem('id');
+      window.location.href = "http://127.0.0.1:8000/demo/evaluation/"+e_id;
+    } else {
+      window.location.href = "http://127.0.0.1:8000/demo/evaluation/";
+    }
+  })
+
+  $('#share-btn').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+    alert('Coming Soon');
+  })
+
+  $('#delete-btn').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+    alert('Coming Soon');
   })
 
   $(document).on("click", '#side-bar-list li',function() {
