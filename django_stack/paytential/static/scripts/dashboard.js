@@ -155,7 +155,7 @@ $(document).ready(function() {
     var gbID = parseInt($(this).attr('id').slice(-1));
     $("#side-bar-list li").each(function() {
       //$.inArray(value, array) returns index of value in array or -1 if not found
-      if ($.inArray($(this).data('e_id'), scoreGrid[gbID]) >= 0) {
+      if ($.inArray($(this).data('id'), scoreGrid[gbID]) >= 0) {
         $(this).show();
       } else {
         $(this).hide();
