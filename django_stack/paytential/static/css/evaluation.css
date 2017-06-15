@@ -47,11 +47,11 @@ textarea {
   height: 13rem !important;
 }
 
-#submit-button {
+/*#submit-button {
   float:right;
   background: #E88924;
   border: #E88924;
-}
+}*/
 
 #eval-section {
   padding: 2%;
@@ -144,6 +144,7 @@ label {
 }
 
 #submit-button {
+  margin-right: 7%;
   margin-top: 10%;
 }
 

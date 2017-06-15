@@ -80,7 +80,7 @@ ul#ul-nav-links{
   color: white;
   background: #666666 !important;
   /*background: white !important;*/
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid whitesmoke;
   height: 42px;
 }
 
@@ -123,7 +123,7 @@ h2.type-contenttitle {
 
 /***********************************SIDEBAR***********************************/
 #side-section {
-  border-right: solid transparent 1px;
+  /*border-right: solid transparent 1px;*/
   padding:0;
   background: #666666;
 }
@@ -146,6 +146,7 @@ h2.type-contenttitle {
 }
 
 #side-bar-list {
+  height: 637px;
   overflow-y: auto;
   padding: inherit;
   margin-bottom: 15%;
