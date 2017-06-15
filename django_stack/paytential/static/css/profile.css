@@ -161,7 +161,7 @@ display: block;
   @media only screen and (max-width: 768px)
   {
 
-    #side-section {
+  #side-section {
       width: 32%;
     }
   #content-wrapper {
@@ -175,6 +175,10 @@ display: block;
 
   #profile-c-header-menu {
     margin-top: 3%;
+  }
+
+  img#graph {
+  display: none;
   }
 
   #employee-info {
@@ -195,15 +199,8 @@ display: block;
     padding: 1%;
     }
 
-    /*#save-btn:hover, #edit-btn:hover, #rate-btn:hover, #share-btn:hover, #delete-btn:hover {
-      background-color: #E88924 !important;
-      color: white !important;
-
-    }*/
-
   #profile-header {
     font-size: large;
-    /*margin-top: -1%;*/
     margin-bottom: 4%;
     }
 
@@ -220,7 +217,6 @@ display: block;
    width: 93%;
    height: 230px;
    }
-
 
   #ratings-content-area {
     padding-left: 2%;
