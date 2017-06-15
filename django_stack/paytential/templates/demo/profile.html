@@ -101,11 +101,11 @@
                                 {% for rating in ratings %}
                                 <tr id="tr-ratings" class="col-xs-12">
                                   <td class="toggle col-xs-1 td-ratings-toggle"><i class="icon-expand"></i></td>
-                                  <td class="col-xs-1 td-ratings-date">{{ rating.date }}</td>
-                                  <td class="col-xs-2 td-ratings-potential">{{ rating.potential }}</td>
-                                  <td class="col-xs-2 td-ratings-performance">{{ rating.performance }}</td>
-                                  <td class="col-xs-4 td-ratings-comments">{{ rating.notes |truncatechars:30 }}</td>
-                                  <td class="col-xs-2 td-ratings-mgrid">{{ rating.managment_relationship.subordinate }}</td>
+                                  <td class="col-xs-1" id="td-ratings-date">{{ rating.date }}</td>
+                                  <td class="col-xs-2" id="td-ratings-potential">{{ rating.potential }}</td>
+                                  <td class="col-xs-2" id="td-ratings-performance">{{ rating.performance }}</td>
+                                  <td class="col-xs-4" id="td-ratings-comments">{{ rating.notes |truncatechars:30 }}</td>
+                                  <td class="col-xs-2" id="td-ratings-mgrid">{{ rating.managment_relationship.subordinate }}</td>
                                 </tr>
                                 {% endfor %}
                                 <!-- <tr class="details"></tr> -->

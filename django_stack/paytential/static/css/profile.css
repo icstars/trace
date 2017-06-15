@@ -7,7 +7,6 @@ body, html {
 
 #profile-maincontent-section {
   height: 450px;
-  /*background: red !important;*/
 }
 
 #profile-content-wrapper {
@@ -85,6 +84,7 @@ button.button.outline {
 #td-ratings-toggle {
   width: 5%;
   text-align: center;
+  height: 14px;
 }
 
 #td-ratings-date {
@@ -102,13 +102,13 @@ button.button.outline {
 #td-ratings-potential, #td-ratings-performance {
   width: 13.5%;
 }
-/*
-#the ad-ratings-potential {*/
-  /*width: 33.5%;*/
-/*}*/
 
 #tr-ratings {
   padding:0;
+}
+
+h2#ratings-header {
+  margin-left: 5%;
 }
 
  #ratings-history-list {
@@ -119,15 +119,18 @@ button.button.outline {
 .table-fixed thead {
   width: 100%;
 }
+
 .table-fixed tbody {
   height: 230px;
   overflow-y: auto;
   width: 93%;
 }
+
 .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
   display: block;
   float: left;
 }
+
 .table-fixed tbody td, .table-fixed thead > tr> th {
 display: block;
   float: left;
@@ -174,11 +177,6 @@ display: block;
   #profile-header {
     font-size: large;
     }
-  /*
-    #profile-c-header-menu {
-      border-color: none;
-      background: none;
-    }*/
 
   #profile-graph {
     display: none;
@@ -192,8 +190,6 @@ display: block;
    margin-left: 2%;
    width: 93%;
    height: 230px;
-  /*overflow-x:none;*/
-   /*overflow-y:overlay;*/
    }
 
 
