@@ -110,7 +110,7 @@ button.button.outline:active, #gridtabs-add:active {
   width: 100px;
 }
 
-#dp6, #dp3, #dp0, #dp7, #dp4, #dp1, #dp8, #dp5, #dp2, #dp4 {
+#dp6, #dp3, #dp9, #dp7, #dp4, #dp1, #dp8, #dp5, #dp2, #dp4 {
   position: absolute;
   clip-path:circle(12px at center);
   font-size: 1.6rem;
@@ -251,7 +251,7 @@ button.button.outline:active, #gridtabs-add:active {
     padding-top: 6%;
   }
 
-  a#dp6, a#dp3, a#dp0, a#dp7, a#dp4, a#dp1, a#dp8, a#dp5, a#dp2, a#dp4{
+  a#dp6, a#dp3, a#dp9, a#dp7, a#dp4, a#dp1, a#dp8, a#dp5, a#dp2, a#dp4{
     font-size: 1.4rem;
     /*font-weight: bolder;*/
     padding-top: 10%;
