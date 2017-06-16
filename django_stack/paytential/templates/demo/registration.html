@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 
 <!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
@@ -28,21 +29,21 @@
 
 
   <!-- CITRUS Styles -->
-  <link rel="stylesheet" href="citrus/css/citrus.all.min.css">
-  <link rel="stylesheet" href="citrus/css/citrus.open-sans.min.css">
-  <link rel="stylesheet" href="citrus/css/citrus.icon-font.min.css">
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.all.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.open-sans.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/citrus.icon-font.min.css" %}"/>
 
   <!-- Global Header -->
-  <link rel="stylesheet" href="citrus/css/components/citrus.header.min.css">
-  <link rel="stylesheet" href="citrus/css/components/citrus.status-bar.min.css">
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.header.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.status-bar.min.css" %}"/>
 
-  <script src="citrus/scripts/libs/modernizr.js"></script>
+  <script src="{% static "citrus/scripts/libs/modernizr.js" %}"/></script>
 
-  <link rel="shortcut icon" href="citrus/images/favicon.png">
+  <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
 
 
 <!-- OUR STYLES AND SCRIPTS -->
-<link rel="stylesheet" href="css/registration.css">
+<link rel="stylesheet" href="{% static "css/registration.css" %}"/>
 </head>
 
 
@@ -54,7 +55,7 @@
       <!-- <label for="Company Id"> Company Id</label> -->
       <div id="logo" class="col-xs-12">
         <br>
-          <img  src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Paylocity-logo.jpg" alt="Logo">
+          <img src="{% static "images/apple-logo-new.png" %}"/ alt="Logo">
         <br>
       </div>
 
