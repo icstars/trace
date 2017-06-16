@@ -195,4 +195,10 @@ $(document).ready(function() {
       return; //prevents button from working if it should be disabled
       sortBy('Driver');
   })
+
+  $('#sort-manager').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+      sortBy('Manager');
+  })
 });
