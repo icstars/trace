@@ -217,7 +217,7 @@ button.button.outline:active, #gridtabs-add:active {
   /****************************************GRIDTABS START****************************************/
     #gridtabs {
       width: 100%;
-      margin: -12% 0 -8% 26%;
+      margin: -12% 0 -8% 20%;
       height: 49px;
     }
 
@@ -230,31 +230,6 @@ button.button.outline:active, #gridtabs-add:active {
     #button-1 {
       padding-left: 1%;
       width: 23%;
-    }
-
-    #gridtabs-back {
-      width: 10%;
-      padding: 1% 3% 1% 2%;
-      /*padding-right: 8%;*/
-    }
-
-     #gridtabs-forward {
-       padding-top: 2%;
-     }
-
-    .icon-forward, .icon-back {
-      font-size: 1rem !important;
-    }
-
-    .icon-forward {
-      padding-right: 10%;
-    }
-
-    #gridtabs-add {
-      height: 54%;
-      padding: 1%;
-      width: 8%;
-      margin-left: 1%;
     }
 
     /***********************************SIDEBAR BUTTONS START**************************************/

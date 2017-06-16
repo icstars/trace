@@ -170,32 +170,41 @@ label {
    display: block;
  }
 
+ #side-bar-list {
+   height: 323px;
+ }
+
   #content-wrapper {
     height: 600px;
   }
+
+ #eval-content-area {
+   margin-left: 1%;
+ }
 
   #eval-section {
     width: 66%;
   }
 
   #eval-pot-header, #eval-perf-header {
-    height: 42px;
+    height: 37px;
     line-height: 40px;
     padding: 0 66px;
+    font-size: medium;
   }
 
   #eval-pot-header::after, #eval-perf-header::after {
-    border-bottom: 21px solid transparent;
-    border-top: 21px solid transparent;
-    border-left: 10px solid #666666;
-    right: -9px;
+    border-bottom: 18px solid transparent;
+    border-top: 18px solid transparent;
+    border-left: 7px solid #666666;
+    right: -6px;
   }
 
   h2#eval-pot-header{
     margin-top: 10%;
   }
 
-#eval-progressbar {
+ #eval-progressbar {
     padding:0;
   }
 
@@ -217,12 +226,13 @@ label {
   }
 
 .bar.data.rounded {
+  margin-right: 1%;
   padding-right: 2%;
 }
   #eval-comments {
     width: 100%;
     margin-top: 11%;
-    margin-bottom: 27%;
+    margin-bottom: -17%;
   }
 
   label {
@@ -231,10 +241,11 @@ label {
 
   textarea {
     width: 130%;
-    height: 7rem !important;
+    height: 5rem !important;
   }
+
   #submit-button {
-    margin -31% 0 0 -6%;
+    margin -18% 0 0 -6%;
   }
 
 }
