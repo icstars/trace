@@ -41,6 +41,7 @@ $(document).ready(function() {
     } else {
       $('.gridbox').addClass('zoomed');
       $('.gridbox a').hide();
+      $('.gridbox img').hide();
       if ($(this).hasClass('blue')) {
         resetGrid('blue');
       } else if ($(this).hasClass('green')) {
@@ -135,8 +136,10 @@ $(document).ready(function() {
       var l = scGrid['' + i].length;
       if (l === 0) {
         $('#dp' + i).hide();
+        $('#ga' + i).hide();
       } else {
         $('#dp' + i).show().text(l);
+        $('#ga' + i).show();
       }
     }
     scoreGrid = scGrid;
@@ -144,7 +147,6 @@ $(document).ready(function() {
 
   //Select dataPoint
   $('.dataPoint').click(function() {
-    //gridbox ID WARNING: will break if gbIDs are greater than 9
     var gbID = parseInt($(this).attr('id').slice(-1));
     $("#side-bar-list li").each(function() {
       //$.inArray(value, array) returns index of value in array or -1 if not found
