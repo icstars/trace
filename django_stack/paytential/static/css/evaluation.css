@@ -51,7 +51,7 @@ h2#side-nav-header {
 
 textarea {
   width: 130%;
-  height: 13rem !important;
+  height: 13rem;
 }
 
 /*#submit-button {
@@ -174,8 +174,6 @@ label {
     height: 600px;
   }
 
-
-
   #eval-section {
     width: 66%;
   }
@@ -201,7 +199,6 @@ label {
     padding:0;
   }
 
-
   #performance.eval-progressbar, #potential.eval-progressbar {
     width: 146%;
     margin-left: -6%;
@@ -219,10 +216,6 @@ label {
     background: #E88924 !important;
   }
 
-  /*.form-group {
-
-  }*/
-
 .bar.data.rounded {
   padding-right: 2%;
 }
@@ -236,8 +229,12 @@ label {
     margin-top: 7%;
   }
 
+  textarea {
+    width: 130%;
+    height: 7rem !important;
+  }
   #submit-button {
-    margin-top: 10%;
+    margin -31% 0 0 -6%;
   }
 
 }

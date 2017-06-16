@@ -3,13 +3,13 @@
   height: 54px;
   width: 78%;
   text-align: center;
-  margin: 0 0 0 17%;
+  margin: 0 0 0 12%;
   /*background: red !important;*/
 }
 
 button.button.outline {
   height: 54px;
-  width: 22%;
+  width: 20%;
   background: #666666 !important;
   border: none;
   color: white !important;

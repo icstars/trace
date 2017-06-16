@@ -177,10 +177,6 @@ display: block;
     margin-top: 3%;
   }
 
-  #graph {
-  display: none;
-  }
-
   #employee-info {
     width: 130%;
     }
@@ -204,9 +200,14 @@ display: block;
     margin-bottom: 4%;
     }
 
-  #profile-graph {
+  /*img#graph {
     display: none;
-    }
+    }*/
+
+div#profile-graph {
+  display: none;
+}
+
   #table-ratings {
     margin:0 0 0 4%;
   }
@@ -229,7 +230,7 @@ display: block;
     }
 
   table {
-    /*height: */
     margin: 10% 0 0 6%;
     }
+
 }
