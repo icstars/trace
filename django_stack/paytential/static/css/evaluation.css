@@ -215,7 +215,7 @@ label {
 
   #performance.eval-progressbar, #potential.eval-progressbar {
     width: 146%;
-    margin-left: -6%;
+    margin-left: 4%;
   }
 
   img.eval-apples-btn {
@@ -232,7 +232,7 @@ label {
 
 .bar.data.rounded {
   margin-right: 1%;
-  padding-right: 2%;
+  padding-right: 11%;
 }
   #eval-comments {
     width: 100%;
