@@ -13,7 +13,7 @@ $(document).ready(function() {
     //populate sidebar
     for (var i in employees) {
       if( employees[i].employee_id === 0 ){ continue; }//removes the District Manager
-      $('#side-bar-list').append("<li data-id="+employees[i].employee_id+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
+      $('#side-bar-list').append("<li data-id="+employees[i].employee_id+" data-pos="+employees[i].position+"><span>" + employees[i].first_name + " " + employees[i].last_name + "</span></li>");
     }
   })
   //slides side bar in and out
