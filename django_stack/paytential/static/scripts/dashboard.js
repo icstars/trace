@@ -15,9 +15,6 @@ $(document).ready(function() {
       });
     }
   }).done(function(){
-    console.log('ajax done');
-    console.log(employees);
-    console.log(ratings);
     plotScores();
   })
 
@@ -113,9 +110,6 @@ $(document).ready(function() {
       var id = employees[i].employee_id;
       if(ratings[j]!==undefined && ratings[j].managment_relationship.subordinate.employee_id!==id)
         continue;//CASE 0
-      console.log(id);
-      console.log(ratings[j]);
-
       perf = ratings[j].performance;
       pot = ratings[j].potential;
 
@@ -137,7 +131,6 @@ $(document).ready(function() {
         j++
       }
     }
-    console.log(scGrid);
     for (var i in scGrid) {
       var l = scGrid['' + i].length;
       if (l === 0) {
@@ -161,11 +154,45 @@ $(document).ready(function() {
         $(this).hide();
       }
     })
-
+    //Reset button
     if($('#side-bar-list li').filter(':hidden').length > 0){//checks if any side-bar-list items are hidden
       $('#reset-btn').removeClass('disabled');
     } else {
       $('#reset-btn').addClass('disabled');
     }
   });
+  //SORT TOOLBAR
+  var sortBy = function(s){
+    $("#side-bar-list li").each(function() {
+      if ($(this).data('pos') === s) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    })
+  }
+
+  $('#sort-cashier').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+      sortBy('Cashier');
+  })
+
+  $('#sort-cook').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+      sortBy('Cook');
+  })
+
+  $('#sort-front').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+      sortBy('Front');
+  })
+
+  $('#sort-driver').click(function() {
+    if ($(this).hasClass('disabled'))
+      return; //prevents button from working if it should be disabled
+      sortBy('Driver');
+  })
 });
