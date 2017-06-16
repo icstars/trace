@@ -220,16 +220,25 @@ div#profile-graph {
     border: none !important;
     }
 
-  #ratings-header {
-    padding-left: 7%;
-    margin-left: 6%;
+    #ratings-table-section {
+      height: 0px;
     }
+
+  #ratings-header {
+    display: none;
+  }
 
   table {
     margin: 10% 0 0 6%;
-    }
+}
+  #table-ratings {
+    display: none;
+  }
   img#graph {
     display: none;
   }
 
+footer {
+  margin-top: -100%;
+}
 }
