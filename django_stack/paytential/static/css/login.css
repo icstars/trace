@@ -14,13 +14,13 @@ background-repeat: no-repeat;
   justify-content: center;
 }
 #logo {
-  background: white;
+  background:;
 margin-bottom: 3%;
 }
 
 #login-form{
-  /*width: 400px;
-  height: 475px;*/
+  width: 300px;
+  height: 498px;
   padding-bottom: 1%;
   /*border: solid 1px white;*/
   text-align: center;
@@ -30,37 +30,22 @@ margin-bottom: 3%;
   transform: translateY(15%);
 }
 
-img{
-padding-bottom: 8%;
-width: 100%;
-height: auto;
+.img{
+padding-bottom: 5%;
+width: 30%;
 
 }
 
 .inputs {
-  margin: 2% 0 4% 0;
+  margin: 4% 0% 6% 8%;
   /*padding-right: 20%;*/
   text-align: center;
-  padding: 1%;
+  padding: 3%;
 }
 
-/*#cid{*/
-  /*padding-right: 20%;*/
-  /*text-align: center;
-  padding: 1%;
-}*/
-
-/*#un{
-  padding-right: 20%;
-  text-align: center;
-  padding: 1%;
+#registration-form{
+	width: 40%;
 }
-
-#pwd{
-  padding-right: 20%;
-  text-align: center;
-  padding: 1%;
-}*/
 
 a{
   text-decoration: none;
@@ -77,4 +62,62 @@ br {
 
 button.button {
   margin: 3% 0 3% 0;
+}
+
+#
+
+@media only screen and (max-width: 768px){
+	#login-wrapper {
+	  display: flex;
+	  justify-content: center;
+	}
+	#logo {
+	  background:;
+	margin-bottom: 3%;
+	}
+
+	#login-form{
+	  /*width: 400px;
+	  height: 475px;*/
+	  padding-bottom: 1%;
+	  /*border: solid 1px white;*/
+	  text-align: center;
+	  background-color: rgba(255, 225, 255, .3);
+	  position: relative;
+	  top:50%;
+	  transform: translateY(15%);
+	}
+
+	img{
+	padding-bottom: 8%;
+	width: 100%;
+	height: auto;
+
+	}
+
+	.inputs {
+	  margin: 4% 0 4% 0;
+	  /*padding-right: 20%;*/
+	  text-align: center;
+	  padding: 1%;
+	}
+
+
+	a{
+	  text-decoration: none;
+	  color: cornsilk;
+	}
+
+	a#login-btn {
+	    color:#333333 !important;
+	}
+
+	br {
+	  line-height: 1%;
+	}
+
+	button.button {
+	  margin: 3% 0 3% 0;
+	}
+
 }
