@@ -51,7 +51,7 @@ h2#side-nav-header {
 
 textarea {
   width: 130%;
-  height: 13rem !important;
+  height: 13rem;
 }
 
 /*#submit-button {
@@ -165,42 +165,53 @@ label {
 
 @media only screen and (max-width: 768px)
 {
+
+/*footer {
+  margin-top: 10%;
+}*/
+
  #side-section {
    width: 33%;
    display: block;
+ }
+
+ #side-bar-list {
+   height: 323px;
  }
 
   #content-wrapper {
     height: 600px;
   }
 
-
+ #eval-content-area {
+   margin-left: 1%;
+ }
 
   #eval-section {
     width: 66%;
   }
 
   #eval-pot-header, #eval-perf-header {
-    height: 42px;
+    height: 37px;
     line-height: 40px;
     padding: 0 66px;
+    font-size: medium;
   }
 
   #eval-pot-header::after, #eval-perf-header::after {
-    border-bottom: 21px solid transparent;
-    border-top: 21px solid transparent;
-    border-left: 10px solid #666666;
-    right: -9px;
+    border-bottom: 18px solid transparent;
+    border-top: 18px solid transparent;
+    border-left: 7px solid #666666;
+    right: -6px;
   }
 
   h2#eval-pot-header{
     margin-top: 10%;
   }
 
-#eval-progressbar {
+ #eval-progressbar {
     padding:0;
   }
-
 
   #performance.eval-progressbar, #potential.eval-progressbar {
     width: 146%;
@@ -219,25 +230,27 @@ label {
     background: #E88924 !important;
   }
 
-  /*.form-group {
-
-  }*/
-
 .bar.data.rounded {
+  margin-right: 1%;
   padding-right: 2%;
 }
   #eval-comments {
     width: 100%;
     margin-top: 11%;
-    margin-bottom: 27%;
+    margin-bottom: -17%;
   }
 
   label {
     margin-top: 7%;
   }
 
+  textarea {
+    width: 130%;
+    height: 5rem !important;
+  }
+
   #submit-button {
-    margin-top: 10%;
+    margin -18% 0 0 -6%;
   }
 
 }

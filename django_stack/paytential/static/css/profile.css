@@ -63,7 +63,7 @@ button.button.outline {
 }
 
 #thead-ratings-toggle {
-  width: 5%;
+  width: 4.5%;
 }
 
 #thead-ratings-mgrid {
@@ -81,11 +81,17 @@ button.button.outline {
 #td-ratings {
   width: 8%;
 }
-#td-ratings-toggle {
-  width: 5%;
+
+toggle {
+  height: 13px;
+width: 4.25%;
+}
+
+/*#td-ratings-toggle {
+  width: 2.5%;
   text-align: center;
   height: 14px;
-}
+}*/
 
 #td-ratings-date {
   width: 7.5%;
@@ -119,30 +125,11 @@ h2#ratings-header {
 .table-fixed thead {
   width: 100%;
 }
-<<<<<<< HEAD
 
 .table-fixed tbody {
   height: 230px;
   overflow-y: auto;
   width: 93%;
-=======
-.table-fixed tbody{
-  height:200px;
-  overflow-y:auto;
-  width: 100%;
-}
-.table-fixed thead,.table-fixed tbody,.table-fixed tr,.table-fixed td,.table-fixed th{
-  display:block;
-}
-tbody td{
-  float:left;
-}
-
-thead tr, thead th {
-  float:left;
- /*background-color: #f39c12;*/
- /*border-color:#e67e22;*/
->>>>>>> 38d2da90810e6273970763447d6cd86ececf0670
 }
 
 .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
@@ -159,7 +146,7 @@ display: block;
   /******************************************MEDIA QUERIES***********************************/
   /*___________________________________________________________________________________________*/
   @media only screen and (max-width: 768px)
-  {
+{
 
   #side-section {
       width: 32%;
@@ -175,11 +162,7 @@ display: block;
 
   #profile-c-header-menu {
     margin-top: 3%;
-  }
-
-  img#graph {
-  display: none;
-  }
+    }
 
   #employee-info {
     width: 130%;
@@ -204,19 +187,33 @@ display: block;
     margin-bottom: 4%;
     }
 
-  #profile-graph {
-    display: none;
-    }
+div#profile-graph {
+  display: none;
+}
+
   #table-ratings {
     margin:0 0 0 4%;
   }
 
-  #ratings-table-section {
-   display: flow-root;
-   margin-left: 2%;
-   width: 93%;
-   height: 230px;
-   }
+#thead-ratings-toggle {
+  width: 2%;
+}
+
+#thead-ratings-date {
+  width: 13%;
+}
+
+#thead-ratings-potential {
+  width: 15%;
+}
+
+#thead-ratings-performance {
+  width: 15%;
+}
+
+#thead-ratings-comments {
+  width: 42.25%;
+}
 
   #ratings-content-area {
     padding-left: 2%;
@@ -229,7 +226,10 @@ display: block;
     }
 
   table {
-    /*height: */
     margin: 10% 0 0 6%;
     }
+  img#graph {
+    display: none;
+  }
+
 }
