@@ -284,15 +284,8 @@ img.soc-med-icons {
   }
 
   .nav-links:hover,.nav-links:active {
-    color: white;
-    background: #666666 !important;
-    width: 16%;
-    margin: 0 1% 0 10%;
-    /*background: white !important;*/
-    /*border-bottom: 2px solid whitesmoke;*/
-    height: 42px;
-    width: 20%;
-    margin: 1%;
+
+    display:none;
   }
 
   #header-wrapper {
@@ -380,7 +373,7 @@ img.soc-med-icons {
   /***********************************FOOTER***************************************/
 footer {
     background: #333333;
-    margin-top: -49%;
+    margin-top: -48%;
     height: 186px;
   }
 
