@@ -8,13 +8,8 @@
 <!--<![endif]-->
 
 <head>
-  <link rel="stylesheet" href="{% static "login.css" %}"/>
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-
-  <title>Patential</title>
-
   <meta name="description" content="XXXXXXXXXXXXXXXX">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
 
@@ -28,18 +23,19 @@
   <link rel="stylesheet" href="{% static  "citrus/css/citrus.open-sans.min.css" %}"/>
   <link rel="stylesheet" href="{% static  "citrus/css/citrus.icon-font.min.css" %}"/>
   <!-- Global Header -->
-  <link rel="stylesheet" href="{% static  "citrus/css/components/citrus.header.min.css" %}"/>
-  <link rel="stylesheet" href="{% static  "citrus/css/components/citrus.status-bar.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.header.min.css" %}"/>
+  <link rel="stylesheet" href="{% static "citrus/css/components/citrus.status-bar.min.css" %}"/>
   <link rel="shortcut icon" href="{% static "citrus/images/favicon.png" %}"/>
   <script src="citrus/scripts/libs/modernizr.js"></script>
   <!--OUR STYLES-->
-  <link rel="stylesheet" href="{% static "css/login.css" %}"/>
+  <link rel="stylesheet" href="{% static "css/helpme.css" %}"/>
 </head>
 
 <body>
 
+
 <div id="logo-header" class="c-header-logo">
-  <img id="img-logo" src="{% static "images/apple-logo-new.png" %" alt="logo">
+  <img id="img-logo" src="{% static "images/apple-logo-new.png" %} alt="logo"/>
 </div>
 
 <h1>Login</h1>
@@ -60,13 +56,13 @@
 <p>An over view of the company employees </p>
 <h2>Side bar</h2>
 <p>has mutliple functions that comply with the name(s)</p>
-<h2>Rate<img src="images/Rate.png"></h2>
+<h2>Rate<img src="{% static "images/Rate.png" %}"/></h2>
 <p>Load the rating page with person selected</p>
-<h2>Profile<img src="images/profile-snippet.png"></h2>
+<h2>Profile<img src="{% static "images/profile-snippet.png" %}"/></h2>
 <p>loads profile page of selecteed employees</p>
-<h2>select<img src="images/Select-snippet.png"></h2>
+<h2>select<img src="{% static "images/Select-snippet.png" %}"/></h2>
 <p>Highlight the employee(s) selected and led to toggle to clear all</p>
-<h2>reset<img src="images/reset-snippet.png"></h2>
+<h2>reset<img src="{% static "images/reset-snippet.png" %}"/></h2>
 <p>This is to reset all the highlighted employee(s) </p>
 
 
